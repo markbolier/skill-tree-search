@@ -5,7 +5,7 @@ export const SearchList = () => {
   return (
     <ul>
       {mockData.map((data) => (
-        <li>{data.title}</li>
+        <li key={data.id}>{data.title}</li>
       ))}
       <li></li>
     </ul>

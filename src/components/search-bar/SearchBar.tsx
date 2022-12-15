@@ -5,14 +5,16 @@ import * as Styled from "./SearchBar.styled";
 export const SearchBar = () => {
   const [query, setQuery] = useState("");
 
-  const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
-    event.preventDefault();
-    setQuery(event.target.value);
-  };
+  console.log(query);
 
   return (
     <div>
-      <input type="text" placeholder="Search... " onChange={handleInputChange} value={query} />
+      <input
+        type="text"
+        placeholder="Search... "
+        onChange={(event) => setQuery(event.target.value)}
+        value={query}
+      />
     </div>
   );
 };
