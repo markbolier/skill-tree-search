@@ -4,9 +4,11 @@ import mockData from "../../mock-data/example-data.json";
 export const SearchList = () => {
   return (
     <ul>
-      {mockData.map((data) => (
-        <li key={data.id}>{data.title}</li>
-      ))}
+      {mockData
+        .filter((data) => data.title.toLowerCase().includes(query))
+        .map((data) => (
+          <li key={data.id}>{data.title}</li>
+        ))}
       <li></li>
     </ul>
   );
