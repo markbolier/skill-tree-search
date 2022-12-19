@@ -10,19 +10,23 @@ export const SearchBar = () => {
 
   return (
     <div>
-      <input
+      <Styled.Input
         type="text"
         placeholder="Search... "
         onChange={(event) => setQuery(event.target.value)}
         value={query}
       />
-      <ul>
+      <Styled.List>
         {mockData
           .filter((data) => data.title.toLowerCase().includes(query))
           .map((data) => (
-            <li key={data.id}>{data.title}</li>
+            <Styled.ListItem key={data.id}>
+              <Styled.Title>{data.title}</Styled.Title>
+              <Styled.Label>{data.label}</Styled.Label>
+              <Styled.Description>{data.description}</Styled.Description>
+            </Styled.ListItem>
           ))}
-      </ul>
+      </Styled.List>
     </div>
   );
 };
