@@ -40,10 +40,13 @@ export const Title = styled.h2`
 `;
 
 export const Label = styled.h3`
-  color: #999;
-  font-size: 1rem;
-  margin: 0;
-  padding: 0;
+  font-size: 0.9rem;
+  margin: 5px 0;
+  padding: 5px;
+  background-color: #f1edeb;
+  border-radius: 5px;
+  width: fit-content;
+  font-weight: 400;
 `;
 
 export const Description = styled.p`

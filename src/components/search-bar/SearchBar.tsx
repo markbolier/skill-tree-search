@@ -22,7 +22,7 @@ export const SearchBar = () => {
           .map((data) => (
             <Styled.ListItem key={data.id}>
               <Styled.Title>{data.title}</Styled.Title>
-              <Styled.Label>{data.label}</Styled.Label>
+              <Styled.Label>#{data.label}</Styled.Label>
               <Styled.Description>{data.description}</Styled.Description>
             </Styled.ListItem>
           ))}
