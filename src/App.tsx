@@ -1,11 +1,10 @@
 import { SearchBar } from "./components/search-bar";
+import { Header } from "./components/header";
 
 function App() {
   return (
     <div className="App">
-      <h1>
-        Skill tree 🌳 <br></br>Nationale Nederlanden
-      </h1>
+      <Header />
       <SearchBar />
     </div>
   );

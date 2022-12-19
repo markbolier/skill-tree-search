@@ -1,4 +1,4 @@
-import { ChangeEvent, useState } from "react";
+import { useState } from "react";
 
 import * as Styled from "./SearchBar.styled";
 import mockData from "../../mock-data/example-data.json";
