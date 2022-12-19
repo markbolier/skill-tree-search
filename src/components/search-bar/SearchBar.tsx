@@ -22,7 +22,6 @@ export const SearchBar = () => {
           .map((data) => (
             <li key={data.id}>{data.title}</li>
           ))}
-        <li></li>
       </ul>
     </div>
   );
