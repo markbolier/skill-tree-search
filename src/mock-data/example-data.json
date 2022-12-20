@@ -5,17 +5,13 @@
     "id": "00efd586-c7a3-4c30-ab48-59f586ccb34d",
     "label": "Testing",
     "dreyfus": 3,
-    "parents": [
-      "7b6d0538-20de-421a-8590-a249322e8f78"
-    ],
+    "parents": ["7b6d0538-20de-421a-8590-a249322e8f78"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "00efd586-c7a3-4c30-ab48-59f586ccb34d",
-    "children": [
-
-    ],
+    "children": [],
     "level": 5
   },
   {
@@ -43,22 +39,14 @@
     "id": "0158429d-7bc7-434f-b4f9-64f85168c198",
     "label": "Cloud",
     "dreyfus": 7,
-    "parents": [
-      "65bf0d94-939c-4a37-8243-60d57187306e"
-    ],
-    "subSkills": [
-      "4bd65aba-95a2-43c9-8063-5423103b230b",
-      "cbc743d7-0f88-4d9b-b4ff-e5bd4f12490b"
-    ],
+    "parents": ["65bf0d94-939c-4a37-8243-60d57187306e"],
+    "subSkills": ["4bd65aba-95a2-43c9-8063-5423103b230b", "cbc743d7-0f88-4d9b-b4ff-e5bd4f12490b"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "0158429d-7bc7-434f-b4f9-64f85168c198",
-    "children": [
-      "473af4ae-2daa-4f68-a3ab-fc2fc3d7dc47",
-      "cba55f51-53c9-4d16-a503-9dd143404198"
-    ],
+    "children": ["473af4ae-2daa-4f68-a3ab-fc2fc3d7dc47", "cba55f51-53c9-4d16-a503-9dd143404198"],
     "level": 1
   },
   {
@@ -67,9 +55,7 @@
     "id": "00b6a9ed-6772-4a03-aa01-2d06336578aa",
     "label": "IT Ops",
     "dreyfus": 3,
-    "parents": [
-      "a970c08c-66b5-4dc5-9e3d-6658646aa71b"
-    ],
+    "parents": ["a970c08c-66b5-4dc5-9e3d-6658646aa71b"],
     "hasCertification": true,
     "isFinished": true,
     "other_resources": [
@@ -88,10 +74,7 @@
       }
     ],
     "slug": "00b6a9ed-6772-4a03-aa01-2d06336578aa",
-    "children": [
-      "17194f73-5e15-4b28-a007-baf0df649604",
-      "c1033571-a8e5-429c-844e-3c2ab26bb354"
-    ],
+    "children": ["17194f73-5e15-4b28-a007-baf0df649604", "c1033571-a8e5-429c-844e-3c2ab26bb354"],
     "level": 4
   },
   {
@@ -100,17 +83,13 @@
     "id": "01af2d1e-20de-46f3-8825-da5daba444f3",
     "label": "Testing",
     "dreyfus": 4,
-    "parents": [
-      "8f18da45-df45-4c6c-a2ec-ca7850703b6a"
-    ],
+    "parents": ["8f18da45-df45-4c6c-a2ec-ca7850703b6a"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "01af2d1e-20de-46f3-8825-da5daba444f3",
-    "children": [
-
-    ],
+    "children": [],
     "level": 6
   },
   {
@@ -119,9 +98,7 @@
     "id": "0407dca4-aece-4a07-9488-12780baa943e",
     "label": "IT Ops",
     "dreyfus": 3,
-    "parents": [
-      "2a7f735b-0513-4c4b-930c-91466b5553d5"
-    ],
+    "parents": ["2a7f735b-0513-4c4b-930c-91466b5553d5"],
     "hasCertification": true,
     "isFinished": true,
     "other_resources": null,
@@ -134,9 +111,7 @@
       }
     ],
     "slug": "0407dca4-aece-4a07-9488-12780baa943e",
-    "children": [
-      "a20f466e-7c31-485c-9e80-3182e1d008f8"
-    ],
+    "children": ["a20f466e-7c31-485c-9e80-3182e1d008f8"],
     "level": 5
   },
   {
@@ -145,17 +120,13 @@
     "id": "057e228f-871b-46d2-950a-352714fbce69",
     "label": "IT Ops",
     "dreyfus": 7,
-    "parents": [
-      "12e53b8d-798f-47e8-b372-b9ae071ac2aa"
-    ],
+    "parents": ["12e53b8d-798f-47e8-b372-b9ae071ac2aa"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "057e228f-871b-46d2-950a-352714fbce69",
-    "children": [
-      "a970c08c-66b5-4dc5-9e3d-6658646aa71b"
-    ],
+    "children": ["a970c08c-66b5-4dc5-9e3d-6658646aa71b"],
     "level": 2
   },
   {
@@ -164,17 +135,13 @@
     "id": "096f43ff-a0b7-4454-902e-cd97bfb5e7e8",
     "label": "IT Ops",
     "dreyfus": 3,
-    "parents": [
-      "2a7f735b-0513-4c4b-930c-91466b5553d5"
-    ],
+    "parents": ["2a7f735b-0513-4c4b-930c-91466b5553d5"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "096f43ff-a0b7-4454-902e-cd97bfb5e7e8",
-    "children": [
-
-    ],
+    "children": [],
     "level": 5
   },
   {
@@ -183,9 +150,7 @@
     "id": "0a4a699d-d66f-4218-aac0-37eac2756da4",
     "label": "Cloud",
     "dreyfus": 2,
-    "parents": [
-      "bd71e6bb-c2c6-4c4e-9a64-0538e28a6034"
-    ],
+    "parents": ["bd71e6bb-c2c6-4c4e-9a64-0538e28a6034"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -228,9 +193,7 @@
       }
     ],
     "slug": "0a4a699d-d66f-4218-aac0-37eac2756da4",
-    "children": [
-
-    ],
+    "children": [],
     "level": 2
   },
   {
@@ -239,17 +202,13 @@
     "id": "0bc9b15f-0b7b-4ce8-947b-0d96f49338bd",
     "label": "Cloud",
     "dreyfus": 2,
-    "parents": [
-      "973d04f0-b74c-4f4e-afa5-25ccdaec851c"
-    ],
+    "parents": ["973d04f0-b74c-4f4e-afa5-25ccdaec851c"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "0bc9b15f-0b7b-4ce8-947b-0d96f49338bd",
-    "children": [
-      "5e600cbf-290f-4681-8e58-2c4ebfc4b256"
-    ],
+    "children": ["5e600cbf-290f-4681-8e58-2c4ebfc4b256"],
     "level": 2
   },
   {
@@ -258,9 +217,7 @@
     "id": "01dc8fe3-2c6a-44b1-b1e0-1488e29285a5",
     "label": "Testing",
     "dreyfus": 2,
-    "parents": [
-      "4475879a-4747-4454-b9ec-e0d1b367a216"
-    ],
+    "parents": ["4475879a-4747-4454-b9ec-e0d1b367a216"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -273,9 +230,7 @@
       }
     ],
     "slug": "01dc8fe3-2c6a-44b1-b1e0-1488e29285a5",
-    "children": [
-
-    ],
+    "children": [],
     "level": 5
   },
   {
@@ -284,9 +239,7 @@
     "id": "12449eb5-4b52-478a-bb48-8042d361f98c",
     "label": "IT Ops",
     "dreyfus": 6,
-    "parents": [
-      "921d6cef-dd83-4736-a196-1754f318fe81"
-    ],
+    "parents": ["921d6cef-dd83-4736-a196-1754f318fe81"],
     "hasCertification": true,
     "isFinished": true,
     "other_resources": null,
@@ -299,9 +252,7 @@
       }
     ],
     "slug": "12449eb5-4b52-478a-bb48-8042d361f98c",
-    "children": [
-
-    ],
+    "children": [],
     "level": 9
   },
   {
@@ -310,9 +261,7 @@
     "id": "0e2762b7-45f5-4bcc-9e87-a1cffc8eb823",
     "label": "Security",
     "dreyfus": 2,
-    "parents": [
-      "2bdeef95-caa1-46d0-ac8b-ed225219a3fb"
-    ],
+    "parents": ["2bdeef95-caa1-46d0-ac8b-ed225219a3fb"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": [
@@ -331,9 +280,7 @@
       }
     ],
     "slug": "0e2762b7-45f5-4bcc-9e87-a1cffc8eb823",
-    "children": [
-
-    ],
+    "children": [],
     "level": 2
   },
   {
@@ -342,9 +289,7 @@
     "id": "12d2da66-4ba5-4f9e-b22a-c65539b49de9",
     "label": "IT Ops",
     "dreyfus": 2,
-    "parents": [
-      "1dbd8f96-d6ab-48dd-89c5-5fa2c349536b"
-    ],
+    "parents": ["1dbd8f96-d6ab-48dd-89c5-5fa2c349536b"],
     "hasCertification": true,
     "isFinished": true,
     "other_resources": null,
@@ -357,9 +302,7 @@
       }
     ],
     "slug": "12d2da66-4ba5-4f9e-b22a-c65539b49de9",
-    "children": [
-      "370ea3d4-b9c5-4e15-951a-e7847255937c"
-    ],
+    "children": ["370ea3d4-b9c5-4e15-951a-e7847255937c"],
     "level": 2
   },
   {
@@ -368,9 +311,7 @@
     "id": "12e53b8d-798f-47e8-b372-b9ae071ac2aa",
     "label": "IT Ops",
     "dreyfus": 1,
-    "parents": [
-      "0152ee19-a75f-4761-9b73-c97c4fb88e89"
-    ],
+    "parents": ["0152ee19-a75f-4761-9b73-c97c4fb88e89"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -390,9 +331,7 @@
     "id": "0641e5f8-44b2-42e1-86b4-e2f51a0faf8c",
     "label": "IT Ops",
     "dreyfus": 7,
-    "parents": [
-      "9a2fcc8d-62c1-4ed5-9a2d-4ff667148b22"
-    ],
+    "parents": ["9a2fcc8d-62c1-4ed5-9a2d-4ff667148b22"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -411,17 +350,13 @@
     "id": "131bad77-4886-489e-ab21-181e1f9fcf77",
     "label": "Cloud",
     "dreyfus": 5,
-    "parents": [
-      "6fa0f0a5-9add-47e0-867f-6ab33ffd6c0b"
-    ],
+    "parents": ["6fa0f0a5-9add-47e0-867f-6ab33ffd6c0b"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "131bad77-4886-489e-ab21-181e1f9fcf77",
-    "children": [
-
-    ],
+    "children": [],
     "level": 7
   },
   {
@@ -430,9 +365,7 @@
     "id": "1967967e-8084-4695-b9bc-ce6f2264a52a",
     "label": "IT Ops",
     "dreyfus": 5,
-    "parents": [
-      "a20f466e-7c31-485c-9e80-3182e1d008f8"
-    ],
+    "parents": ["a20f466e-7c31-485c-9e80-3182e1d008f8"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -445,9 +378,7 @@
       }
     ],
     "slug": "1967967e-8084-4695-b9bc-ce6f2264a52a",
-    "children": [
-      "921d6cef-dd83-4736-a196-1754f318fe81"
-    ],
+    "children": ["921d6cef-dd83-4736-a196-1754f318fe81"],
     "level": 7
   },
   {
@@ -456,17 +387,13 @@
     "id": "1457bc79-4b57-4e13-9c54-bf11cc396344",
     "label": "Testing",
     "dreyfus": 4,
-    "parents": [
-      "8f18da45-df45-4c6c-a2ec-ca7850703b6a"
-    ],
+    "parents": ["8f18da45-df45-4c6c-a2ec-ca7850703b6a"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "1457bc79-4b57-4e13-9c54-bf11cc396344",
-    "children": [
-
-    ],
+    "children": [],
     "level": 6
   },
   {
@@ -475,17 +402,13 @@
     "id": "0f73f4bd-040d-4dea-92e6-5bc746007fa7",
     "label": "IT Ops",
     "dreyfus": 1,
-    "parents": [
-      "0152ee19-a75f-4761-9b73-c97c4fb88e89"
-    ],
+    "parents": ["0152ee19-a75f-4761-9b73-c97c4fb88e89"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "0f73f4bd-040d-4dea-92e6-5bc746007fa7",
-    "children": [
-      "56648cdd-e566-469c-b646-4b7ef8faa653"
-    ],
+    "children": ["56648cdd-e566-469c-b646-4b7ef8faa653"],
     "level": 1
   },
   {
@@ -494,9 +417,7 @@
     "id": "1d0949aa-011c-4540-b616-e6fb9508f2bd",
     "label": "Cloud",
     "dreyfus": 2,
-    "parents": [
-      "53a9bbeb-77f8-45f4-bf3b-d9cd6f917b6e"
-    ],
+    "parents": ["53a9bbeb-77f8-45f4-bf3b-d9cd6f917b6e"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": [
@@ -520,9 +441,7 @@
       }
     ],
     "slug": "1d0949aa-011c-4540-b616-e6fb9508f2bd",
-    "children": [
-      "a8efea15-7c49-4be7-a128-612f4ab08961"
-    ],
+    "children": ["a8efea15-7c49-4be7-a128-612f4ab08961"],
     "level": 2
   },
   {
@@ -531,17 +450,13 @@
     "id": "15d3ee92-5027-432a-91fa-68c47880fe38",
     "label": "IT Ops",
     "dreyfus": 4,
-    "parents": [
-      "40bd732c-25ad-4635-a51b-6767b67b3d15"
-    ],
+    "parents": ["40bd732c-25ad-4635-a51b-6767b67b3d15"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "15d3ee92-5027-432a-91fa-68c47880fe38",
-    "children": [
-      "5bf92cdf-0951-4bbf-8167-ca9ac4baaa91"
-    ],
+    "children": ["5bf92cdf-0951-4bbf-8167-ca9ac4baaa91"],
     "level": 8
   },
   {
@@ -550,9 +465,7 @@
     "id": "17194f73-5e15-4b28-a007-baf0df649604",
     "label": "IT Ops",
     "dreyfus": 4,
-    "parents": [
-      "00b6a9ed-6772-4a03-aa01-2d06336578aa"
-    ],
+    "parents": ["00b6a9ed-6772-4a03-aa01-2d06336578aa"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": [
@@ -581,10 +494,7 @@
       }
     ],
     "slug": "17194f73-5e15-4b28-a007-baf0df649604",
-    "children": [
-      "6432e193-8cd2-4854-8ef2-9f75785f6943",
-      "eed96e52-7183-4c52-b45b-cffa0a7d31c0"
-    ],
+    "children": ["6432e193-8cd2-4854-8ef2-9f75785f6943", "eed96e52-7183-4c52-b45b-cffa0a7d31c0"],
     "level": 5
   },
   {
@@ -593,9 +503,7 @@
     "id": "1f7a190b-b5cd-4960-ae56-f64b07edd5b5",
     "label": "Testing",
     "dreyfus": 7,
-    "parents": [
-      "b77606f2-1ea5-4b9e-b77b-d4b96c914cf4"
-    ],
+    "parents": ["b77606f2-1ea5-4b9e-b77b-d4b96c914cf4"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -615,9 +523,7 @@
     "id": "20cb61e2-ed42-4261-b44f-5f680fc91235",
     "label": "IT Ops",
     "dreyfus": 5,
-    "parents": [
-      "40bd732c-25ad-4635-a51b-6767b67b3d15"
-    ],
+    "parents": ["40bd732c-25ad-4635-a51b-6767b67b3d15"],
     "hasCertification": true,
     "isFinished": true,
     "other_resources": null,
@@ -630,9 +536,7 @@
       }
     ],
     "slug": "20cb61e2-ed42-4261-b44f-5f680fc91235",
-    "children": [
-
-    ],
+    "children": [],
     "level": 8
   },
   {
@@ -641,17 +545,13 @@
     "id": "1dd85bba-7935-4116-9417-7858549b198c",
     "label": "IT Ops",
     "dreyfus": 5,
-    "parents": [
-      "e3fee3fa-8b30-4c78-ab98-f3b401c5a6dc"
-    ],
+    "parents": ["e3fee3fa-8b30-4c78-ab98-f3b401c5a6dc"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "1dd85bba-7935-4116-9417-7858549b198c",
-    "children": [
-      "e3fd7e73-6315-45a2-bcb5-0d994f48a065"
-    ],
+    "children": ["e3fd7e73-6315-45a2-bcb5-0d994f48a065"],
     "level": 10
   },
   {
@@ -660,17 +560,13 @@
     "id": "19e8bffc-9064-4890-85cb-815ed729511b",
     "label": "IT Ops",
     "dreyfus": 4,
-    "parents": [
-      "b59b067d-daba-4298-909d-80f3d15cdd95"
-    ],
+    "parents": ["b59b067d-daba-4298-909d-80f3d15cdd95"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "19e8bffc-9064-4890-85cb-815ed729511b",
-    "children": [
-
-    ],
+    "children": [],
     "level": 6
   },
   {
@@ -679,17 +575,13 @@
     "id": "1f2cb81c-0be1-4e00-8d60-16449c3ef3d5",
     "label": "IT Ops",
     "dreyfus": 6,
-    "parents": [
-      "fc67b878-6c46-40fd-9037-1be838eae2cf"
-    ],
+    "parents": ["fc67b878-6c46-40fd-9037-1be838eae2cf"],
     "hasCertification": true,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "1f2cb81c-0be1-4e00-8d60-16449c3ef3d5",
-    "children": [
-
-    ],
+    "children": [],
     "level": 9
   },
   {
@@ -698,9 +590,7 @@
     "id": "270985b4-976c-49c3-bdf5-379195f2663e",
     "label": "Security",
     "dreyfus": 3,
-    "parents": [
-      "2bdeef95-caa1-46d0-ac8b-ed225219a3fb"
-    ],
+    "parents": ["2bdeef95-caa1-46d0-ac8b-ed225219a3fb"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": [
@@ -719,9 +609,7 @@
       }
     ],
     "slug": "270985b4-976c-49c3-bdf5-379195f2663e",
-    "children": [
-
-    ],
+    "children": [],
     "level": 2
   },
   {
@@ -730,9 +618,7 @@
     "id": "258218a7-a2c1-481f-a28a-927fc04bde32",
     "label": "Cloud",
     "dreyfus": 5,
-    "parents": [
-      "7bbdf8bc-2493-4579-af2f-e39153aa73a7"
-    ],
+    "parents": ["7bbdf8bc-2493-4579-af2f-e39153aa73a7"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -745,9 +631,7 @@
       }
     ],
     "slug": "258218a7-a2c1-481f-a28a-927fc04bde32",
-    "children": [
-
-    ],
+    "children": [],
     "level": 5
   },
   {
@@ -756,9 +640,7 @@
     "id": "2521b59e-a5c6-41a0-b700-10c90b5ac4e7",
     "label": "Cloud",
     "dreyfus": 2,
-    "parents": [
-      "32191a69-9815-4b39-925d-2c1dfd8b2c6c"
-    ],
+    "parents": ["32191a69-9815-4b39-925d-2c1dfd8b2c6c"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -777,9 +659,7 @@
       }
     ],
     "slug": "2521b59e-a5c6-41a0-b700-10c90b5ac4e7",
-    "children": [
-      "7b9b5122-fb90-4cbe-80a1-bb917d63c504"
-    ],
+    "children": ["7b9b5122-fb90-4cbe-80a1-bb917d63c504"],
     "level": 2
   },
   {
@@ -788,9 +668,7 @@
     "id": "2a7f735b-0513-4c4b-930c-91466b5553d5",
     "label": "IT Ops",
     "dreyfus": 7,
-    "parents": [
-      "549f2cbe-955e-4b76-9bb0-9bfe5e59cbbe"
-    ],
+    "parents": ["549f2cbe-955e-4b76-9bb0-9bfe5e59cbbe"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -817,9 +695,7 @@
     "id": "28865531-6d4a-4c9f-86e1-732467742d74",
     "label": "IT Ops",
     "dreyfus": 3,
-    "parents": [
-      "b53c09da-8137-4149-ba7b-269de8bc2ea2"
-    ],
+    "parents": ["b53c09da-8137-4149-ba7b-269de8bc2ea2"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -832,9 +708,7 @@
       }
     ],
     "slug": "28865531-6d4a-4c9f-86e1-732467742d74",
-    "children": [
-
-    ],
+    "children": [],
     "level": 3
   },
   {
@@ -843,9 +717,7 @@
     "id": "2bdeef95-caa1-46d0-ac8b-ed225219a3fb",
     "label": "Security",
     "dreyfus": 2,
-    "parents": [
-      "b9baaf2b-347f-40f4-9556-cb6d171d8618"
-    ],
+    "parents": ["b9baaf2b-347f-40f4-9556-cb6d171d8618"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": [
@@ -881,18 +753,13 @@
     "id": "1dbd8f96-d6ab-48dd-89c5-5fa2c349536b",
     "label": "IT Ops",
     "dreyfus": 1,
-    "parents": [
-      "0152ee19-a75f-4761-9b73-c97c4fb88e89"
-    ],
+    "parents": ["0152ee19-a75f-4761-9b73-c97c4fb88e89"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "1dbd8f96-d6ab-48dd-89c5-5fa2c349536b",
-    "children": [
-      "12d2da66-4ba5-4f9e-b22a-c65539b49de9",
-      "934a6ada-9b26-4cd7-9287-94f326a9d3a8"
-    ],
+    "children": ["12d2da66-4ba5-4f9e-b22a-c65539b49de9", "934a6ada-9b26-4cd7-9287-94f326a9d3a8"],
     "level": 1
   },
   {
@@ -901,9 +768,7 @@
     "id": "2c1ece0d-23d2-4243-97b5-be1b25bde052",
     "label": "IT Ops",
     "dreyfus": 4,
-    "parents": [
-      "40bd732c-25ad-4635-a51b-6767b67b3d15"
-    ],
+    "parents": ["40bd732c-25ad-4635-a51b-6767b67b3d15"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -916,9 +781,7 @@
       }
     ],
     "slug": "2c1ece0d-23d2-4243-97b5-be1b25bde052",
-    "children": [
-      "b7ebc24e-aff0-4d6d-bb8e-53a7f1dc148a"
-    ],
+    "children": ["b7ebc24e-aff0-4d6d-bb8e-53a7f1dc148a"],
     "level": 8
   },
   {
@@ -927,17 +790,13 @@
     "id": "2dc09b3a-5df7-4a27-9b77-139e4e26df10",
     "label": "IT Ops",
     "dreyfus": 2,
-    "parents": [
-      "b53c09da-8137-4149-ba7b-269de8bc2ea2"
-    ],
+    "parents": ["b53c09da-8137-4149-ba7b-269de8bc2ea2"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "2dc09b3a-5df7-4a27-9b77-139e4e26df10",
-    "children": [
-
-    ],
+    "children": [],
     "level": 3
   },
   {
@@ -946,9 +805,7 @@
     "id": "2d29cfe6-43f2-42a0-8f2a-ab792ba16131",
     "label": "Cloud",
     "dreyfus": 4,
-    "parents": [
-      "7bbdf8bc-2493-4579-af2f-e39153aa73a7"
-    ],
+    "parents": ["7bbdf8bc-2493-4579-af2f-e39153aa73a7"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -961,9 +818,7 @@
       }
     ],
     "slug": "2d29cfe6-43f2-42a0-8f2a-ab792ba16131",
-    "children": [
-
-    ],
+    "children": [],
     "level": 5
   },
   {
@@ -972,9 +827,7 @@
     "id": "2de00689-6b55-4c30-8e2b-48150967a48f",
     "label": "Testing",
     "dreyfus": 3,
-    "parents": [
-      "4a417ecd-1217-4687-9cb3-74327f71b93b"
-    ],
+    "parents": ["4a417ecd-1217-4687-9cb3-74327f71b93b"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -987,9 +840,7 @@
       }
     ],
     "slug": "2de00689-6b55-4c30-8e2b-48150967a48f",
-    "children": [
-
-    ],
+    "children": [],
     "level": 5
   },
   {
@@ -998,17 +849,13 @@
     "id": "36215f16-0920-4414-aa9c-79f2f692871c",
     "label": "Cloud",
     "dreyfus": 3,
-    "parents": [
-      "fe689f60-7c1c-43c0-ae46-5533c7d27cb0"
-    ],
+    "parents": ["fe689f60-7c1c-43c0-ae46-5533c7d27cb0"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "36215f16-0920-4414-aa9c-79f2f692871c",
-    "children": [
-      "a07dab2e-e208-4433-87a3-fad052668a12"
-    ],
+    "children": ["a07dab2e-e208-4433-87a3-fad052668a12"],
     "level": 6
   },
   {
@@ -1017,18 +864,13 @@
     "id": "32191a69-9815-4b39-925d-2c1dfd8b2c6c",
     "label": "Cloud",
     "dreyfus": 7,
-    "parents": [
-      "65bf0d94-939c-4a37-8243-60d57187306e"
-    ],
+    "parents": ["65bf0d94-939c-4a37-8243-60d57187306e"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "32191a69-9815-4b39-925d-2c1dfd8b2c6c",
-    "children": [
-      "2521b59e-a5c6-41a0-b700-10c90b5ac4e7",
-      "655e1dc9-8304-483f-bbe3-32c01117e0f7"
-    ],
+    "children": ["2521b59e-a5c6-41a0-b700-10c90b5ac4e7", "655e1dc9-8304-483f-bbe3-32c01117e0f7"],
     "level": 1
   },
   {
@@ -1037,9 +879,7 @@
     "id": "35e30ab8-c2ac-443b-a3d2-d1da37de5cf0",
     "label": "Security",
     "dreyfus": 4,
-    "parents": [
-      "8539d89c-983b-42d8-a292-2b4ac1c9d8fe"
-    ],
+    "parents": ["8539d89c-983b-42d8-a292-2b4ac1c9d8fe"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": [
@@ -1058,9 +898,7 @@
       }
     ],
     "slug": "35e30ab8-c2ac-443b-a3d2-d1da37de5cf0",
-    "children": [
-
-    ],
+    "children": [],
     "level": 4
   },
   {
@@ -1069,17 +907,13 @@
     "id": "37b0ab70-9763-406a-bca9-832d94ee1d4d",
     "label": "IT Ops",
     "dreyfus": 5,
-    "parents": [
-      "c5978370-7a79-4bdc-89a3-c7c39406d339"
-    ],
+    "parents": ["c5978370-7a79-4bdc-89a3-c7c39406d339"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "37b0ab70-9763-406a-bca9-832d94ee1d4d",
-    "children": [
-      "863db8eb-e7e3-4ede-b2f0-5bf2149a5c25"
-    ],
+    "children": ["863db8eb-e7e3-4ede-b2f0-5bf2149a5c25"],
     "level": 12
   },
   {
@@ -1088,9 +922,7 @@
     "id": "40645fd6-95cc-439f-b972-ad03247f7aab",
     "label": "IT Ops",
     "dreyfus": 2,
-    "parents": [
-      "d349f771-56d5-4a80-ae59-abf3fd03ec29"
-    ],
+    "parents": ["d349f771-56d5-4a80-ae59-abf3fd03ec29"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -1103,9 +935,7 @@
       }
     ],
     "slug": "40645fd6-95cc-439f-b972-ad03247f7aab",
-    "children": [
-
-    ],
+    "children": [],
     "level": 4
   },
   {
@@ -1114,9 +944,7 @@
     "id": "3666aa91-6a35-4982-aead-a60c2c1175df",
     "label": "Testing",
     "dreyfus": 4,
-    "parents": [
-      "b77606f2-1ea5-4b9e-b77b-d4b96c914cf4"
-    ],
+    "parents": ["b77606f2-1ea5-4b9e-b77b-d4b96c914cf4"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -1129,9 +957,7 @@
       }
     ],
     "slug": "3666aa91-6a35-4982-aead-a60c2c1175df",
-    "children": [
-
-    ],
+    "children": [],
     "level": 5
   },
   {
@@ -1140,9 +966,7 @@
     "id": "3c947f5f-304e-46e8-9b84-a44e247ce162",
     "label": "Testing",
     "dreyfus": 6,
-    "parents": [
-      "7ab5ef58-b369-4b7b-b9a4-37bb222b9bb4"
-    ],
+    "parents": ["7ab5ef58-b369-4b7b-b9a4-37bb222b9bb4"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -1155,9 +979,7 @@
       }
     ],
     "slug": "3c947f5f-304e-46e8-9b84-a44e247ce162",
-    "children": [
-
-    ],
+    "children": [],
     "level": 7
   },
   {
@@ -1166,9 +988,7 @@
     "id": "3e2b482c-679c-44ac-9a81-95b02ba007f9",
     "label": "Cloud",
     "dreyfus": 2,
-    "parents": [
-      "473af4ae-2daa-4f68-a3ab-fc2fc3d7dc47"
-    ],
+    "parents": ["473af4ae-2daa-4f68-a3ab-fc2fc3d7dc47"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": [
@@ -1192,9 +1012,7 @@
       }
     ],
     "slug": "3e2b482c-679c-44ac-9a81-95b02ba007f9",
-    "children": [
-
-    ],
+    "children": [],
     "level": 3
   },
   {
@@ -1203,9 +1021,7 @@
     "id": "370ea3d4-b9c5-4e15-951a-e7847255937c",
     "label": "IT Ops",
     "dreyfus": 3,
-    "parents": [
-      "12d2da66-4ba5-4f9e-b22a-c65539b49de9"
-    ],
+    "parents": ["12d2da66-4ba5-4f9e-b22a-c65539b49de9"],
     "hasCertification": true,
     "isFinished": true,
     "other_resources": null,
@@ -1218,9 +1034,7 @@
       }
     ],
     "slug": "370ea3d4-b9c5-4e15-951a-e7847255937c",
-    "children": [
-      "ecd229b5-1758-4de5-a966-4b5880aace74"
-    ],
+    "children": ["ecd229b5-1758-4de5-a966-4b5880aace74"],
     "level": 3
   },
   {
@@ -1229,9 +1043,7 @@
     "id": "43919303-85fc-418e-b0ad-19f5c3a22cb1",
     "label": "Cloud",
     "dreyfus": 4,
-    "parents": [
-      "3492fa3a-8adc-48d4-92e8-5bc1e39a463b"
-    ],
+    "parents": ["3492fa3a-8adc-48d4-92e8-5bc1e39a463b"],
     "hasCertification": true,
     "isFinished": true,
     "other_resources": null,
@@ -1250,17 +1062,13 @@
     "id": "40cecc08-8a77-43bc-ae96-1630e51f588e",
     "label": "IT Ops",
     "dreyfus": 4,
-    "parents": [
-      "a20f466e-7c31-485c-9e80-3182e1d008f8"
-    ],
+    "parents": ["a20f466e-7c31-485c-9e80-3182e1d008f8"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "40cecc08-8a77-43bc-ae96-1630e51f588e",
-    "children": [
-      "b1282c2c-9bdb-48bb-b1e0-eb0bb1b3cdaa"
-    ],
+    "children": ["b1282c2c-9bdb-48bb-b1e0-eb0bb1b3cdaa"],
     "level": 7
   },
   {
@@ -1269,18 +1077,13 @@
     "id": "4475879a-4747-4454-b9ec-e0d1b367a216",
     "label": "Testing",
     "dreyfus": 2,
-    "parents": [
-      "fddb2017-a6d0-4031-b98b-adc64d0226e2"
-    ],
+    "parents": ["fddb2017-a6d0-4031-b98b-adc64d0226e2"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "4475879a-4747-4454-b9ec-e0d1b367a216",
-    "children": [
-      "01dc8fe3-2c6a-44b1-b1e0-1488e29285a5",
-      "a8e406a7-2c4c-40ba-ba40-57f4118ad631"
-    ],
+    "children": ["01dc8fe3-2c6a-44b1-b1e0-1488e29285a5", "a8e406a7-2c4c-40ba-ba40-57f4118ad631"],
     "level": 4
   },
   {
@@ -1289,9 +1092,7 @@
     "id": "38839c25-19e0-4a0f-ae74-99ff34dd49a2",
     "label": "Cloud",
     "dreyfus": 5,
-    "parents": [
-      "a821bac4-90f2-4b0f-b834-f385f14df7db"
-    ],
+    "parents": ["a821bac4-90f2-4b0f-b834-f385f14df7db"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -1304,9 +1105,7 @@
       }
     ],
     "slug": "38839c25-19e0-4a0f-ae74-99ff34dd49a2",
-    "children": [
-
-    ],
+    "children": [],
     "level": 5
   },
   {
@@ -1315,9 +1114,7 @@
     "id": "473af4ae-2daa-4f68-a3ab-fc2fc3d7dc47",
     "label": "Cloud",
     "dreyfus": 2,
-    "parents": [
-      "0158429d-7bc7-434f-b4f9-64f85168c198"
-    ],
+    "parents": ["0158429d-7bc7-434f-b4f9-64f85168c198"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": [
@@ -1366,9 +1163,7 @@
     "id": "40bd732c-25ad-4635-a51b-6767b67b3d15",
     "label": "IT Ops",
     "dreyfus": 4,
-    "parents": [
-      "e82b56ee-bd86-4c89-b2a3-aa35abf4896b"
-    ],
+    "parents": ["e82b56ee-bd86-4c89-b2a3-aa35abf4896b"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -1400,9 +1195,7 @@
     "id": "41c9bbe0-5c25-4e6a-91b9-c6104c18fe9f",
     "label": "Cloud",
     "dreyfus": 2,
-    "parents": [
-      "473af4ae-2daa-4f68-a3ab-fc2fc3d7dc47"
-    ],
+    "parents": ["473af4ae-2daa-4f68-a3ab-fc2fc3d7dc47"],
     "hasCertification": true,
     "isFinished": true,
     "other_resources": [
@@ -1444,9 +1237,7 @@
     "id": "4bd65aba-95a2-43c9-8063-5423103b230b",
     "label": "Cloud",
     "dreyfus": -1,
-    "parents": [
-
-    ],
+    "parents": [],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -1465,9 +1256,7 @@
       }
     ],
     "slug": "4bd65aba-95a2-43c9-8063-5423103b230b",
-    "children": [
-
-    ],
+    "children": [],
     "level": 0
   },
   {
@@ -1476,9 +1265,7 @@
     "id": "4a417ecd-1217-4687-9cb3-74327f71b93b",
     "label": "Testing",
     "dreyfus": 7,
-    "parents": [
-      "d9f73741-429d-4b40-813f-33644e01e833"
-    ],
+    "parents": ["d9f73741-429d-4b40-813f-33644e01e833"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -1499,17 +1286,13 @@
     "id": "4cd166dc-895c-42e9-9c54-626a757fb05b",
     "label": "Testing",
     "dreyfus": 2,
-    "parents": [
-      "fddb2017-a6d0-4031-b98b-adc64d0226e2"
-    ],
+    "parents": ["fddb2017-a6d0-4031-b98b-adc64d0226e2"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "4cd166dc-895c-42e9-9c54-626a757fb05b",
-    "children": [
-
-    ],
+    "children": [],
     "level": 4
   },
   {
@@ -1518,9 +1301,7 @@
     "id": "534a6045-05a4-433b-a197-cceb1d8915dd",
     "label": "Cloud",
     "dreyfus": 4,
-    "parents": [
-      "99dcda6a-6577-4925-8e48-7f5b19c8c958"
-    ],
+    "parents": ["99dcda6a-6577-4925-8e48-7f5b19c8c958"],
     "hasCertification": true,
     "isFinished": true,
     "other_resources": [
@@ -1544,9 +1325,7 @@
       }
     ],
     "slug": "534a6045-05a4-433b-a197-cceb1d8915dd",
-    "children": [
-
-    ],
+    "children": [],
     "level": 3
   },
   {
@@ -1555,9 +1334,7 @@
     "id": "51dbb51b-7748-4dc1-a462-a374aaf0634e",
     "label": "Security",
     "dreyfus": 2,
-    "parents": [
-      "2bdeef95-caa1-46d0-ac8b-ed225219a3fb"
-    ],
+    "parents": ["2bdeef95-caa1-46d0-ac8b-ed225219a3fb"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": [
@@ -1576,10 +1353,7 @@
       }
     ],
     "slug": "51dbb51b-7748-4dc1-a462-a374aaf0634e",
-    "children": [
-      "7d9ad516-50b7-4d99-8e56-7f7ebc1691a3",
-      "8539d89c-983b-42d8-a292-2b4ac1c9d8fe"
-    ],
+    "children": ["7d9ad516-50b7-4d99-8e56-7f7ebc1691a3", "8539d89c-983b-42d8-a292-2b4ac1c9d8fe"],
     "level": 2
   },
   {
@@ -1588,9 +1362,7 @@
     "id": "54988f02-f3f1-47e6-8b26-c2bacab2ad8f",
     "label": "Testing",
     "dreyfus": 3,
-    "parents": [
-      "d9f73741-429d-4b40-813f-33644e01e833"
-    ],
+    "parents": ["d9f73741-429d-4b40-813f-33644e01e833"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -1603,9 +1375,7 @@
       }
     ],
     "slug": "54988f02-f3f1-47e6-8b26-c2bacab2ad8f",
-    "children": [
-      "9a83fabd-16e8-46f5-9efe-aa7e743ae5fb"
-    ],
+    "children": ["9a83fabd-16e8-46f5-9efe-aa7e743ae5fb"],
     "level": 4
   },
   {
@@ -1614,9 +1384,7 @@
     "id": "549f2cbe-955e-4b76-9bb0-9bfe5e59cbbe",
     "label": "IT Ops",
     "dreyfus": 2,
-    "parents": [
-      "56648cdd-e566-469c-b646-4b7ef8faa653"
-    ],
+    "parents": ["56648cdd-e566-469c-b646-4b7ef8faa653"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -1629,9 +1397,7 @@
       }
     ],
     "slug": "549f2cbe-955e-4b76-9bb0-9bfe5e59cbbe",
-    "children": [
-      "2a7f735b-0513-4c4b-930c-91466b5553d5"
-    ],
+    "children": ["2a7f735b-0513-4c4b-930c-91466b5553d5"],
     "level": 3
   },
   {
@@ -1640,9 +1406,7 @@
     "id": "4c4d8165-a50b-42bc-9920-e0561c1a9885",
     "label": "Security",
     "dreyfus": 4,
-    "parents": [
-      "b0e2ad55-5dc8-4ebb-93f5-58fe46b670a5"
-    ],
+    "parents": ["b0e2ad55-5dc8-4ebb-93f5-58fe46b670a5"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": [
@@ -1673,9 +1437,7 @@
       }
     ],
     "slug": "4c4d8165-a50b-42bc-9920-e0561c1a9885",
-    "children": [
-
-    ],
+    "children": [],
     "level": 3
   },
   {
@@ -1684,17 +1446,13 @@
     "id": "56648cdd-e566-469c-b646-4b7ef8faa653",
     "label": "IT Ops",
     "dreyfus": 2,
-    "parents": [
-      "0f73f4bd-040d-4dea-92e6-5bc746007fa7"
-    ],
+    "parents": ["0f73f4bd-040d-4dea-92e6-5bc746007fa7"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "56648cdd-e566-469c-b646-4b7ef8faa653",
-    "children": [
-      "549f2cbe-955e-4b76-9bb0-9bfe5e59cbbe"
-    ],
+    "children": ["549f2cbe-955e-4b76-9bb0-9bfe5e59cbbe"],
     "level": 2
   },
   {
@@ -1703,18 +1461,13 @@
     "id": "3492fa3a-8adc-48d4-92e8-5bc1e39a463b",
     "label": "Cloud",
     "dreyfus": 4,
-    "parents": [
-      "a792f567-c795-4c37-8363-68d6decee16f"
-    ],
+    "parents": ["a792f567-c795-4c37-8363-68d6decee16f"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "3492fa3a-8adc-48d4-92e8-5bc1e39a463b",
-    "children": [
-      "43919303-85fc-418e-b0ad-19f5c3a22cb1",
-      "a5e6d5ec-d4d7-40e1-9a77-d8f0ef861541"
-    ],
+    "children": ["43919303-85fc-418e-b0ad-19f5c3a22cb1", "a5e6d5ec-d4d7-40e1-9a77-d8f0ef861541"],
     "level": 5
   },
   {
@@ -1723,9 +1476,7 @@
     "id": "56b09afd-fcb1-4947-ad10-c8dc73b0f338",
     "label": "Testing",
     "dreyfus": 4,
-    "parents": [
-      "b77606f2-1ea5-4b9e-b77b-d4b96c914cf4"
-    ],
+    "parents": ["b77606f2-1ea5-4b9e-b77b-d4b96c914cf4"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -1738,9 +1489,7 @@
       }
     ],
     "slug": "56b09afd-fcb1-4947-ad10-c8dc73b0f338",
-    "children": [
-
-    ],
+    "children": [],
     "level": 5
   },
   {
@@ -1749,9 +1498,7 @@
     "id": "56ccb7f7-40d8-489b-bd42-8f597b4044e3",
     "label": "Testing",
     "dreyfus": 5,
-    "parents": [
-      "1f7a190b-b5cd-4960-ae56-f64b07edd5b5"
-    ],
+    "parents": ["1f7a190b-b5cd-4960-ae56-f64b07edd5b5"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -1764,9 +1511,7 @@
       }
     ],
     "slug": "56ccb7f7-40d8-489b-bd42-8f597b4044e3",
-    "children": [
-
-    ],
+    "children": [],
     "level": 6
   },
   {
@@ -1775,9 +1520,7 @@
     "id": "53a9bbeb-77f8-45f4-bf3b-d9cd6f917b6e",
     "label": "Cloud",
     "dreyfus": 7,
-    "parents": [
-      "65bf0d94-939c-4a37-8243-60d57187306e"
-    ],
+    "parents": ["65bf0d94-939c-4a37-8243-60d57187306e"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -1796,17 +1539,13 @@
     "id": "5bf92cdf-0951-4bbf-8167-ca9ac4baaa91",
     "label": "IT Ops",
     "dreyfus": 4,
-    "parents": [
-      "15d3ee92-5027-432a-91fa-68c47880fe38"
-    ],
+    "parents": ["15d3ee92-5027-432a-91fa-68c47880fe38"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "5bf92cdf-0951-4bbf-8167-ca9ac4baaa91",
-    "children": [
-
-    ],
+    "children": [],
     "level": 9
   },
   {
@@ -1815,9 +1554,7 @@
     "id": "5a9b4617-6d21-469f-91cc-8a83aac6d381",
     "label": "Cloud",
     "dreyfus": 3,
-    "parents": [
-      "7b9b5122-fb90-4cbe-80a1-bb917d63c504"
-    ],
+    "parents": ["7b9b5122-fb90-4cbe-80a1-bb917d63c504"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -1830,9 +1567,7 @@
       }
     ],
     "slug": "5a9b4617-6d21-469f-91cc-8a83aac6d381",
-    "children": [
-      "66f34aab-4e9e-4cc4-9abe-81f79dccf863"
-    ],
+    "children": ["66f34aab-4e9e-4cc4-9abe-81f79dccf863"],
     "level": 4
   },
   {
@@ -1841,17 +1576,13 @@
     "id": "5e600cbf-290f-4681-8e58-2c4ebfc4b256",
     "label": "Cloud",
     "dreyfus": 2,
-    "parents": [
-      "0bc9b15f-0b7b-4ce8-947b-0d96f49338bd"
-    ],
+    "parents": ["0bc9b15f-0b7b-4ce8-947b-0d96f49338bd"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "5e600cbf-290f-4681-8e58-2c4ebfc4b256",
-    "children": [
-      "a9bde7cf-349b-4cab-b575-cea039fe4310"
-    ],
+    "children": ["a9bde7cf-349b-4cab-b575-cea039fe4310"],
     "level": 3
   },
   {
@@ -1860,9 +1591,7 @@
     "id": "61a896f5-2ee7-4eed-a2d5-6dbe2b01e300",
     "label": "Testing",
     "dreyfus": 3,
-    "parents": [
-      "4a417ecd-1217-4687-9cb3-74327f71b93b"
-    ],
+    "parents": ["4a417ecd-1217-4687-9cb3-74327f71b93b"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -1875,9 +1604,7 @@
       }
     ],
     "slug": "61a896f5-2ee7-4eed-a2d5-6dbe2b01e300",
-    "children": [
-
-    ],
+    "children": [],
     "level": 5
   },
   {
@@ -1886,9 +1613,7 @@
     "id": "5d9d7e72-1ca9-4e5a-993d-05aeedb55d9d",
     "label": "Cloud",
     "dreyfus": 3,
-    "parents": [
-      "41c9bbe0-5c25-4e6a-91b9-c6104c18fe9f"
-    ],
+    "parents": ["41c9bbe0-5c25-4e6a-91b9-c6104c18fe9f"],
     "hasCertification": true,
     "isFinished": true,
     "other_resources": [
@@ -1903,13 +1628,9 @@
         "link": "https://kubernetes.io/docs/home/"
       }
     ],
-    "courses": [
-
-    ],
+    "courses": [],
     "slug": "5d9d7e72-1ca9-4e5a-993d-05aeedb55d9d",
-    "children": [
-      "9b9c8b32-14de-46d3-942f-482b80b23a00"
-    ],
+    "children": ["9b9c8b32-14de-46d3-942f-482b80b23a00"],
     "level": 4
   },
   {
@@ -1918,9 +1639,7 @@
     "id": "6053a351-9868-42ee-8bca-394537fb0fae",
     "label": "Testing",
     "dreyfus": 2,
-    "parents": [
-      "7ae3fb8b-bc5c-429c-bbfd-8e43ee7f1347"
-    ],
+    "parents": ["7ae3fb8b-bc5c-429c-bbfd-8e43ee7f1347"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -1933,10 +1652,7 @@
       }
     ],
     "slug": "6053a351-9868-42ee-8bca-394537fb0fae",
-    "children": [
-      "d9f73741-429d-4b40-813f-33644e01e833",
-      "fddb2017-a6d0-4031-b98b-adc64d0226e2"
-    ],
+    "children": ["d9f73741-429d-4b40-813f-33644e01e833", "fddb2017-a6d0-4031-b98b-adc64d0226e2"],
     "level": 2
   },
   {
@@ -1945,17 +1661,13 @@
     "id": "633db070-a18c-4009-a8d5-75be7e77fb2e",
     "label": "IT Ops",
     "dreyfus": 3,
-    "parents": [
-      "e29a7883-97cf-43d4-a35b-316fda78173d"
-    ],
+    "parents": ["e29a7883-97cf-43d4-a35b-316fda78173d"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "633db070-a18c-4009-a8d5-75be7e77fb2e",
-    "children": [
-
-    ],
+    "children": [],
     "level": 3
   },
   {
@@ -1964,17 +1676,13 @@
     "id": "61dd5226-acf3-4114-87a8-6778fab2eed0",
     "label": "IT Ops",
     "dreyfus": 3,
-    "parents": [
-      "2a7f735b-0513-4c4b-930c-91466b5553d5"
-    ],
+    "parents": ["2a7f735b-0513-4c4b-930c-91466b5553d5"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "61dd5226-acf3-4114-87a8-6778fab2eed0",
-    "children": [
-
-    ],
+    "children": [],
     "level": 5
   },
   {
@@ -1983,9 +1691,7 @@
     "id": "6432e193-8cd2-4854-8ef2-9f75785f6943",
     "label": "IT Ops",
     "dreyfus": 4,
-    "parents": [
-      "17194f73-5e15-4b28-a007-baf0df649604"
-    ],
+    "parents": ["17194f73-5e15-4b28-a007-baf0df649604"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": [
@@ -2014,9 +1720,7 @@
       }
     ],
     "slug": "6432e193-8cd2-4854-8ef2-9f75785f6943",
-    "children": [
-
-    ],
+    "children": [],
     "level": 6
   },
   {
@@ -2025,9 +1729,7 @@
     "id": "655e1dc9-8304-483f-bbe3-32c01117e0f7",
     "label": "Cloud",
     "dreyfus": 2,
-    "parents": [
-      "32191a69-9815-4b39-925d-2c1dfd8b2c6c"
-    ],
+    "parents": ["32191a69-9815-4b39-925d-2c1dfd8b2c6c"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -2046,9 +1748,7 @@
       }
     ],
     "slug": "655e1dc9-8304-483f-bbe3-32c01117e0f7",
-    "children": [
-      "7b9b5122-fb90-4cbe-80a1-bb917d63c504"
-    ],
+    "children": ["7b9b5122-fb90-4cbe-80a1-bb917d63c504"],
     "level": 2
   },
   {
@@ -2057,17 +1757,13 @@
     "id": "66b2a092-7c85-4271-98bf-a34069076d95",
     "label": "Cloud",
     "dreyfus": 2,
-    "parents": [
-      "a9bde7cf-349b-4cab-b575-cea039fe4310"
-    ],
+    "parents": ["a9bde7cf-349b-4cab-b575-cea039fe4310"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "66b2a092-7c85-4271-98bf-a34069076d95",
-    "children": [
-
-    ],
+    "children": [],
     "level": 5
   },
   {
@@ -2097,17 +1793,13 @@
     "id": "687949cc-a3a6-4bd1-af1a-9bc3cee33e5d",
     "label": "IT Ops",
     "dreyfus": 3,
-    "parents": [
-      "2a7f735b-0513-4c4b-930c-91466b5553d5"
-    ],
+    "parents": ["2a7f735b-0513-4c4b-930c-91466b5553d5"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "687949cc-a3a6-4bd1-af1a-9bc3cee33e5d",
-    "children": [
-
-    ],
+    "children": [],
     "level": 5
   },
   {
@@ -2116,9 +1808,7 @@
     "id": "6916b3e1-4879-4291-ad60-84325c77fc8a",
     "label": "Testing",
     "dreyfus": 5,
-    "parents": [
-      "1f7a190b-b5cd-4960-ae56-f64b07edd5b5"
-    ],
+    "parents": ["1f7a190b-b5cd-4960-ae56-f64b07edd5b5"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -2131,9 +1821,7 @@
       }
     ],
     "slug": "6916b3e1-4879-4291-ad60-84325c77fc8a",
-    "children": [
-
-    ],
+    "children": [],
     "level": 6
   },
   {
@@ -2142,9 +1830,7 @@
     "id": "66f34aab-4e9e-4cc4-9abe-81f79dccf863",
     "label": "Cloud",
     "dreyfus": 4,
-    "parents": [
-      "5a9b4617-6d21-469f-91cc-8a83aac6d381"
-    ],
+    "parents": ["5a9b4617-6d21-469f-91cc-8a83aac6d381"],
     "hasCertification": true,
     "isFinished": true,
     "other_resources": null,
@@ -2157,9 +1843,7 @@
       }
     ],
     "slug": "66f34aab-4e9e-4cc4-9abe-81f79dccf863",
-    "children": [
-
-    ],
+    "children": [],
     "level": 5
   },
   {
@@ -2168,9 +1852,7 @@
     "id": "69816093-c73e-490d-a442-9990b9eb3256",
     "label": "Cloud",
     "dreyfus": 3,
-    "parents": [
-      "41c9bbe0-5c25-4e6a-91b9-c6104c18fe9f"
-    ],
+    "parents": ["41c9bbe0-5c25-4e6a-91b9-c6104c18fe9f"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": [
@@ -2205,9 +1887,7 @@
       }
     ],
     "slug": "69816093-c73e-490d-a442-9990b9eb3256",
-    "children": [
-
-    ],
+    "children": [],
     "level": 4
   },
   {
@@ -2216,9 +1896,7 @@
     "id": "6cf2b048-f666-47fb-9e71-ffd7e4236dca",
     "label": "IT Ops",
     "dreyfus": 5,
-    "parents": [
-      "9a2fcc8d-62c1-4ed5-9a2d-4ff667148b22"
-    ],
+    "parents": ["9a2fcc8d-62c1-4ed5-9a2d-4ff667148b22"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": [
@@ -2260,17 +1938,13 @@
     "id": "6a2af477-490f-4515-a2b3-227153502f7f",
     "label": "Cloud",
     "dreyfus": 6,
-    "parents": [
-      "cac7dae4-7747-4318-913c-849cb09cb065"
-    ],
+    "parents": ["cac7dae4-7747-4318-913c-849cb09cb065"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "6a2af477-490f-4515-a2b3-227153502f7f",
-    "children": [
-
-    ],
+    "children": [],
     "level": 9
   },
   {
@@ -2279,18 +1953,13 @@
     "id": "6fa0f0a5-9add-47e0-867f-6ab33ffd6c0b",
     "label": "Cloud",
     "dreyfus": 3,
-    "parents": [
-      "9b9c8b32-14de-46d3-942f-482b80b23a00"
-    ],
+    "parents": ["9b9c8b32-14de-46d3-942f-482b80b23a00"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "6fa0f0a5-9add-47e0-867f-6ab33ffd6c0b",
-    "children": [
-      "131bad77-4886-489e-ab21-181e1f9fcf77",
-      "c7e2c073-eaab-4f02-9ea3-cf06238cdcf8"
-    ],
+    "children": ["131bad77-4886-489e-ab21-181e1f9fcf77", "c7e2c073-eaab-4f02-9ea3-cf06238cdcf8"],
     "level": 6
   },
   {
@@ -2299,9 +1968,7 @@
     "id": "6705915d-b7d1-4f6f-b187-3ff855af81e6",
     "label": "IT Ops",
     "dreyfus": 5,
-    "parents": [
-      "0641e5f8-44b2-42e1-86b4-e2f51a0faf8c"
-    ],
+    "parents": ["0641e5f8-44b2-42e1-86b4-e2f51a0faf8c"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": [
@@ -2330,9 +1997,7 @@
       }
     ],
     "slug": "6705915d-b7d1-4f6f-b187-3ff855af81e6",
-    "children": [
-
-    ],
+    "children": [],
     "level": 8
   },
   {
@@ -2341,9 +2006,7 @@
     "id": "72be5242-755d-4413-892d-e1e6d0d177c6",
     "label": "Testing",
     "dreyfus": 3,
-    "parents": [
-      "7b6d0538-20de-421a-8590-a249322e8f78"
-    ],
+    "parents": ["7b6d0538-20de-421a-8590-a249322e8f78"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -2356,9 +2019,7 @@
       }
     ],
     "slug": "72be5242-755d-4413-892d-e1e6d0d177c6",
-    "children": [
-      "b0f38ad4-d6bd-4f78-b38b-eb69ab393c6a"
-    ],
+    "children": ["b0f38ad4-d6bd-4f78-b38b-eb69ab393c6a"],
     "level": 5
   },
   {
@@ -2367,17 +2028,13 @@
     "id": "7590e11f-0842-40c8-8abd-cc7a1ced0048",
     "label": "Testing",
     "dreyfus": 6,
-    "parents": [
-      "7ab5ef58-b369-4b7b-b9a4-37bb222b9bb4"
-    ],
+    "parents": ["7ab5ef58-b369-4b7b-b9a4-37bb222b9bb4"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "7590e11f-0842-40c8-8abd-cc7a1ced0048",
-    "children": [
-
-    ],
+    "children": [],
     "level": 7
   },
   {
@@ -2386,17 +2043,13 @@
     "id": "751ea936-94b5-43b6-b9ee-2f5b1d8ce1e3",
     "label": "IT Ops",
     "dreyfus": 6,
-    "parents": [
-      "e3fd7e73-6315-45a2-bcb5-0d994f48a065"
-    ],
+    "parents": ["e3fd7e73-6315-45a2-bcb5-0d994f48a065"],
     "hasCertification": true,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "751ea936-94b5-43b6-b9ee-2f5b1d8ce1e3",
-    "children": [
-
-    ],
+    "children": [],
     "level": 12
   },
   {
@@ -2405,17 +2058,13 @@
     "id": "72630a4f-6a7f-412d-a2f3-fbe1813b620a",
     "label": "IT Ops",
     "dreyfus": 7,
-    "parents": [
-      "e8a1f78e-6719-45be-b0b0-6fb591a7b0bc"
-    ],
+    "parents": ["e8a1f78e-6719-45be-b0b0-6fb591a7b0bc"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "72630a4f-6a7f-412d-a2f3-fbe1813b620a",
-    "children": [
-      "c5978370-7a79-4bdc-89a3-c7c39406d339"
-    ],
+    "children": ["c5978370-7a79-4bdc-89a3-c7c39406d339"],
     "level": 10
   },
   {
@@ -2424,9 +2073,7 @@
     "id": "7894b628-2848-4b39-aa2c-90c57bc8aed1",
     "label": "Cloud",
     "dreyfus": 3,
-    "parents": [
-      "fa0e5fab-8627-4a7e-9ff1-4064ef40cbfe"
-    ],
+    "parents": ["fa0e5fab-8627-4a7e-9ff1-4064ef40cbfe"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": [
@@ -2461,9 +2108,7 @@
       }
     ],
     "slug": "7894b628-2848-4b39-aa2c-90c57bc8aed1",
-    "children": [
-
-    ],
+    "children": [],
     "level": 4
   },
   {
@@ -2472,9 +2117,7 @@
     "id": "73466259-4e1b-496e-b150-5af9b828281f",
     "label": "Cloud",
     "dreyfus": 4,
-    "parents": [
-      "80aa87d0-d5a3-4e90-a5b7-71a9a9fc2b59"
-    ],
+    "parents": ["80aa87d0-d5a3-4e90-a5b7-71a9a9fc2b59"],
     "hasCertification": true,
     "isFinished": true,
     "other_resources": [
@@ -2498,9 +2141,7 @@
       }
     ],
     "slug": "73466259-4e1b-496e-b150-5af9b828281f",
-    "children": [
-
-    ],
+    "children": [],
     "level": 3
   },
   {
@@ -2509,17 +2150,13 @@
     "id": "7673ec3a-0d29-44d7-830b-978226c7d468",
     "label": "IT Ops",
     "dreyfus": 4,
-    "parents": [
-      "a20f466e-7c31-485c-9e80-3182e1d008f8"
-    ],
+    "parents": ["a20f466e-7c31-485c-9e80-3182e1d008f8"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "7673ec3a-0d29-44d7-830b-978226c7d468",
-    "children": [
-
-    ],
+    "children": [],
     "level": 7
   },
   {
@@ -2528,17 +2165,13 @@
     "id": "78c25b96-0c4d-43dd-b246-68a587446b8a",
     "label": "IT Ops",
     "dreyfus": 3,
-    "parents": [
-      "b53c09da-8137-4149-ba7b-269de8bc2ea2"
-    ],
+    "parents": ["b53c09da-8137-4149-ba7b-269de8bc2ea2"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "78c25b96-0c4d-43dd-b246-68a587446b8a",
-    "children": [
-
-    ],
+    "children": [],
     "level": 3
   },
   {
@@ -2547,17 +2180,13 @@
     "id": "7ae3fb8b-bc5c-429c-bbfd-8e43ee7f1347",
     "label": "Testing",
     "dreyfus": 7,
-    "parents": [
-      "eaa27ff7-21a2-4cbf-ac6b-c344a3f7ef9f"
-    ],
+    "parents": ["eaa27ff7-21a2-4cbf-ac6b-c344a3f7ef9f"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "7ae3fb8b-bc5c-429c-bbfd-8e43ee7f1347",
-    "children": [
-      "6053a351-9868-42ee-8bca-394537fb0fae"
-    ],
+    "children": ["6053a351-9868-42ee-8bca-394537fb0fae"],
     "level": 1
   },
   {
@@ -2566,10 +2195,7 @@
     "id": "7b9b5122-fb90-4cbe-80a1-bb917d63c504",
     "label": "Cloud",
     "dreyfus": 2,
-    "parents": [
-      "655e1dc9-8304-483f-bbe3-32c01117e0f7",
-      "2521b59e-a5c6-41a0-b700-10c90b5ac4e7"
-    ],
+    "parents": ["655e1dc9-8304-483f-bbe3-32c01117e0f7", "2521b59e-a5c6-41a0-b700-10c90b5ac4e7"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -2600,9 +2226,7 @@
     "id": "7b6d0538-20de-421a-8590-a249322e8f78",
     "label": "Testing",
     "dreyfus": 7,
-    "parents": [
-      "d9f73741-429d-4b40-813f-33644e01e833"
-    ],
+    "parents": ["d9f73741-429d-4b40-813f-33644e01e833"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -2624,9 +2248,7 @@
     "id": "7bbdf8bc-2493-4579-af2f-e39153aa73a7",
     "label": "Cloud",
     "dreyfus": 3,
-    "parents": [
-      "7b9b5122-fb90-4cbe-80a1-bb917d63c504"
-    ],
+    "parents": ["7b9b5122-fb90-4cbe-80a1-bb917d63c504"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -2652,9 +2274,7 @@
     "id": "7ab5ef58-b369-4b7b-b9a4-37bb222b9bb4",
     "label": "Testing",
     "dreyfus": 7,
-    "parents": [
-      "1f7a190b-b5cd-4960-ae56-f64b07edd5b5"
-    ],
+    "parents": ["1f7a190b-b5cd-4960-ae56-f64b07edd5b5"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -2673,17 +2293,13 @@
     "id": "7f531c49-74b5-4272-acc8-78062e32b5a7",
     "label": "Cloud",
     "dreyfus": 4,
-    "parents": [
-      "43919303-85fc-418e-b0ad-19f5c3a22cb1"
-    ],
+    "parents": ["43919303-85fc-418e-b0ad-19f5c3a22cb1"],
     "hasCertification": true,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "7f531c49-74b5-4272-acc8-78062e32b5a7",
-    "children": [
-
-    ],
+    "children": [],
     "level": 7
   },
   {
@@ -2692,9 +2308,7 @@
     "id": "7fd60d5d-0f1f-41fa-8700-a1b15b99dab8",
     "label": "Testing",
     "dreyfus": 5,
-    "parents": [
-      "1f7a190b-b5cd-4960-ae56-f64b07edd5b5"
-    ],
+    "parents": ["1f7a190b-b5cd-4960-ae56-f64b07edd5b5"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -2707,9 +2321,7 @@
       }
     ],
     "slug": "7fd60d5d-0f1f-41fa-8700-a1b15b99dab8",
-    "children": [
-
-    ],
+    "children": [],
     "level": 6
   },
   {
@@ -2718,17 +2330,13 @@
     "id": "8112797a-5741-4236-990a-9954634366b1",
     "label": "IT Ops",
     "dreyfus": 7,
-    "parents": [
-      "12e53b8d-798f-47e8-b372-b9ae071ac2aa"
-    ],
+    "parents": ["12e53b8d-798f-47e8-b372-b9ae071ac2aa"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "8112797a-5741-4236-990a-9954634366b1",
-    "children": [
-      "a8049c69-e7fa-44d5-bfbf-0b533af5cec7"
-    ],
+    "children": ["a8049c69-e7fa-44d5-bfbf-0b533af5cec7"],
     "level": 2
   },
   {
@@ -2737,9 +2345,7 @@
     "id": "80aa87d0-d5a3-4e90-a5b7-71a9a9fc2b59",
     "label": "Cloud",
     "dreyfus": 2,
-    "parents": [
-      "53a9bbeb-77f8-45f4-bf3b-d9cd6f917b6e"
-    ],
+    "parents": ["53a9bbeb-77f8-45f4-bf3b-d9cd6f917b6e"],
     "hasCertification": true,
     "isFinished": true,
     "other_resources": [
@@ -2786,9 +2392,7 @@
     "id": "7d9ad516-50b7-4d99-8e56-7f7ebc1691a3",
     "label": "Security",
     "dreyfus": 3,
-    "parents": [
-      "51dbb51b-7748-4dc1-a462-a374aaf0634e"
-    ],
+    "parents": ["51dbb51b-7748-4dc1-a462-a374aaf0634e"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": [
@@ -2807,9 +2411,7 @@
       }
     ],
     "slug": "7d9ad516-50b7-4d99-8e56-7f7ebc1691a3",
-    "children": [
-
-    ],
+    "children": [],
     "level": 3
   },
   {
@@ -2818,17 +2420,13 @@
     "id": "8160aac2-6a54-4b15-a5c1-619083b4f597",
     "label": "IT Ops",
     "dreyfus": 3,
-    "parents": [
-      "2a7f735b-0513-4c4b-930c-91466b5553d5"
-    ],
+    "parents": ["2a7f735b-0513-4c4b-930c-91466b5553d5"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "8160aac2-6a54-4b15-a5c1-619083b4f597",
-    "children": [
-
-    ],
+    "children": [],
     "level": 5
   },
   {
@@ -2837,9 +2435,7 @@
     "id": "8539d89c-983b-42d8-a292-2b4ac1c9d8fe",
     "label": "Security",
     "dreyfus": 3,
-    "parents": [
-      "51dbb51b-7748-4dc1-a462-a374aaf0634e"
-    ],
+    "parents": ["51dbb51b-7748-4dc1-a462-a374aaf0634e"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": [
@@ -2864,9 +2460,7 @@
       }
     ],
     "slug": "8539d89c-983b-42d8-a292-2b4ac1c9d8fe",
-    "children": [
-      "35e30ab8-c2ac-443b-a3d2-d1da37de5cf0"
-    ],
+    "children": ["35e30ab8-c2ac-443b-a3d2-d1da37de5cf0"],
     "level": 3
   },
   {
@@ -2875,9 +2469,7 @@
     "id": "89e2387a-7ffe-448a-95ca-e92fe8a5c6f9",
     "label": "Testing",
     "dreyfus": 4,
-    "parents": [
-      "b77606f2-1ea5-4b9e-b77b-d4b96c914cf4"
-    ],
+    "parents": ["b77606f2-1ea5-4b9e-b77b-d4b96c914cf4"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -2890,9 +2482,7 @@
       }
     ],
     "slug": "89e2387a-7ffe-448a-95ca-e92fe8a5c6f9",
-    "children": [
-      "ba9f5d72-def3-49f1-9a7c-31d33f024d8c"
-    ],
+    "children": ["ba9f5d72-def3-49f1-9a7c-31d33f024d8c"],
     "level": 5
   },
   {
@@ -2901,9 +2491,7 @@
     "id": "863db8eb-e7e3-4ede-b2f0-5bf2149a5c25",
     "label": "IT Ops",
     "dreyfus": 5,
-    "parents": [
-      "37b0ab70-9763-406a-bca9-832d94ee1d4d"
-    ],
+    "parents": ["37b0ab70-9763-406a-bca9-832d94ee1d4d"],
     "hasCertification": true,
     "isFinished": true,
     "other_resources": null,
@@ -2916,9 +2504,7 @@
       }
     ],
     "slug": "863db8eb-e7e3-4ede-b2f0-5bf2149a5c25",
-    "children": [
-      "a2af4fd2-128d-4734-a40f-ec47519fbb2a"
-    ],
+    "children": ["a2af4fd2-128d-4734-a40f-ec47519fbb2a"],
     "level": 13
   },
   {
@@ -2927,9 +2513,7 @@
     "id": "8de8a706-c19e-4c34-8c82-9797c69c2712",
     "label": "Testing",
     "dreyfus": 6,
-    "parents": [
-      "7ab5ef58-b369-4b7b-b9a4-37bb222b9bb4"
-    ],
+    "parents": ["7ab5ef58-b369-4b7b-b9a4-37bb222b9bb4"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -2942,9 +2526,7 @@
       }
     ],
     "slug": "8de8a706-c19e-4c34-8c82-9797c69c2712",
-    "children": [
-
-    ],
+    "children": [],
     "level": 7
   },
   {
@@ -2953,9 +2535,7 @@
     "id": "8998d6df-e9f5-4db2-87e6-66aaca768fc6",
     "label": "IT Ops",
     "dreyfus": 5,
-    "parents": [
-      "0641e5f8-44b2-42e1-86b4-e2f51a0faf8c"
-    ],
+    "parents": ["0641e5f8-44b2-42e1-86b4-e2f51a0faf8c"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": [
@@ -2984,9 +2564,7 @@
       }
     ],
     "slug": "8998d6df-e9f5-4db2-87e6-66aaca768fc6",
-    "children": [
-
-    ],
+    "children": [],
     "level": 8
   },
   {
@@ -2995,9 +2573,7 @@
     "id": "91c3d3b2-01f5-4ef7-b3cf-975f6a22cb91",
     "label": "Cloud",
     "dreyfus": 4,
-    "parents": [
-      "7bbdf8bc-2493-4579-af2f-e39153aa73a7"
-    ],
+    "parents": ["7bbdf8bc-2493-4579-af2f-e39153aa73a7"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -3010,9 +2586,7 @@
       }
     ],
     "slug": "91c3d3b2-01f5-4ef7-b3cf-975f6a22cb91",
-    "children": [
-
-    ],
+    "children": [],
     "level": 5
   },
   {
@@ -3021,9 +2595,7 @@
     "id": "8cab7e9a-e655-4878-8891-7d806e020fe6",
     "label": "Testing",
     "dreyfus": 4,
-    "parents": [
-      "b77606f2-1ea5-4b9e-b77b-d4b96c914cf4"
-    ],
+    "parents": ["b77606f2-1ea5-4b9e-b77b-d4b96c914cf4"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -3036,9 +2608,7 @@
       }
     ],
     "slug": "8cab7e9a-e655-4878-8891-7d806e020fe6",
-    "children": [
-
-    ],
+    "children": [],
     "level": 5
   },
   {
@@ -3047,9 +2617,7 @@
     "id": "8f18da45-df45-4c6c-a2ec-ca7850703b6a",
     "label": "Testing",
     "dreyfus": 7,
-    "parents": [
-      "7b6d0538-20de-421a-8590-a249322e8f78"
-    ],
+    "parents": ["7b6d0538-20de-421a-8590-a249322e8f78"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -3069,9 +2637,7 @@
     "id": "8ea60e82-56e3-44e6-94d5-e20baab20e6c",
     "label": "Testing",
     "dreyfus": 4,
-    "parents": [
-      "b77606f2-1ea5-4b9e-b77b-d4b96c914cf4"
-    ],
+    "parents": ["b77606f2-1ea5-4b9e-b77b-d4b96c914cf4"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -3084,9 +2650,7 @@
       }
     ],
     "slug": "8ea60e82-56e3-44e6-94d5-e20baab20e6c",
-    "children": [
-
-    ],
+    "children": [],
     "level": 5
   },
   {
@@ -3095,9 +2659,7 @@
     "id": "9444119e-8a20-4c6b-8d97-0234753066a2",
     "label": "Cloud",
     "dreyfus": 3,
-    "parents": [
-      "99dcda6a-6577-4925-8e48-7f5b19c8c958"
-    ],
+    "parents": ["99dcda6a-6577-4925-8e48-7f5b19c8c958"],
     "hasCertification": true,
     "isFinished": true,
     "other_resources": [
@@ -3121,9 +2683,7 @@
       }
     ],
     "slug": "9444119e-8a20-4c6b-8d97-0234753066a2",
-    "children": [
-
-    ],
+    "children": [],
     "level": 3
   },
   {
@@ -3132,17 +2692,13 @@
     "id": "938afde9-4114-4a1e-a613-aaceb0ab9f0d",
     "label": "IT Ops",
     "dreyfus": 3,
-    "parents": [
-      "a71db7e1-a905-42c9-92b3-9473095b1600"
-    ],
+    "parents": ["a71db7e1-a905-42c9-92b3-9473095b1600"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "938afde9-4114-4a1e-a613-aaceb0ab9f0d",
-    "children": [
-
-    ],
+    "children": [],
     "level": 3
   },
   {
@@ -3151,9 +2707,7 @@
     "id": "921d6cef-dd83-4736-a196-1754f318fe81",
     "label": "IT Ops",
     "dreyfus": 5,
-    "parents": [
-      "1967967e-8084-4695-b9bc-ce6f2264a52a"
-    ],
+    "parents": ["1967967e-8084-4695-b9bc-ce6f2264a52a"],
     "hasCertification": true,
     "isFinished": true,
     "other_resources": null,
@@ -3166,9 +2720,7 @@
       }
     ],
     "slug": "921d6cef-dd83-4736-a196-1754f318fe81",
-    "children": [
-      "12449eb5-4b52-478a-bb48-8042d361f98c"
-    ],
+    "children": ["12449eb5-4b52-478a-bb48-8042d361f98c"],
     "level": 8
   },
   {
@@ -3177,17 +2729,13 @@
     "id": "96df766f-856a-47f3-b5d9-4b7a0edea52f",
     "label": "IT Ops",
     "dreyfus": 3,
-    "parents": [
-      "2a7f735b-0513-4c4b-930c-91466b5553d5"
-    ],
+    "parents": ["2a7f735b-0513-4c4b-930c-91466b5553d5"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "96df766f-856a-47f3-b5d9-4b7a0edea52f",
-    "children": [
-
-    ],
+    "children": [],
     "level": 5
   },
   {
@@ -3196,19 +2744,13 @@
     "id": "973d04f0-b74c-4f4e-afa5-25ccdaec851c",
     "label": "Cloud",
     "dreyfus": 7,
-    "parents": [
-      "65bf0d94-939c-4a37-8243-60d57187306e"
-    ],
+    "parents": ["65bf0d94-939c-4a37-8243-60d57187306e"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
-    "courses": [
-
-    ],
+    "courses": [],
     "slug": "973d04f0-b74c-4f4e-afa5-25ccdaec851c",
-    "children": [
-      "0bc9b15f-0b7b-4ce8-947b-0d96f49338bd"
-    ],
+    "children": ["0bc9b15f-0b7b-4ce8-947b-0d96f49338bd"],
     "level": 1
   },
   {
@@ -3217,9 +2759,7 @@
     "id": "9a066ea6-038a-4b65-b9d6-c9cdcdd37b42",
     "label": "Cloud",
     "dreyfus": 3,
-    "parents": [
-      "7b9b5122-fb90-4cbe-80a1-bb917d63c504"
-    ],
+    "parents": ["7b9b5122-fb90-4cbe-80a1-bb917d63c504"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -3232,9 +2772,7 @@
       }
     ],
     "slug": "9a066ea6-038a-4b65-b9d6-c9cdcdd37b42",
-    "children": [
-
-    ],
+    "children": [],
     "level": 4
   },
   {
@@ -3243,9 +2781,7 @@
     "id": "934a6ada-9b26-4cd7-9287-94f326a9d3a8",
     "label": "IT Ops",
     "dreyfus": 2,
-    "parents": [
-      "1dbd8f96-d6ab-48dd-89c5-5fa2c349536b"
-    ],
+    "parents": ["1dbd8f96-d6ab-48dd-89c5-5fa2c349536b"],
     "hasCertification": true,
     "isFinished": true,
     "other_resources": null,
@@ -3258,9 +2794,7 @@
       }
     ],
     "slug": "934a6ada-9b26-4cd7-9287-94f326a9d3a8",
-    "children": [
-
-    ],
+    "children": [],
     "level": 2
   },
   {
@@ -3269,9 +2803,7 @@
     "id": "9a3962d1-3b2c-4a0c-8e22-60716ad8ba6d",
     "label": "Testing",
     "dreyfus": 5,
-    "parents": [
-      "dbb12b6f-7fca-46b3-9a82-779bc85b054c"
-    ],
+    "parents": ["dbb12b6f-7fca-46b3-9a82-779bc85b054c"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -3284,9 +2816,7 @@
       }
     ],
     "slug": "9a3962d1-3b2c-4a0c-8e22-60716ad8ba6d",
-    "children": [
-
-    ],
+    "children": [],
     "level": 7
   },
   {
@@ -3295,9 +2825,7 @@
     "id": "9a2fcc8d-62c1-4ed5-9a2d-4ff667148b22",
     "label": "IT Ops",
     "dreyfus": 5,
-    "parents": [
-      "c1033571-a8e5-429c-844e-3c2ab26bb354"
-    ],
+    "parents": ["c1033571-a8e5-429c-844e-3c2ab26bb354"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": [
@@ -3326,10 +2854,7 @@
       }
     ],
     "slug": "9a2fcc8d-62c1-4ed5-9a2d-4ff667148b22",
-    "children": [
-      "0641e5f8-44b2-42e1-86b4-e2f51a0faf8c",
-      "6cf2b048-f666-47fb-9e71-ffd7e4236dca"
-    ],
+    "children": ["0641e5f8-44b2-42e1-86b4-e2f51a0faf8c", "6cf2b048-f666-47fb-9e71-ffd7e4236dca"],
     "level": 6
   },
   {
@@ -3338,9 +2863,7 @@
     "id": "9c63cbdf-b739-403b-b51a-94c35b533bf0",
     "label": "Cloud",
     "dreyfus": 5,
-    "parents": [
-      "7b9b5122-fb90-4cbe-80a1-bb917d63c504"
-    ],
+    "parents": ["7b9b5122-fb90-4cbe-80a1-bb917d63c504"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -3353,9 +2876,7 @@
       }
     ],
     "slug": "9c63cbdf-b739-403b-b51a-94c35b533bf0",
-    "children": [
-
-    ],
+    "children": [],
     "level": 4
   },
   {
@@ -3364,9 +2885,7 @@
     "id": "99dcda6a-6577-4925-8e48-7f5b19c8c958",
     "label": "Cloud",
     "dreyfus": 2,
-    "parents": [
-      "53a9bbeb-77f8-45f4-bf3b-d9cd6f917b6e"
-    ],
+    "parents": ["53a9bbeb-77f8-45f4-bf3b-d9cd6f917b6e"],
     "hasCertification": true,
     "isFinished": true,
     "other_resources": [
@@ -3414,10 +2933,7 @@
     "id": "9a83fabd-16e8-46f5-9efe-aa7e743ae5fb",
     "label": "Testing",
     "dreyfus": 4,
-    "parents": [
-      "54988f02-f3f1-47e6-8b26-c2bacab2ad8f",
-      "b77606f2-1ea5-4b9e-b77b-d4b96c914cf4"
-    ],
+    "parents": ["54988f02-f3f1-47e6-8b26-c2bacab2ad8f", "b77606f2-1ea5-4b9e-b77b-d4b96c914cf4"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -3430,9 +2946,7 @@
       }
     ],
     "slug": "9a83fabd-16e8-46f5-9efe-aa7e743ae5fb",
-    "children": [
-
-    ],
+    "children": [],
     "level": 5
   },
   {
@@ -3441,9 +2955,7 @@
     "id": "9b9c8b32-14de-46d3-942f-482b80b23a00",
     "label": "Cloud",
     "dreyfus": 3,
-    "parents": [
-      "5d9d7e72-1ca9-4e5a-993d-05aeedb55d9d"
-    ],
+    "parents": ["5d9d7e72-1ca9-4e5a-993d-05aeedb55d9d"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": [
@@ -3467,9 +2979,7 @@
       }
     ],
     "slug": "9b9c8b32-14de-46d3-942f-482b80b23a00",
-    "children": [
-      "6fa0f0a5-9add-47e0-867f-6ab33ffd6c0b"
-    ],
+    "children": ["6fa0f0a5-9add-47e0-867f-6ab33ffd6c0b"],
     "level": 5
   },
   {
@@ -3478,9 +2988,7 @@
     "id": "9f610f47-511b-45b6-afde-8bef56b1bb05",
     "label": "IT Ops",
     "dreyfus": 6,
-    "parents": [
-      "c782c0e4-a565-4321-af88-e57f2e4d7ad9"
-    ],
+    "parents": ["c782c0e4-a565-4321-af88-e57f2e4d7ad9"],
     "hasCertification": true,
     "isFinished": true,
     "other_resources": null,
@@ -3493,9 +3001,7 @@
       }
     ],
     "slug": "9f610f47-511b-45b6-afde-8bef56b1bb05",
-    "children": [
-
-    ],
+    "children": [],
     "level": 9
   },
   {
@@ -3504,9 +3010,7 @@
     "id": "a2af4fd2-128d-4734-a40f-ec47519fbb2a",
     "label": "IT Ops",
     "dreyfus": 6,
-    "parents": [
-      "863db8eb-e7e3-4ede-b2f0-5bf2149a5c25"
-    ],
+    "parents": ["863db8eb-e7e3-4ede-b2f0-5bf2149a5c25"],
     "hasCertification": true,
     "isFinished": true,
     "other_resources": null,
@@ -3519,9 +3023,7 @@
       }
     ],
     "slug": "a2af4fd2-128d-4734-a40f-ec47519fbb2a",
-    "children": [
-
-    ],
+    "children": [],
     "level": 14
   },
   {
@@ -3530,17 +3032,13 @@
     "id": "a07dab2e-e208-4433-87a3-fad052668a12",
     "label": "Cloud",
     "dreyfus": 4,
-    "parents": [
-      "36215f16-0920-4414-aa9c-79f2f692871c"
-    ],
+    "parents": ["36215f16-0920-4414-aa9c-79f2f692871c"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "a07dab2e-e208-4433-87a3-fad052668a12",
-    "children": [
-      "cac7dae4-7747-4318-913c-849cb09cb065"
-    ],
+    "children": ["cac7dae4-7747-4318-913c-849cb09cb065"],
     "level": 7
   },
   {
@@ -3549,9 +3047,7 @@
     "id": "a20f466e-7c31-485c-9e80-3182e1d008f8",
     "label": "IT Ops",
     "dreyfus": 7,
-    "parents": [
-      "0407dca4-aece-4a07-9488-12780baa943e"
-    ],
+    "parents": ["0407dca4-aece-4a07-9488-12780baa943e"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -3571,17 +3067,13 @@
     "id": "a43c8914-e382-4fac-90a5-fa98f377558e",
     "label": "IT Ops",
     "dreyfus": 5,
-    "parents": [
-      "40bd732c-25ad-4635-a51b-6767b67b3d15"
-    ],
+    "parents": ["40bd732c-25ad-4635-a51b-6767b67b3d15"],
     "hasCertification": true,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "a43c8914-e382-4fac-90a5-fa98f377558e",
-    "children": [
-
-    ],
+    "children": [],
     "level": 8
   },
   {
@@ -3590,17 +3082,13 @@
     "id": "a5e6d5ec-d4d7-40e1-9a77-d8f0ef861541",
     "label": "Cloud",
     "dreyfus": 4,
-    "parents": [
-      "3492fa3a-8adc-48d4-92e8-5bc1e39a463b"
-    ],
+    "parents": ["3492fa3a-8adc-48d4-92e8-5bc1e39a463b"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "a5e6d5ec-d4d7-40e1-9a77-d8f0ef861541",
-    "children": [
-
-    ],
+    "children": [],
     "level": 6
   },
   {
@@ -3609,17 +3097,13 @@
     "id": "a8049c69-e7fa-44d5-bfbf-0b533af5cec7",
     "label": "IT Ops",
     "dreyfus": 3,
-    "parents": [
-      "8112797a-5741-4236-990a-9954634366b1"
-    ],
+    "parents": ["8112797a-5741-4236-990a-9954634366b1"],
     "hasCertification": true,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "a8049c69-e7fa-44d5-bfbf-0b533af5cec7",
-    "children": [
-
-    ],
+    "children": [],
     "level": 3
   },
   {
@@ -3628,9 +3112,7 @@
     "id": "a792f567-c795-4c37-8363-68d6decee16f",
     "label": "Cloud",
     "dreyfus": 3,
-    "parents": [
-      "fa0e5fab-8627-4a7e-9ff1-4064ef40cbfe"
-    ],
+    "parents": ["fa0e5fab-8627-4a7e-9ff1-4064ef40cbfe"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": [
@@ -3645,13 +3127,9 @@
         "link": "https://training.linuxfoundation.org/full-catalog/?_sft_product_type=training&_sft_topic_area=cloud-containers,linux-kernel-development,devops-site-reliability&_sft_technology=devops,docker,helm,kubernetes"
       }
     ],
-    "courses": [
-
-    ],
+    "courses": [],
     "slug": "a792f567-c795-4c37-8363-68d6decee16f",
-    "children": [
-      "3492fa3a-8adc-48d4-92e8-5bc1e39a463b"
-    ],
+    "children": ["3492fa3a-8adc-48d4-92e8-5bc1e39a463b"],
     "level": 4
   },
   {
@@ -3660,17 +3138,13 @@
     "id": "a71db7e1-a905-42c9-92b3-9473095b1600",
     "label": "IT Ops",
     "dreyfus": 7,
-    "parents": [
-      "12e53b8d-798f-47e8-b372-b9ae071ac2aa"
-    ],
+    "parents": ["12e53b8d-798f-47e8-b372-b9ae071ac2aa"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "a71db7e1-a905-42c9-92b3-9473095b1600",
-    "children": [
-      "938afde9-4114-4a1e-a613-aaceb0ab9f0d"
-    ],
+    "children": ["938afde9-4114-4a1e-a613-aaceb0ab9f0d"],
     "level": 2
   },
   {
@@ -3679,9 +3153,7 @@
     "id": "a8e406a7-2c4c-40ba-ba40-57f4118ad631",
     "label": "Testing",
     "dreyfus": 4,
-    "parents": [
-      "4475879a-4747-4454-b9ec-e0d1b367a216"
-    ],
+    "parents": ["4475879a-4747-4454-b9ec-e0d1b367a216"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -3694,9 +3166,7 @@
       }
     ],
     "slug": "a8e406a7-2c4c-40ba-ba40-57f4118ad631",
-    "children": [
-
-    ],
+    "children": [],
     "level": 5
   },
   {
@@ -3705,9 +3175,7 @@
     "id": "a8a67dc5-1938-4fb0-84df-44a3393a198f",
     "label": "Security",
     "dreyfus": 2,
-    "parents": [
-      "2bdeef95-caa1-46d0-ac8b-ed225219a3fb"
-    ],
+    "parents": ["2bdeef95-caa1-46d0-ac8b-ed225219a3fb"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": [
@@ -3726,9 +3194,7 @@
       }
     ],
     "slug": "a8a67dc5-1938-4fb0-84df-44a3393a198f",
-    "children": [
-
-    ],
+    "children": [],
     "level": 2
   },
   {
@@ -3737,9 +3203,7 @@
     "id": "a821bac4-90f2-4b0f-b834-f385f14df7db",
     "label": "Cloud",
     "dreyfus": 3,
-    "parents": [
-      "7b9b5122-fb90-4cbe-80a1-bb917d63c504"
-    ],
+    "parents": ["7b9b5122-fb90-4cbe-80a1-bb917d63c504"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -3752,9 +3216,7 @@
       }
     ],
     "slug": "a821bac4-90f2-4b0f-b834-f385f14df7db",
-    "children": [
-      "38839c25-19e0-4a0f-ae74-99ff34dd49a2"
-    ],
+    "children": ["38839c25-19e0-4a0f-ae74-99ff34dd49a2"],
     "level": 4
   },
   {
@@ -3763,9 +3225,7 @@
     "id": "a8efea15-7c49-4be7-a128-612f4ab08961",
     "label": "Cloud",
     "dreyfus": 3,
-    "parents": [
-      "1d0949aa-011c-4540-b616-e6fb9508f2bd"
-    ],
+    "parents": ["1d0949aa-011c-4540-b616-e6fb9508f2bd"],
     "hasCertification": true,
     "isFinished": true,
     "other_resources": [
@@ -3789,9 +3249,7 @@
       }
     ],
     "slug": "a8efea15-7c49-4be7-a128-612f4ab08961",
-    "children": [
-
-    ],
+    "children": [],
     "level": 3
   },
   {
@@ -3800,9 +3258,7 @@
     "id": "a970c08c-66b5-4dc5-9e3d-6658646aa71b",
     "label": "IT Ops",
     "dreyfus": 2,
-    "parents": [
-      "057e228f-871b-46d2-950a-352714fbce69"
-    ],
+    "parents": ["057e228f-871b-46d2-950a-352714fbce69"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": [
@@ -3831,10 +3287,7 @@
       }
     ],
     "slug": "a970c08c-66b5-4dc5-9e3d-6658646aa71b",
-    "children": [
-      "00b6a9ed-6772-4a03-aa01-2d06336578aa",
-      "cf7dd853-9bd7-408a-9120-e5d022945409"
-    ],
+    "children": ["00b6a9ed-6772-4a03-aa01-2d06336578aa", "cf7dd853-9bd7-408a-9120-e5d022945409"],
     "level": 3
   },
   {
@@ -3843,18 +3296,13 @@
     "id": "a9bde7cf-349b-4cab-b575-cea039fe4310",
     "label": "Cloud",
     "dreyfus": 2,
-    "parents": [
-      "5e600cbf-290f-4681-8e58-2c4ebfc4b256"
-    ],
+    "parents": ["5e600cbf-290f-4681-8e58-2c4ebfc4b256"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "a9bde7cf-349b-4cab-b575-cea039fe4310",
-    "children": [
-      "66b2a092-7c85-4271-98bf-a34069076d95",
-      "fe689f60-7c1c-43c0-ae46-5533c7d27cb0"
-    ],
+    "children": ["66b2a092-7c85-4271-98bf-a34069076d95", "fe689f60-7c1c-43c0-ae46-5533c7d27cb0"],
     "level": 4
   },
   {
@@ -3863,17 +3311,13 @@
     "id": "a0c1e5c7-2916-4c64-8118-afa950df2d53",
     "label": "IT Ops",
     "dreyfus": 3,
-    "parents": [
-      "2a7f735b-0513-4c4b-930c-91466b5553d5"
-    ],
+    "parents": ["2a7f735b-0513-4c4b-930c-91466b5553d5"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "a0c1e5c7-2916-4c64-8118-afa950df2d53",
-    "children": [
-
-    ],
+    "children": [],
     "level": 5
   },
   {
@@ -3882,9 +3326,7 @@
     "id": "a9c940ec-39ae-4f0f-8a59-34c68230c09d",
     "label": "IT Ops",
     "dreyfus": 5,
-    "parents": [
-      "40bd732c-25ad-4635-a51b-6767b67b3d15"
-    ],
+    "parents": ["40bd732c-25ad-4635-a51b-6767b67b3d15"],
     "hasCertification": true,
     "isFinished": true,
     "other_resources": null,
@@ -3897,9 +3339,7 @@
       }
     ],
     "slug": "a9c940ec-39ae-4f0f-8a59-34c68230c09d",
-    "children": [
-
-    ],
+    "children": [],
     "level": 8
   },
   {
@@ -3908,9 +3348,7 @@
     "id": "a9ce0955-cb19-4b9d-b508-2f3fe7d9d89c",
     "label": "Testing",
     "dreyfus": 3,
-    "parents": [
-      "d9f73741-429d-4b40-813f-33644e01e833"
-    ],
+    "parents": ["d9f73741-429d-4b40-813f-33644e01e833"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -3923,9 +3361,7 @@
       }
     ],
     "slug": "a9ce0955-cb19-4b9d-b508-2f3fe7d9d89c",
-    "children": [
-
-    ],
+    "children": [],
     "level": 4
   },
   {
@@ -3934,9 +3370,7 @@
     "id": "af11fe7c-e544-4da4-8386-8aff97153b47",
     "label": "IT Ops",
     "dreyfus": 2,
-    "parents": [
-      "b53c09da-8137-4149-ba7b-269de8bc2ea2"
-    ],
+    "parents": ["b53c09da-8137-4149-ba7b-269de8bc2ea2"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -3949,9 +3383,7 @@
       }
     ],
     "slug": "af11fe7c-e544-4da4-8386-8aff97153b47",
-    "children": [
-
-    ],
+    "children": [],
     "level": 3
   },
   {
@@ -3960,9 +3392,7 @@
     "id": "b0e2ad55-5dc8-4ebb-93f5-58fe46b670a5",
     "label": "Security",
     "dreyfus": 3,
-    "parents": [
-      "2bdeef95-caa1-46d0-ac8b-ed225219a3fb"
-    ],
+    "parents": ["2bdeef95-caa1-46d0-ac8b-ed225219a3fb"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -3981,9 +3411,7 @@
       }
     ],
     "slug": "b0e2ad55-5dc8-4ebb-93f5-58fe46b670a5",
-    "children": [
-      "4c4d8165-a50b-42bc-9920-e0561c1a9885"
-    ],
+    "children": ["4c4d8165-a50b-42bc-9920-e0561c1a9885"],
     "level": 2
   },
   {
@@ -3992,17 +3420,13 @@
     "id": "b1282c2c-9bdb-48bb-b1e0-eb0bb1b3cdaa",
     "label": "IT Ops",
     "dreyfus": 7,
-    "parents": [
-      "40cecc08-8a77-43bc-ae96-1630e51f588e"
-    ],
+    "parents": ["40cecc08-8a77-43bc-ae96-1630e51f588e"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "b1282c2c-9bdb-48bb-b1e0-eb0bb1b3cdaa",
-    "children": [
-      "e8a1f78e-6719-45be-b0b0-6fb591a7b0bc"
-    ],
+    "children": ["e8a1f78e-6719-45be-b0b0-6fb591a7b0bc"],
     "level": 8
   },
   {
@@ -4011,9 +3435,7 @@
     "id": "b0f38ad4-d6bd-4f78-b38b-eb69ab393c6a",
     "label": "Testing",
     "dreyfus": 3,
-    "parents": [
-      "72be5242-755d-4413-892d-e1e6d0d177c6"
-    ],
+    "parents": ["72be5242-755d-4413-892d-e1e6d0d177c6"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -4026,9 +3448,7 @@
       }
     ],
     "slug": "b0f38ad4-d6bd-4f78-b38b-eb69ab393c6a",
-    "children": [
-
-    ],
+    "children": [],
     "level": 6
   },
   {
@@ -4037,9 +3457,7 @@
     "id": "af1e79a4-983e-4b84-a560-e68a285b8e26",
     "label": "IT Ops",
     "dreyfus": 5,
-    "parents": [
-      "ea33065b-cde6-4b9d-8e9d-7977a3d540a8"
-    ],
+    "parents": ["ea33065b-cde6-4b9d-8e9d-7977a3d540a8"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": [
@@ -4068,9 +3486,7 @@
       }
     ],
     "slug": "af1e79a4-983e-4b84-a560-e68a285b8e26",
-    "children": [
-
-    ],
+    "children": [],
     "level": 9
   },
   {
@@ -4079,9 +3495,7 @@
     "id": "b3cc7b5d-afbb-42d1-986e-4e43c96335f3",
     "label": "Security",
     "dreyfus": 2,
-    "parents": [
-      "2bdeef95-caa1-46d0-ac8b-ed225219a3fb"
-    ],
+    "parents": ["2bdeef95-caa1-46d0-ac8b-ed225219a3fb"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": [
@@ -4100,9 +3514,7 @@
       }
     ],
     "slug": "b3cc7b5d-afbb-42d1-986e-4e43c96335f3",
-    "children": [
-
-    ],
+    "children": [],
     "level": 2
   },
   {
@@ -4111,17 +3523,13 @@
     "id": "b716a56a-c5d6-4dbe-8b11-bf7a60eef985",
     "label": "Testing",
     "dreyfus": 3,
-    "parents": [
-      "7b6d0538-20de-421a-8590-a249322e8f78"
-    ],
+    "parents": ["7b6d0538-20de-421a-8590-a249322e8f78"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "b716a56a-c5d6-4dbe-8b11-bf7a60eef985",
-    "children": [
-
-    ],
+    "children": [],
     "level": 5
   },
   {
@@ -4130,9 +3538,7 @@
     "id": "b53c09da-8137-4149-ba7b-269de8bc2ea2",
     "label": "IT Ops",
     "dreyfus": 2,
-    "parents": [
-      "cbac9f1a-9dd5-458d-9473-def8fabd21da"
-    ],
+    "parents": ["cbac9f1a-9dd5-458d-9473-def8fabd21da"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -4155,17 +3561,13 @@
     "id": "b59b067d-daba-4298-909d-80f3d15cdd95",
     "label": "IT Ops",
     "dreyfus": 3,
-    "parents": [
-      "b7b8a2d9-85cf-46ea-89d9-fa535a2e71b0"
-    ],
+    "parents": ["b7b8a2d9-85cf-46ea-89d9-fa535a2e71b0"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "b59b067d-daba-4298-909d-80f3d15cdd95",
-    "children": [
-      "19e8bffc-9064-4890-85cb-815ed729511b"
-    ],
+    "children": ["19e8bffc-9064-4890-85cb-815ed729511b"],
     "level": 5
   },
   {
@@ -4174,9 +3576,7 @@
     "id": "b7ebc24e-aff0-4d6d-bb8e-53a7f1dc148a",
     "label": "IT Ops",
     "dreyfus": 5,
-    "parents": [
-      "2c1ece0d-23d2-4243-97b5-be1b25bde052"
-    ],
+    "parents": ["2c1ece0d-23d2-4243-97b5-be1b25bde052"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -4189,9 +3589,7 @@
       }
     ],
     "slug": "b7ebc24e-aff0-4d6d-bb8e-53a7f1dc148a",
-    "children": [
-
-    ],
+    "children": [],
     "level": 9
   },
   {
@@ -4200,9 +3598,7 @@
     "id": "b7b8a2d9-85cf-46ea-89d9-fa535a2e71b0",
     "label": "IT Ops",
     "dreyfus": 7,
-    "parents": [
-      "bf178504-f181-47e8-933b-6ae9c901d8d8"
-    ],
+    "parents": ["bf178504-f181-47e8-933b-6ae9c901d8d8"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -4221,9 +3617,7 @@
     "id": "b77606f2-1ea5-4b9e-b77b-d4b96c914cf4",
     "label": "Testing",
     "dreyfus": 7,
-    "parents": [
-      "d9f73741-429d-4b40-813f-33644e01e833"
-    ],
+    "parents": ["d9f73741-429d-4b40-813f-33644e01e833"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -4246,17 +3640,13 @@
     "id": "ba4e9e99-589f-41c8-9a1a-579a431863ed",
     "label": "IT Ops",
     "dreyfus": 3,
-    "parents": [
-      "2a7f735b-0513-4c4b-930c-91466b5553d5"
-    ],
+    "parents": ["2a7f735b-0513-4c4b-930c-91466b5553d5"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "ba4e9e99-589f-41c8-9a1a-579a431863ed",
-    "children": [
-
-    ],
+    "children": [],
     "level": 5
   },
   {
@@ -4265,9 +3655,7 @@
     "id": "bacc4a43-e189-4a04-8b38-df21ce0fcfaf",
     "label": "IT Ops",
     "dreyfus": 5,
-    "parents": [
-      "6cf2b048-f666-47fb-9e71-ffd7e4236dca"
-    ],
+    "parents": ["6cf2b048-f666-47fb-9e71-ffd7e4236dca"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": [
@@ -4296,9 +3684,7 @@
       }
     ],
     "slug": "bacc4a43-e189-4a04-8b38-df21ce0fcfaf",
-    "children": [
-
-    ],
+    "children": [],
     "level": 8
   },
   {
@@ -4307,9 +3693,7 @@
     "id": "ba9f5d72-def3-49f1-9a7c-31d33f024d8c",
     "label": "Testing",
     "dreyfus": 4,
-    "parents": [
-      "89e2387a-7ffe-448a-95ca-e92fe8a5c6f9"
-    ],
+    "parents": ["89e2387a-7ffe-448a-95ca-e92fe8a5c6f9"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -4322,9 +3706,7 @@
       }
     ],
     "slug": "ba9f5d72-def3-49f1-9a7c-31d33f024d8c",
-    "children": [
-
-    ],
+    "children": [],
     "level": 6
   },
   {
@@ -4333,18 +3715,13 @@
     "id": "bd71e6bb-c2c6-4c4e-9a64-0538e28a6034",
     "label": "Cloud",
     "dreyfus": 7,
-    "parents": [
-      "65bf0d94-939c-4a37-8243-60d57187306e"
-    ],
+    "parents": ["65bf0d94-939c-4a37-8243-60d57187306e"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "bd71e6bb-c2c6-4c4e-9a64-0538e28a6034",
-    "children": [
-      "0a4a699d-d66f-4218-aac0-37eac2756da4",
-      "f793fde5-cf39-458d-8569-8b3e62e52227"
-    ],
+    "children": ["0a4a699d-d66f-4218-aac0-37eac2756da4", "f793fde5-cf39-458d-8569-8b3e62e52227"],
     "level": 1
   },
   {
@@ -4358,9 +3735,7 @@
     "other_resources": null,
     "courses": null,
     "slug": "b9baaf2b-347f-40f4-9556-cb6d171d8618",
-    "children": [
-      "2bdeef95-caa1-46d0-ac8b-ed225219a3fb"
-    ],
+    "children": ["2bdeef95-caa1-46d0-ac8b-ed225219a3fb"],
     "level": 0
   },
   {
@@ -4369,17 +3744,13 @@
     "id": "be7a70ab-198f-441c-b770-6d1dc3fdf8d9",
     "label": "IT Ops",
     "dreyfus": 3,
-    "parents": [
-      "b7b8a2d9-85cf-46ea-89d9-fa535a2e71b0"
-    ],
+    "parents": ["b7b8a2d9-85cf-46ea-89d9-fa535a2e71b0"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "be7a70ab-198f-441c-b770-6d1dc3fdf8d9",
-    "children": [
-
-    ],
+    "children": [],
     "level": 5
   },
   {
@@ -4388,9 +3759,7 @@
     "id": "bdf62942-a18a-4391-a635-70e6e7d46d8c",
     "label": "IT Ops",
     "dreyfus": 5,
-    "parents": [
-      "0641e5f8-44b2-42e1-86b4-e2f51a0faf8c"
-    ],
+    "parents": ["0641e5f8-44b2-42e1-86b4-e2f51a0faf8c"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": [
@@ -4419,9 +3788,7 @@
       }
     ],
     "slug": "bdf62942-a18a-4391-a635-70e6e7d46d8c",
-    "children": [
-
-    ],
+    "children": [],
     "level": 8
   },
   {
@@ -4430,17 +3797,13 @@
     "id": "c1941eb1-2289-4636-b9fa-f8ecc1ddd0ce",
     "label": "Testing",
     "dreyfus": 3,
-    "parents": [
-      "7b6d0538-20de-421a-8590-a249322e8f78"
-    ],
+    "parents": ["7b6d0538-20de-421a-8590-a249322e8f78"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "c1941eb1-2289-4636-b9fa-f8ecc1ddd0ce",
-    "children": [
-
-    ],
+    "children": [],
     "level": 5
   },
   {
@@ -4449,17 +3812,13 @@
     "id": "bf178504-f181-47e8-933b-6ae9c901d8d8",
     "label": "IT Ops",
     "dreyfus": 2,
-    "parents": [
-      "b53c09da-8137-4149-ba7b-269de8bc2ea2"
-    ],
+    "parents": ["b53c09da-8137-4149-ba7b-269de8bc2ea2"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "bf178504-f181-47e8-933b-6ae9c901d8d8",
-    "children": [
-      "b7b8a2d9-85cf-46ea-89d9-fa535a2e71b0"
-    ],
+    "children": ["b7b8a2d9-85cf-46ea-89d9-fa535a2e71b0"],
     "level": 3
   },
   {
@@ -4468,17 +3827,13 @@
     "id": "c1033571-a8e5-429c-844e-3c2ab26bb354",
     "label": "IT Ops",
     "dreyfus": 7,
-    "parents": [
-      "00b6a9ed-6772-4a03-aa01-2d06336578aa"
-    ],
+    "parents": ["00b6a9ed-6772-4a03-aa01-2d06336578aa"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "c1033571-a8e5-429c-844e-3c2ab26bb354",
-    "children": [
-      "9a2fcc8d-62c1-4ed5-9a2d-4ff667148b22"
-    ],
+    "children": ["9a2fcc8d-62c1-4ed5-9a2d-4ff667148b22"],
     "level": 5
   },
   {
@@ -4487,17 +3842,13 @@
     "id": "c4b53c14-9cb0-4a4f-87e1-4d630558322d",
     "label": "IT Ops",
     "dreyfus": 3,
-    "parents": [
-      "b7b8a2d9-85cf-46ea-89d9-fa535a2e71b0"
-    ],
+    "parents": ["b7b8a2d9-85cf-46ea-89d9-fa535a2e71b0"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "c4b53c14-9cb0-4a4f-87e1-4d630558322d",
-    "children": [
-
-    ],
+    "children": [],
     "level": 5
   },
   {
@@ -4506,17 +3857,13 @@
     "id": "bfcc5c50-9735-4844-966a-a269930fba57",
     "label": "Cloud",
     "dreyfus": 7,
-    "parents": [
-      "65bf0d94-939c-4a37-8243-60d57187306e"
-    ],
+    "parents": ["65bf0d94-939c-4a37-8243-60d57187306e"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "bfcc5c50-9735-4844-966a-a269930fba57",
-    "children": [
-
-    ],
+    "children": [],
     "level": 1
   },
   {
@@ -4525,17 +3872,13 @@
     "id": "c7e2c073-eaab-4f02-9ea3-cf06238cdcf8",
     "label": "Cloud",
     "dreyfus": 5,
-    "parents": [
-      "6fa0f0a5-9add-47e0-867f-6ab33ffd6c0b"
-    ],
+    "parents": ["6fa0f0a5-9add-47e0-867f-6ab33ffd6c0b"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "c7e2c073-eaab-4f02-9ea3-cf06238cdcf8",
-    "children": [
-
-    ],
+    "children": [],
     "level": 7
   },
   {
@@ -4544,9 +3887,7 @@
     "id": "c5978370-7a79-4bdc-89a3-c7c39406d339",
     "label": "IT Ops",
     "dreyfus": 4,
-    "parents": [
-      "72630a4f-6a7f-412d-a2f3-fbe1813b620a"
-    ],
+    "parents": ["72630a4f-6a7f-412d-a2f3-fbe1813b620a"],
     "hasCertification": true,
     "isFinished": true,
     "other_resources": null,
@@ -4559,9 +3900,7 @@
       }
     ],
     "slug": "c5978370-7a79-4bdc-89a3-c7c39406d339",
-    "children": [
-      "37b0ab70-9763-406a-bca9-832d94ee1d4d"
-    ],
+    "children": ["37b0ab70-9763-406a-bca9-832d94ee1d4d"],
     "level": 11
   },
   {
@@ -4570,17 +3909,13 @@
     "id": "cac7dae4-7747-4318-913c-849cb09cb065",
     "label": "Cloud",
     "dreyfus": 5,
-    "parents": [
-      "a07dab2e-e208-4433-87a3-fad052668a12"
-    ],
+    "parents": ["a07dab2e-e208-4433-87a3-fad052668a12"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "cac7dae4-7747-4318-913c-849cb09cb065",
-    "children": [
-      "6a2af477-490f-4515-a2b3-227153502f7f"
-    ],
+    "children": ["6a2af477-490f-4515-a2b3-227153502f7f"],
     "level": 8
   },
   {
@@ -4589,9 +3924,7 @@
     "id": "ca133709-1437-4c6a-b916-caeb1913a4ed",
     "label": "Cloud",
     "dreyfus": 4,
-    "parents": [
-      "99dcda6a-6577-4925-8e48-7f5b19c8c958"
-    ],
+    "parents": ["99dcda6a-6577-4925-8e48-7f5b19c8c958"],
     "hasCertification": true,
     "isFinished": true,
     "other_resources": [
@@ -4615,9 +3948,7 @@
       }
     ],
     "slug": "ca133709-1437-4c6a-b916-caeb1913a4ed",
-    "children": [
-
-    ],
+    "children": [],
     "level": 3
   },
   {
@@ -4626,9 +3957,7 @@
     "id": "c782c0e4-a565-4321-af88-e57f2e4d7ad9",
     "label": "IT Ops",
     "dreyfus": 5,
-    "parents": [
-      "d50d6c21-3a9f-4d0d-b210-c011554acf9b"
-    ],
+    "parents": ["d50d6c21-3a9f-4d0d-b210-c011554acf9b"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -4641,9 +3970,7 @@
       }
     ],
     "slug": "c782c0e4-a565-4321-af88-e57f2e4d7ad9",
-    "children": [
-      "9f610f47-511b-45b6-afde-8bef56b1bb05"
-    ],
+    "children": ["9f610f47-511b-45b6-afde-8bef56b1bb05"],
     "level": 8
   },
   {
@@ -4652,9 +3979,7 @@
     "id": "cbc743d7-0f88-4d9b-b4ff-e5bd4f12490b",
     "label": "Cloud",
     "dreyfus": -1,
-    "parents": [
-
-    ],
+    "parents": [],
     "hasCertification": true,
     "isFinished": true,
     "other_resources": [
@@ -4678,9 +4003,7 @@
       }
     ],
     "slug": "cbc743d7-0f88-4d9b-b4ff-e5bd4f12490b",
-    "children": [
-
-    ],
+    "children": [],
     "level": 0
   },
   {
@@ -4689,9 +4012,7 @@
     "id": "cba55f51-53c9-4d16-a503-9dd143404198",
     "label": "Cloud",
     "dreyfus": 3,
-    "parents": [
-      "0158429d-7bc7-434f-b4f9-64f85168c198"
-    ],
+    "parents": ["0158429d-7bc7-434f-b4f9-64f85168c198"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": [
@@ -4708,9 +4029,7 @@
     ],
     "courses": null,
     "slug": "cba55f51-53c9-4d16-a503-9dd143404198",
-    "children": [
-
-    ],
+    "children": [],
     "level": 2
   },
   {
@@ -4719,17 +4038,13 @@
     "id": "cbac9f1a-9dd5-458d-9473-def8fabd21da",
     "label": "IT Ops",
     "dreyfus": 1,
-    "parents": [
-      "0152ee19-a75f-4761-9b73-c97c4fb88e89"
-    ],
+    "parents": ["0152ee19-a75f-4761-9b73-c97c4fb88e89"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "cbac9f1a-9dd5-458d-9473-def8fabd21da",
-    "children": [
-      "b53c09da-8137-4149-ba7b-269de8bc2ea2"
-    ],
+    "children": ["b53c09da-8137-4149-ba7b-269de8bc2ea2"],
     "level": 1
   },
   {
@@ -4738,9 +4053,7 @@
     "id": "cbff2a4f-8716-48bc-8161-fea8b2ceed71",
     "label": "Cloud",
     "dreyfus": 5,
-    "parents": [
-      "7b9b5122-fb90-4cbe-80a1-bb917d63c504"
-    ],
+    "parents": ["7b9b5122-fb90-4cbe-80a1-bb917d63c504"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -4753,9 +4066,7 @@
       }
     ],
     "slug": "cbff2a4f-8716-48bc-8161-fea8b2ceed71",
-    "children": [
-
-    ],
+    "children": [],
     "level": 4
   },
   {
@@ -4764,17 +4075,13 @@
     "id": "ceb4e875-cee8-4ebc-b939-14ce33cd585c",
     "label": "IT Ops",
     "dreyfus": 5,
-    "parents": [
-      "40bd732c-25ad-4635-a51b-6767b67b3d15"
-    ],
+    "parents": ["40bd732c-25ad-4635-a51b-6767b67b3d15"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "ceb4e875-cee8-4ebc-b939-14ce33cd585c",
-    "children": [
-      "e3fee3fa-8b30-4c78-ab98-f3b401c5a6dc"
-    ],
+    "children": ["e3fee3fa-8b30-4c78-ab98-f3b401c5a6dc"],
     "level": 8
   },
   {
@@ -4783,9 +4090,7 @@
     "id": "cf9bd790-34e1-45e8-a20d-67be232185ec",
     "label": "Testing",
     "dreyfus": 3,
-    "parents": [
-      "4a417ecd-1217-4687-9cb3-74327f71b93b"
-    ],
+    "parents": ["4a417ecd-1217-4687-9cb3-74327f71b93b"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -4798,9 +4103,7 @@
       }
     ],
     "slug": "cf9bd790-34e1-45e8-a20d-67be232185ec",
-    "children": [
-
-    ],
+    "children": [],
     "level": 5
   },
   {
@@ -4809,17 +4112,13 @@
     "id": "d1eaa32d-1024-434e-a17f-5e615b4bb09d",
     "label": "IT Ops",
     "dreyfus": 4,
-    "parents": [
-      "a20f466e-7c31-485c-9e80-3182e1d008f8"
-    ],
+    "parents": ["a20f466e-7c31-485c-9e80-3182e1d008f8"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "d1eaa32d-1024-434e-a17f-5e615b4bb09d",
-    "children": [
-
-    ],
+    "children": [],
     "level": 7
   },
   {
@@ -4828,17 +4127,13 @@
     "id": "d1d4349e-f506-4e6d-98d2-71a7cd4de2ef",
     "label": "IT Ops",
     "dreyfus": 7,
-    "parents": [
-      "6cf2b048-f666-47fb-9e71-ffd7e4236dca"
-    ],
+    "parents": ["6cf2b048-f666-47fb-9e71-ffd7e4236dca"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "d1d4349e-f506-4e6d-98d2-71a7cd4de2ef",
-    "children": [
-
-    ],
+    "children": [],
     "level": 8
   },
   {
@@ -4847,9 +4142,7 @@
     "id": "cf7dd853-9bd7-408a-9120-e5d022945409",
     "label": "IT Ops",
     "dreyfus": 3,
-    "parents": [
-      "a970c08c-66b5-4dc5-9e3d-6658646aa71b"
-    ],
+    "parents": ["a970c08c-66b5-4dc5-9e3d-6658646aa71b"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": [
@@ -4873,9 +4166,7 @@
       }
     ],
     "slug": "cf7dd853-9bd7-408a-9120-e5d022945409",
-    "children": [
-
-    ],
+    "children": [],
     "level": 4
   },
   {
@@ -4884,9 +4175,7 @@
     "id": "d4bfa919-8012-4bca-bc6a-85970476f3a9",
     "label": "IT Ops",
     "dreyfus": 3,
-    "parents": [
-      "2a7f735b-0513-4c4b-930c-91466b5553d5"
-    ],
+    "parents": ["2a7f735b-0513-4c4b-930c-91466b5553d5"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -4899,9 +4188,7 @@
       }
     ],
     "slug": "d4bfa919-8012-4bca-bc6a-85970476f3a9",
-    "children": [
-
-    ],
+    "children": [],
     "level": 5
   },
   {
@@ -4910,17 +4197,13 @@
     "id": "d349f771-56d5-4a80-ae59-abf3fd03ec29",
     "label": "IT Ops",
     "dreyfus": 7,
-    "parents": [
-      "b53c09da-8137-4149-ba7b-269de8bc2ea2"
-    ],
+    "parents": ["b53c09da-8137-4149-ba7b-269de8bc2ea2"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "d349f771-56d5-4a80-ae59-abf3fd03ec29",
-    "children": [
-      "40645fd6-95cc-439f-b972-ad03247f7aab"
-    ],
+    "children": ["40645fd6-95cc-439f-b972-ad03247f7aab"],
     "level": 3
   },
   {
@@ -4929,17 +4212,13 @@
     "id": "d8a5c775-c339-4ca8-8f33-624ce55b0bc9",
     "label": "IT Ops",
     "dreyfus": 4,
-    "parents": [
-      "40bd732c-25ad-4635-a51b-6767b67b3d15"
-    ],
+    "parents": ["40bd732c-25ad-4635-a51b-6767b67b3d15"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "d8a5c775-c339-4ca8-8f33-624ce55b0bc9",
-    "children": [
-      "eb9072a3-c39f-43c0-ae1d-61400b00f2fd"
-    ],
+    "children": ["eb9072a3-c39f-43c0-ae1d-61400b00f2fd"],
     "level": 8
   },
   {
@@ -4948,9 +4227,7 @@
     "id": "d8db7d09-c85b-48e3-b126-04d6f8c325d6",
     "label": "Testing",
     "dreyfus": 3,
-    "parents": [
-      "4a417ecd-1217-4687-9cb3-74327f71b93b"
-    ],
+    "parents": ["4a417ecd-1217-4687-9cb3-74327f71b93b"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -4963,9 +4240,7 @@
       }
     ],
     "slug": "d8db7d09-c85b-48e3-b126-04d6f8c325d6",
-    "children": [
-
-    ],
+    "children": [],
     "level": 5
   },
   {
@@ -4974,9 +4249,7 @@
     "id": "d9f73741-429d-4b40-813f-33644e01e833",
     "label": "Testing",
     "dreyfus": 7,
-    "parents": [
-      "6053a351-9868-42ee-8bca-394537fb0fae"
-    ],
+    "parents": ["6053a351-9868-42ee-8bca-394537fb0fae"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -4997,9 +4270,7 @@
     "id": "d50d6c21-3a9f-4d0d-b210-c011554acf9b",
     "label": "IT Ops",
     "dreyfus": 4,
-    "parents": [
-      "e82b56ee-bd86-4c89-b2a3-aa35abf4896b"
-    ],
+    "parents": ["e82b56ee-bd86-4c89-b2a3-aa35abf4896b"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -5012,9 +4283,7 @@
       }
     ],
     "slug": "d50d6c21-3a9f-4d0d-b210-c011554acf9b",
-    "children": [
-      "c782c0e4-a565-4321-af88-e57f2e4d7ad9"
-    ],
+    "children": ["c782c0e4-a565-4321-af88-e57f2e4d7ad9"],
     "level": 7
   },
   {
@@ -5023,9 +4292,7 @@
     "id": "db1c89b3-27b4-4918-a141-53926dca2978",
     "label": "Cloud",
     "dreyfus": 5,
-    "parents": [
-      "7b9b5122-fb90-4cbe-80a1-bb917d63c504"
-    ],
+    "parents": ["7b9b5122-fb90-4cbe-80a1-bb917d63c504"],
     "hasCertification": true,
     "isFinished": true,
     "other_resources": null,
@@ -5038,9 +4305,7 @@
       }
     ],
     "slug": "db1c89b3-27b4-4918-a141-53926dca2978",
-    "children": [
-
-    ],
+    "children": [],
     "level": 4
   },
   {
@@ -5049,17 +4314,13 @@
     "id": "e0494949-4c0a-47e3-bc3e-1d0ea3d36844",
     "label": "Testing",
     "dreyfus": 3,
-    "parents": [
-      "7b6d0538-20de-421a-8590-a249322e8f78"
-    ],
+    "parents": ["7b6d0538-20de-421a-8590-a249322e8f78"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "e0494949-4c0a-47e3-bc3e-1d0ea3d36844",
-    "children": [
-
-    ],
+    "children": [],
     "level": 5
   },
   {
@@ -5068,17 +4329,13 @@
     "id": "e29a7883-97cf-43d4-a35b-316fda78173d",
     "label": "IT Ops",
     "dreyfus": 7,
-    "parents": [
-      "12e53b8d-798f-47e8-b372-b9ae071ac2aa"
-    ],
+    "parents": ["12e53b8d-798f-47e8-b372-b9ae071ac2aa"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "e29a7883-97cf-43d4-a35b-316fda78173d",
-    "children": [
-      "633db070-a18c-4009-a8d5-75be7e77fb2e"
-    ],
+    "children": ["633db070-a18c-4009-a8d5-75be7e77fb2e"],
     "level": 2
   },
   {
@@ -5087,17 +4344,13 @@
     "id": "e255ecfe-7006-466e-bc8a-7705fda6cb7b",
     "label": "IT Ops",
     "dreyfus": 2,
-    "parents": [
-      "b53c09da-8137-4149-ba7b-269de8bc2ea2"
-    ],
+    "parents": ["b53c09da-8137-4149-ba7b-269de8bc2ea2"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "e255ecfe-7006-466e-bc8a-7705fda6cb7b",
-    "children": [
-
-    ],
+    "children": [],
     "level": 3
   },
   {
@@ -5106,9 +4359,7 @@
     "id": "dac6eddb-3d11-4740-823e-7f4e1622c279",
     "label": "Cloud",
     "dreyfus": 2,
-    "parents": [
-      "473af4ae-2daa-4f68-a3ab-fc2fc3d7dc47"
-    ],
+    "parents": ["473af4ae-2daa-4f68-a3ab-fc2fc3d7dc47"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -5133,9 +4384,7 @@
       }
     ],
     "slug": "dac6eddb-3d11-4740-823e-7f4e1622c279",
-    "children": [
-
-    ],
+    "children": [],
     "level": 3
   },
   {
@@ -5144,17 +4393,13 @@
     "id": "e3fd7e73-6315-45a2-bcb5-0d994f48a065",
     "label": "IT Ops",
     "dreyfus": 5,
-    "parents": [
-      "1dd85bba-7935-4116-9417-7858549b198c"
-    ],
+    "parents": ["1dd85bba-7935-4116-9417-7858549b198c"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "e3fd7e73-6315-45a2-bcb5-0d994f48a065",
-    "children": [
-      "751ea936-94b5-43b6-b9ee-2f5b1d8ce1e3"
-    ],
+    "children": ["751ea936-94b5-43b6-b9ee-2f5b1d8ce1e3"],
     "level": 11
   },
   {
@@ -5163,17 +4408,13 @@
     "id": "e6e8a057-b8d4-446d-aea9-8d57f5fb2653",
     "label": "IT Ops",
     "dreyfus": 5,
-    "parents": [
-      "40bd732c-25ad-4635-a51b-6767b67b3d15"
-    ],
+    "parents": ["40bd732c-25ad-4635-a51b-6767b67b3d15"],
     "hasCertification": true,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "e6e8a057-b8d4-446d-aea9-8d57f5fb2653",
-    "children": [
-
-    ],
+    "children": [],
     "level": 8
   },
   {
@@ -5182,17 +4423,13 @@
     "id": "dbb12b6f-7fca-46b3-9a82-779bc85b054c",
     "label": "Testing",
     "dreyfus": 7,
-    "parents": [
-      "8f18da45-df45-4c6c-a2ec-ca7850703b6a"
-    ],
+    "parents": ["8f18da45-df45-4c6c-a2ec-ca7850703b6a"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "dbb12b6f-7fca-46b3-9a82-779bc85b054c",
-    "children": [
-      "9a3962d1-3b2c-4a0c-8e22-60716ad8ba6d"
-    ],
+    "children": ["9a3962d1-3b2c-4a0c-8e22-60716ad8ba6d"],
     "level": 6
   },
   {
@@ -5201,17 +4438,13 @@
     "id": "e3fee3fa-8b30-4c78-ab98-f3b401c5a6dc",
     "label": "IT Ops",
     "dreyfus": 5,
-    "parents": [
-      "ceb4e875-cee8-4ebc-b939-14ce33cd585c"
-    ],
+    "parents": ["ceb4e875-cee8-4ebc-b939-14ce33cd585c"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "e3fee3fa-8b30-4c78-ab98-f3b401c5a6dc",
-    "children": [
-      "1dd85bba-7935-4116-9417-7858549b198c"
-    ],
+    "children": ["1dd85bba-7935-4116-9417-7858549b198c"],
     "level": 9
   },
   {
@@ -5220,9 +4453,7 @@
     "id": "e82b56ee-bd86-4c89-b2a3-aa35abf4896b",
     "label": "IT Ops",
     "dreyfus": 3,
-    "parents": [
-      "ffbcd26e-6bf2-4fa7-ae5f-495ce4436d10"
-    ],
+    "parents": ["ffbcd26e-6bf2-4fa7-ae5f-495ce4436d10"],
     "hasCertification": true,
     "isFinished": true,
     "other_resources": null,
@@ -5235,10 +4466,7 @@
       }
     ],
     "slug": "e82b56ee-bd86-4c89-b2a3-aa35abf4896b",
-    "children": [
-      "40bd732c-25ad-4635-a51b-6767b67b3d15",
-      "d50d6c21-3a9f-4d0d-b210-c011554acf9b"
-    ],
+    "children": ["40bd732c-25ad-4635-a51b-6767b67b3d15", "d50d6c21-3a9f-4d0d-b210-c011554acf9b"],
     "level": 6
   },
   {
@@ -5247,9 +4475,7 @@
     "id": "e568ecba-a97a-4fb5-ac51-9ae8c8e24c5d",
     "label": "Cloud",
     "dreyfus": 3,
-    "parents": [
-      "41c9bbe0-5c25-4e6a-91b9-c6104c18fe9f"
-    ],
+    "parents": ["41c9bbe0-5c25-4e6a-91b9-c6104c18fe9f"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -5274,9 +4500,7 @@
       }
     ],
     "slug": "e568ecba-a97a-4fb5-ac51-9ae8c8e24c5d",
-    "children": [
-
-    ],
+    "children": [],
     "level": 4
   },
   {
@@ -5285,9 +4509,7 @@
     "id": "e7171661-df09-4310-9bd9-5e58ae18d3a1",
     "label": "Cloud",
     "dreyfus": 3,
-    "parents": [
-      "80aa87d0-d5a3-4e90-a5b7-71a9a9fc2b59"
-    ],
+    "parents": ["80aa87d0-d5a3-4e90-a5b7-71a9a9fc2b59"],
     "hasCertification": true,
     "isFinished": true,
     "other_resources": [
@@ -5311,9 +4533,7 @@
       }
     ],
     "slug": "e7171661-df09-4310-9bd9-5e58ae18d3a1",
-    "children": [
-
-    ],
+    "children": [],
     "level": 3
   },
   {
@@ -5322,17 +4542,13 @@
     "id": "e8a1f78e-6719-45be-b0b0-6fb591a7b0bc",
     "label": "IT Ops",
     "dreyfus": 4,
-    "parents": [
-      "b1282c2c-9bdb-48bb-b1e0-eb0bb1b3cdaa"
-    ],
+    "parents": ["b1282c2c-9bdb-48bb-b1e0-eb0bb1b3cdaa"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "e8a1f78e-6719-45be-b0b0-6fb591a7b0bc",
-    "children": [
-      "72630a4f-6a7f-412d-a2f3-fbe1813b620a"
-    ],
+    "children": ["72630a4f-6a7f-412d-a2f3-fbe1813b620a"],
     "level": 9
   },
   {
@@ -5341,17 +4557,13 @@
     "id": "eb9072a3-c39f-43c0-ae1d-61400b00f2fd",
     "label": "IT Ops",
     "dreyfus": 4,
-    "parents": [
-      "d8a5c775-c339-4ca8-8f33-624ce55b0bc9"
-    ],
+    "parents": ["d8a5c775-c339-4ca8-8f33-624ce55b0bc9"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "eb9072a3-c39f-43c0-ae1d-61400b00f2fd",
-    "children": [
-
-    ],
+    "children": [],
     "level": 9
   },
   {
@@ -5360,9 +4572,7 @@
     "id": "ebb8b5ed-3121-421b-a57d-0e96efa891a6",
     "label": "Cloud",
     "dreyfus": 3,
-    "parents": [
-      "80aa87d0-d5a3-4e90-a5b7-71a9a9fc2b59"
-    ],
+    "parents": ["80aa87d0-d5a3-4e90-a5b7-71a9a9fc2b59"],
     "hasCertification": true,
     "isFinished": true,
     "other_resources": [
@@ -5386,9 +4596,7 @@
       }
     ],
     "slug": "ebb8b5ed-3121-421b-a57d-0e96efa891a6",
-    "children": [
-
-    ],
+    "children": [],
     "level": 3
   },
   {
@@ -5397,17 +4605,13 @@
     "id": "ea33065b-cde6-4b9d-8e9d-7977a3d540a8",
     "label": "IT Ops",
     "dreyfus": 7,
-    "parents": [
-      "6cf2b048-f666-47fb-9e71-ffd7e4236dca"
-    ],
+    "parents": ["6cf2b048-f666-47fb-9e71-ffd7e4236dca"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "ea33065b-cde6-4b9d-8e9d-7977a3d540a8",
-    "children": [
-      "af1e79a4-983e-4b84-a560-e68a285b8e26"
-    ],
+    "children": ["af1e79a4-983e-4b84-a560-e68a285b8e26"],
     "level": 8
   },
   {
@@ -5416,9 +4620,7 @@
     "id": "ecd229b5-1758-4de5-a966-4b5880aace74",
     "label": "IT Ops",
     "dreyfus": 6,
-    "parents": [
-      "370ea3d4-b9c5-4e15-951a-e7847255937c"
-    ],
+    "parents": ["370ea3d4-b9c5-4e15-951a-e7847255937c"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -5431,9 +4633,7 @@
       }
     ],
     "slug": "ecd229b5-1758-4de5-a966-4b5880aace74",
-    "children": [
-
-    ],
+    "children": [],
     "level": 4
   },
   {
@@ -5447,9 +4647,7 @@
     "other_resources": null,
     "courses": null,
     "slug": "eaa27ff7-21a2-4cbf-ac6b-c344a3f7ef9f",
-    "children": [
-      "7ae3fb8b-bc5c-429c-bbfd-8e43ee7f1347"
-    ],
+    "children": ["7ae3fb8b-bc5c-429c-bbfd-8e43ee7f1347"],
     "level": 0
   },
   {
@@ -5458,9 +4656,7 @@
     "id": "ec70d824-9bc5-4cfd-b659-12138d8daa5b",
     "label": "Cloud",
     "dreyfus": 4,
-    "parents": [
-      "99dcda6a-6577-4925-8e48-7f5b19c8c958"
-    ],
+    "parents": ["99dcda6a-6577-4925-8e48-7f5b19c8c958"],
     "hasCertification": true,
     "isFinished": true,
     "other_resources": [
@@ -5484,9 +4680,7 @@
       }
     ],
     "slug": "ec70d824-9bc5-4cfd-b659-12138d8daa5b",
-    "children": [
-
-    ],
+    "children": [],
     "level": 3
   },
   {
@@ -5495,9 +4689,7 @@
     "id": "eed96e52-7183-4c52-b45b-cffa0a7d31c0",
     "label": "IT Ops",
     "dreyfus": 4,
-    "parents": [
-      "17194f73-5e15-4b28-a007-baf0df649604"
-    ],
+    "parents": ["17194f73-5e15-4b28-a007-baf0df649604"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": [
@@ -5526,9 +4718,7 @@
       }
     ],
     "slug": "eed96e52-7183-4c52-b45b-cffa0a7d31c0",
-    "children": [
-
-    ],
+    "children": [],
     "level": 6
   },
   {
@@ -5537,17 +4727,13 @@
     "id": "ed93a89e-1b42-447a-b630-21074b7963e2",
     "label": "Testing",
     "dreyfus": 3,
-    "parents": [
-      "4a417ecd-1217-4687-9cb3-74327f71b93b"
-    ],
+    "parents": ["4a417ecd-1217-4687-9cb3-74327f71b93b"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "ed93a89e-1b42-447a-b630-21074b7963e2",
-    "children": [
-
-    ],
+    "children": [],
     "level": 5
   },
   {
@@ -5556,9 +4742,7 @@
     "id": "f591994f-6d1f-4e58-81d8-e2e7181c53b9",
     "label": "Cloud",
     "dreyfus": 5,
-    "parents": [
-      "7b9b5122-fb90-4cbe-80a1-bb917d63c504"
-    ],
+    "parents": ["7b9b5122-fb90-4cbe-80a1-bb917d63c504"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -5571,9 +4755,7 @@
       }
     ],
     "slug": "f591994f-6d1f-4e58-81d8-e2e7181c53b9",
-    "children": [
-
-    ],
+    "children": [],
     "level": 4
   },
   {
@@ -5582,17 +4764,13 @@
     "id": "f6702857-8f61-4d83-861d-892fdc8f47da",
     "label": "IT Ops",
     "dreyfus": 3,
-    "parents": [
-      "2a7f735b-0513-4c4b-930c-91466b5553d5"
-    ],
+    "parents": ["2a7f735b-0513-4c4b-930c-91466b5553d5"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "f6702857-8f61-4d83-861d-892fdc8f47da",
-    "children": [
-
-    ],
+    "children": [],
     "level": 5
   },
   {
@@ -5601,9 +4779,7 @@
     "id": "f40077d7-0f59-419f-b565-cee5bdcd430a",
     "label": "Security",
     "dreyfus": 4,
-    "parents": [
-      "2bdeef95-caa1-46d0-ac8b-ed225219a3fb"
-    ],
+    "parents": ["2bdeef95-caa1-46d0-ac8b-ed225219a3fb"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": [
@@ -5622,9 +4798,7 @@
       }
     ],
     "slug": "f40077d7-0f59-419f-b565-cee5bdcd430a",
-    "children": [
-
-    ],
+    "children": [],
     "level": 2
   },
   {
@@ -5633,9 +4807,7 @@
     "id": "f793fde5-cf39-458d-8569-8b3e62e52227",
     "label": "Cloud",
     "dreyfus": 2,
-    "parents": [
-      "bd71e6bb-c2c6-4c4e-9a64-0538e28a6034"
-    ],
+    "parents": ["bd71e6bb-c2c6-4c4e-9a64-0538e28a6034"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
@@ -5648,9 +4820,7 @@
       }
     ],
     "slug": "f793fde5-cf39-458d-8569-8b3e62e52227",
-    "children": [
-
-    ],
+    "children": [],
     "level": 2
   },
   {
@@ -5659,17 +4829,13 @@
     "id": "f9eb8a0e-6a89-4e8b-b00d-da280a075cbc",
     "label": "Cloud",
     "dreyfus": 6,
-    "parents": [
-      "43919303-85fc-418e-b0ad-19f5c3a22cb1"
-    ],
+    "parents": ["43919303-85fc-418e-b0ad-19f5c3a22cb1"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "f9eb8a0e-6a89-4e8b-b00d-da280a075cbc",
-    "children": [
-
-    ],
+    "children": [],
     "level": 7
   },
   {
@@ -5678,17 +4844,13 @@
     "id": "f727f7e1-a8c8-4830-9338-6784982883ef",
     "label": "Cloud",
     "dreyfus": 5,
-    "parents": [
-      "43919303-85fc-418e-b0ad-19f5c3a22cb1"
-    ],
+    "parents": ["43919303-85fc-418e-b0ad-19f5c3a22cb1"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "f727f7e1-a8c8-4830-9338-6784982883ef",
-    "children": [
-
-    ],
+    "children": [],
     "level": 7
   },
   {
@@ -5697,17 +4859,13 @@
     "id": "fe689f60-7c1c-43c0-ae46-5533c7d27cb0",
     "label": "Cloud",
     "dreyfus": 2,
-    "parents": [
-      "a9bde7cf-349b-4cab-b575-cea039fe4310"
-    ],
+    "parents": ["a9bde7cf-349b-4cab-b575-cea039fe4310"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "fe689f60-7c1c-43c0-ae46-5533c7d27cb0",
-    "children": [
-      "36215f16-0920-4414-aa9c-79f2f692871c"
-    ],
+    "children": ["36215f16-0920-4414-aa9c-79f2f692871c"],
     "level": 5
   },
   {
@@ -5716,17 +4874,13 @@
     "id": "fc67b878-6c46-40fd-9037-1be838eae2cf",
     "label": "IT Ops",
     "dreyfus": 5,
-    "parents": [
-      "40bd732c-25ad-4635-a51b-6767b67b3d15"
-    ],
+    "parents": ["40bd732c-25ad-4635-a51b-6767b67b3d15"],
     "hasCertification": true,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "fc67b878-6c46-40fd-9037-1be838eae2cf",
-    "children": [
-      "1f2cb81c-0be1-4e00-8d60-16449c3ef3d5"
-    ],
+    "children": ["1f2cb81c-0be1-4e00-8d60-16449c3ef3d5"],
     "level": 8
   },
   {
@@ -5735,18 +4889,13 @@
     "id": "fddb2017-a6d0-4031-b98b-adc64d0226e2",
     "label": "Testing",
     "dreyfus": 7,
-    "parents": [
-      "6053a351-9868-42ee-8bca-394537fb0fae"
-    ],
+    "parents": ["6053a351-9868-42ee-8bca-394537fb0fae"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "fddb2017-a6d0-4031-b98b-adc64d0226e2",
-    "children": [
-      "4475879a-4747-4454-b9ec-e0d1b367a216",
-      "4cd166dc-895c-42e9-9c54-626a757fb05b"
-    ],
+    "children": ["4475879a-4747-4454-b9ec-e0d1b367a216", "4cd166dc-895c-42e9-9c54-626a757fb05b"],
     "level": 3
   },
   {
@@ -5755,9 +4904,7 @@
     "id": "fa0e5fab-8627-4a7e-9ff1-4064ef40cbfe",
     "label": "Cloud",
     "dreyfus": 2,
-    "parents": [
-      "473af4ae-2daa-4f68-a3ab-fc2fc3d7dc47"
-    ],
+    "parents": ["473af4ae-2daa-4f68-a3ab-fc2fc3d7dc47"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": [
@@ -5781,10 +4928,7 @@
       }
     ],
     "slug": "fa0e5fab-8627-4a7e-9ff1-4064ef40cbfe",
-    "children": [
-      "7894b628-2848-4b39-aa2c-90c57bc8aed1",
-      "a792f567-c795-4c37-8363-68d6decee16f"
-    ],
+    "children": ["7894b628-2848-4b39-aa2c-90c57bc8aed1", "a792f567-c795-4c37-8363-68d6decee16f"],
     "level": 3
   },
   {
@@ -5793,17 +4937,13 @@
     "id": "ff464340-1012-4548-b8c9-bde23347723d",
     "label": "Testing",
     "dreyfus": 4,
-    "parents": [
-      "8f18da45-df45-4c6c-a2ec-ca7850703b6a"
-    ],
+    "parents": ["8f18da45-df45-4c6c-a2ec-ca7850703b6a"],
     "hasCertification": false,
     "isFinished": true,
     "other_resources": null,
     "courses": null,
     "slug": "ff464340-1012-4548-b8c9-bde23347723d",
-    "children": [
-
-    ],
+    "children": [],
     "level": 6
   },
   {
@@ -5812,9 +4952,7 @@
     "id": "ffbcd26e-6bf2-4fa7-ae5f-495ce4436d10",
     "label": "IT Ops",
     "dreyfus": 3,
-    "parents": [
-      "2a7f735b-0513-4c4b-930c-91466b5553d5"
-    ],
+    "parents": ["2a7f735b-0513-4c4b-930c-91466b5553d5"],
     "hasCertification": true,
     "isFinished": true,
     "other_resources": null,
@@ -5827,9 +4965,7 @@
       }
     ],
     "slug": "ffbcd26e-6bf2-4fa7-ae5f-495ce4436d10",
-    "children": [
-      "e82b56ee-bd86-4c89-b2a3-aa35abf4896b"
-    ],
+    "children": ["e82b56ee-bd86-4c89-b2a3-aa35abf4896b"],
     "level": 5
   }
 ]
