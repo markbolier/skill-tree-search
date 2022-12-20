@@ -15,7 +15,7 @@ export const SearchBar = () => {
         placeholder="Search... "
         onChange={(event) => setQuery(event.target.value)}
         value={query}
-      />
+      ></Styled.Input>
       <Styled.List>
         {mockData
           .filter((data) => data.title.toLowerCase().includes(query))
