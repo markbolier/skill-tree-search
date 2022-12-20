@@ -6,7 +6,10 @@ import mockData from "../../mock-data/example-data.json";
 export const SearchBar = () => {
   const [query, setQuery] = useState("");
 
-  console.log(query);
+  const highlightQuery = (query: string, text: string) => {
+    const regex = new RegExp(query, "gi");
+    return text.replace(regex, `<mark style="background: yellow; color: white;">${query}</mark>`);
+  };
 
   return (
     <div>
