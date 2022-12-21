@@ -1,4 +1,4 @@
-import { useReducer, useState } from "react";
+import { useReducer } from "react";
 
 import * as Styled from "./SearchBar.styled";
 import mockData from "../../mock-data/example-data.json";
