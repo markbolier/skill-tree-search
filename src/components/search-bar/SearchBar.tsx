@@ -45,11 +45,6 @@ export const SearchBar = () => {
     dispatch({ type: "SEARCH_DATA", payload: newArr });
   };
 
-  // const highlightQuery = (query: string, text: string) => {
-  //   const regex = new RegExp(query, "gi");
-  //   return text.replace(regex, `<mark style="background: yellow; color: white;">${query}</mark>`);
-  // };
-
   return (
     <div>
       <Styled.Input
