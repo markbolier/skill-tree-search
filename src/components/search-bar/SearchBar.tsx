@@ -35,7 +35,7 @@ export const SearchBar = () => {
       .map((text: any) => {
         let highlightedTitle = text.title.replace(
           new RegExp(string, "gi"),
-          (match: any) => `<mark>${match}</mark>`,
+          (match: any) => `<mark style="color: #ea650d">${match}</mark>`,
         );
         return {
           ...text,
