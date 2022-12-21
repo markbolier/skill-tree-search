@@ -35,7 +35,7 @@ export const SearchBar = () => {
       .map((text: any) => {
         let highlightedTitle = text.title.replace(
           new RegExp(string, "gi"),
-          (match: any) => `<mark style="background: yellow; color: white;">${match}</mark>`,
+          (match: any) => `<mark>${match}</mark>`,
         );
         return {
           ...text,
@@ -50,20 +50,18 @@ export const SearchBar = () => {
       <Styled.Input
         onChange={(event) => setQuery(event.target.value)}
         onKeyDown={handleInput}
-        placeholder="Search... "
+        placeholder="Search..."
         type="text"
         value={query}
       ></Styled.Input>
       <Styled.List>
-        {state.queryData
-          .filter((data: any) => data.title.toLowerCase().includes(query))
-          .map((data: any) => (
-            <Styled.ListItem key={data.id}>
-              <Styled.Title>{data.title}</Styled.Title>
-              <Styled.Label>#{data.label}</Styled.Label>
-              <Styled.Description>{data.description}</Styled.Description>
-            </Styled.ListItem>
-          ))}
+        {state.queryData.map((data: any) => (
+          <Styled.ListItem key={data.id}>
+            <Styled.Title dangerouslySetInnerHTML={{ __html: data.title }}></Styled.Title>
+            <Styled.Label>#{data.label}</Styled.Label>
+            <Styled.Description>{data.description}</Styled.Description>
+          </Styled.ListItem>
+        ))}
       </Styled.List>
     </div>
   );
