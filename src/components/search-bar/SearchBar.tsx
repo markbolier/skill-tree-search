@@ -4,8 +4,6 @@ import * as Styled from "./SearchBar.styled";
 import mockData from "../../mock-data/example-data.json";
 
 export const SearchBar = () => {
-  const [query, setQuery] = useState("");
-
   const initialState = {
     data: mockData,
     query: "",
@@ -63,20 +61,17 @@ export const SearchBar = () => {
   return (
     <div>
       <Styled.Input
-        onChange={(event) => setQuery(event.target.value)}
+        onChange={(event) => dispatch({ type: "SEARCH_INPUT", payload: event })}
         onKeyDown={handleInput}
         placeholder="Search..."
         type="text"
-        value={query}
       ></Styled.Input>
       <Styled.List>
         {state.queryData.map((data: any) => (
           <Styled.ListItem key={data.id}>
-            <Styled.Title dangerouslySetInnerHTML={{ __html: data.title }}></Styled.Title>
-            <Styled.Label dangerouslySetInnerHTML={{ __html: data.label }}></Styled.Label>
-            <Styled.Description
-              dangerouslySetInnerHTML={{ __html: data.description }}
-            ></Styled.Description>
+            <Styled.Title dangerouslySetInnerHTML={{ __html: data.title }} />
+            <Styled.Label dangerouslySetInnerHTML={{ __html: data.label }} />
+            <Styled.Description dangerouslySetInnerHTML={{ __html: data.description }} />
           </Styled.ListItem>
         ))}
       </Styled.List>
