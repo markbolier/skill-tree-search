@@ -31,11 +31,13 @@ export const SearchBar = () => {
     const newArr = state.data
       .filter(
         (text: any) =>
+          // TODO refactor this to seperate function?
           text.title.toLowerCase().includes(string.toLowerCase()) ||
           text.label.toLowerCase().includes(string.toLowerCase()) ||
           text.description.toLowerCase().includes(string.toLowerCase()),
       )
       .map((text: any) => {
+        // TODO refactor this to seperate function?
         let highlightedTitle = text.title.replace(
           new RegExp(string, "gi"),
           (match: any) => `<mark style="color: #ea650d">${match}</mark>`,
