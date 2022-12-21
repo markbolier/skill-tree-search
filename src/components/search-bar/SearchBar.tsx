@@ -34,7 +34,8 @@ export const SearchBar = () => {
       .filter(
         (text: any) =>
           text.title.toLowerCase().includes(string.toLowerCase()) ||
-          text.label.toLowerCase().includes(string.toLowerCase()),
+          text.label.toLowerCase().includes(string.toLowerCase()) ||
+          text.description.toLowerCase().includes(string.toLowerCase()),
       )
       .map((text: any) => {
         let highlightedTitle = text.title.replace(
@@ -45,10 +46,15 @@ export const SearchBar = () => {
           new RegExp(string, "gi"),
           (match: any) => `<mark style="color: #ea650d">${match}</mark>`,
         );
+        let highlightedDescription = text.description.replace(
+          new RegExp(string, "gi"),
+          (match: any) => `<mark style="color: #ea650d">${match}</mark>`,
+        );
         return {
           ...text,
           title: highlightedTitle,
           label: highlightedLabel,
+          description: highlightedDescription,
         };
       });
     dispatch({ type: "SEARCH_DATA", payload: newArr });
@@ -68,7 +74,9 @@ export const SearchBar = () => {
           <Styled.ListItem key={data.id}>
             <Styled.Title dangerouslySetInnerHTML={{ __html: data.title }}></Styled.Title>
             <Styled.Label dangerouslySetInnerHTML={{ __html: data.label }}></Styled.Label>
-            <Styled.Description>{data.description}</Styled.Description>
+            <Styled.Description
+              dangerouslySetInnerHTML={{ __html: data.description }}
+            ></Styled.Description>
           </Styled.ListItem>
         ))}
       </Styled.List>
