@@ -31,15 +31,24 @@ export const SearchBar = () => {
     let string = event.target.value;
     dispatch({ type: "SEARCH_INPUT", payload: string });
     const newArr = state.data
-      .filter((text: any) => text.title.toLowerCase().includes(string.toLowerCase()))
+      .filter(
+        (text: any) =>
+          text.title.toLowerCase().includes(string.toLowerCase()) ||
+          text.label.toLowerCase().includes(string.toLowerCase()),
+      )
       .map((text: any) => {
         let highlightedTitle = text.title.replace(
+          new RegExp(string, "gi"),
+          (match: any) => `<mark style="color: #ea650d">${match}</mark>`,
+        );
+        let highlightedLabel = text.label.replace(
           new RegExp(string, "gi"),
           (match: any) => `<mark style="color: #ea650d">${match}</mark>`,
         );
         return {
           ...text,
           title: highlightedTitle,
+          label: highlightedLabel,
         };
       });
     dispatch({ type: "SEARCH_DATA", payload: newArr });
@@ -58,7 +67,7 @@ export const SearchBar = () => {
         {state.queryData.map((data: any) => (
           <Styled.ListItem key={data.id}>
             <Styled.Title dangerouslySetInnerHTML={{ __html: data.title }}></Styled.Title>
-            <Styled.Label>#{data.label}</Styled.Label>
+            <Styled.Label dangerouslySetInnerHTML={{ __html: data.label }}></Styled.Label>
             <Styled.Description>{data.description}</Styled.Description>
           </Styled.ListItem>
         ))}
