@@ -43,17 +43,15 @@ function App() {
       .map((text: any) => {
         // TODO put this in helper function?
         const replacement = (match: any) => `<mark style="color: #ea650d">${match}</mark>`;
-        let highlightedTitle = text.title.replace(new RegExp(string, "gi"), replacement);
-        let highlightedLabel = text.label.replace(new RegExp(string, "gi"), replacement);
-        let highlightedDescription = text.description.replace(
-          new RegExp(string, "gi"),
-          replacement,
-        );
+        const regex = new RegExp(string, "gi");
+        let markedTitle = text.title.replace(regex, replacement);
+        let markedLabel = text.label.replace(regex, replacement);
+        let markedDescription = text.description.replace(regex, replacement);
         return {
           ...text,
-          title: highlightedTitle,
-          label: highlightedLabel,
-          description: highlightedDescription,
+          title: markedTitle,
+          label: markedLabel,
+          description: markedDescription,
         };
       });
 

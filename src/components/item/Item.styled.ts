@@ -14,13 +14,13 @@ export const Title = styled.h2`
 `;
 
 export const Label = styled.h3`
-  font-size: 0.9rem;
-  margin: 5px 0;
-  padding: 5px;
   background-color: #f1edeb;
   border-radius: 5px;
-  width: fit-content;
+  font-size: 0.9rem;
   font-weight: 400;
+  margin: 5px 0;
+  padding: 5px;
+  width: fit-content;
 `;
 
 export const Description = styled.p`
