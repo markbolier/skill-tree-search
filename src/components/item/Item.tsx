@@ -1,5 +1,6 @@
 import * as Styled from "./Item.styled";
 
+// TODO create workaround for innerHTML or sanitize
 export const Item = (props: any) => {
   return (
     <Styled.List key={props.id}>

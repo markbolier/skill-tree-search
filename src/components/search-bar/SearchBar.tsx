@@ -2,6 +2,7 @@ import { useReducer } from "react";
 
 import * as Styled from "./SearchBar.styled";
 import mockData from "../../mock-data/example-data.json";
+import { Item } from "../item";
 
 export const SearchBar = () => {
   const initialState = {
@@ -63,21 +64,20 @@ export const SearchBar = () => {
       <Styled.List>
         {state.query.length > 0
           ? state.queryData.map((data: any) => (
-              // TODO put this in seperate component
-              // TODO create workaround for innerHTML or sanitize
-              <Styled.ListItem key={data.id}>
-                <Styled.Title dangerouslySetInnerHTML={{ __html: data.title }} />
-                <Styled.Label dangerouslySetInnerHTML={{ __html: data.label }} />
-                <Styled.Description dangerouslySetInnerHTML={{ __html: data.description }} />
-              </Styled.ListItem>
+              <Item
+                key={data.id}
+                title={data.title}
+                label={data.label}
+                description={data.description}
+              />
             ))
           : state.data.map((data: any) => (
-              // TODO put this in seperate component
-              <Styled.ListItem key={data.id}>
-                <Styled.Title>{data.title}</Styled.Title>
-                <Styled.Label>{data.label}</Styled.Label>
-                <Styled.Description>{data.description}</Styled.Description>
-              </Styled.ListItem>
+              <Item
+                key={data.id}
+                title={data.title}
+                label={data.label}
+                description={data.description}
+              />
             ))}
       </Styled.List>
     </div>
