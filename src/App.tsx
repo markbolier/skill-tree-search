@@ -28,8 +28,8 @@ function App() {
 
   const [state, dispatch] = useReducer(reducer, initialState);
 
-  const handleInput = (event: any) => {
-    let string = event.target.value;
+  const handleInput = (event: React.FormEvent<HTMLInputElement>) => {
+    let string = event.currentTarget.value;
     dispatch({ type: "SEARCH_INPUT", payload: string });
 
     const newArr = state.data
@@ -67,6 +67,7 @@ function App() {
           ? state.queryData.map((data: any) => (
               <Item
                 key={data.id}
+                id={data.id}
                 title={data.title}
                 label={data.label}
                 description={data.description}
@@ -75,6 +76,7 @@ function App() {
           : state.data.map((data: any) => (
               <Item
                 key={data.id}
+                id={data.id}
                 title={data.title}
                 label={data.label}
                 description={data.description}

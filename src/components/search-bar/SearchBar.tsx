@@ -1,7 +1,11 @@
 import * as Styled from "./SearchBar.styled";
 
-export const SearchBar = (props: any) => {
-  return <Styled.Input onChange={props.handleInput} placeholder="Search..." type="text" />;
+interface SearchBarProps {
+  handleInput: any;
+}
+
+export const SearchBar = ({ handleInput }: SearchBarProps) => {
+  return <Styled.Input onChange={handleInput} placeholder="Search..." type="text" />;
 };
 
 export default SearchBar;
