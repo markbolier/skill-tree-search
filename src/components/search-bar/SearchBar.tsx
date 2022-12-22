@@ -28,15 +28,17 @@ export const SearchBar = () => {
   const handleInput = (event: any) => {
     let string = event.target.value;
     dispatch({ type: "SEARCH_INPUT", payload: string });
+
     const newArr = state.data
       .filter(
         (text: any) =>
-          // TODO refactor this to seperate function?
+          // TODO put this in helper function?
           text.title.toLowerCase().includes(string.toLowerCase()) ||
           text.label.toLowerCase().includes(string.toLowerCase()) ||
           text.description.toLowerCase().includes(string.toLowerCase()),
       )
       .map((text: any) => {
+        // TODO put this in helper function?
         const replacement = (match: any) => `<mark style="color: #ea650d">${match}</mark>`;
         let highlightedTitle = text.title.replace(new RegExp(string, "gi"), replacement);
         let highlightedLabel = text.label.replace(new RegExp(string, "gi"), replacement);
@@ -51,6 +53,7 @@ export const SearchBar = () => {
           description: highlightedDescription,
         };
       });
+
     dispatch({ type: "SEARCH_DATA", payload: newArr });
   };
 
@@ -60,6 +63,8 @@ export const SearchBar = () => {
       <Styled.List>
         {state.query.length > 0
           ? state.queryData.map((data: any) => (
+              // TODO put this in seperate component
+              // TODO create workaround for innerHTML or sanitize
               <Styled.ListItem key={data.id}>
                 <Styled.Title dangerouslySetInnerHTML={{ __html: data.title }} />
                 <Styled.Label dangerouslySetInnerHTML={{ __html: data.label }} />
@@ -67,6 +72,7 @@ export const SearchBar = () => {
               </Styled.ListItem>
             ))
           : state.data.map((data: any) => (
+              // TODO put this in seperate component
               <Styled.ListItem key={data.id}>
                 <Styled.Title>{data.title}</Styled.Title>
                 <Styled.Label>{data.label}</Styled.Label>
