@@ -56,12 +56,7 @@ export const SearchBar = () => {
 
   return (
     <div>
-      <Styled.Input
-        onChange={(event) => dispatch({ type: "SEARCH_INPUT", payload: event })}
-        onKeyDown={handleInput}
-        placeholder="Search..."
-        type="text"
-      ></Styled.Input>
+      <Styled.Input onChange={handleInput} placeholder="Search..." type="text"></Styled.Input>
       <Styled.List>
         {state.query.length > 0
           ? state.queryData.map((data: any) => (
