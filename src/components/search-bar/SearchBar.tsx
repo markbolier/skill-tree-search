@@ -37,18 +37,12 @@ export const SearchBar = () => {
           text.description.toLowerCase().includes(string.toLowerCase()),
       )
       .map((text: any) => {
-        // TODO refactor this to seperate function?
-        let highlightedTitle = text.title.replace(
-          new RegExp(string, "gi"),
-          (match: any) => `<mark style="color: #ea650d">${match}</mark>`,
-        );
-        let highlightedLabel = text.label.replace(
-          new RegExp(string, "gi"),
-          (match: any) => `<mark style="color: #ea650d">${match}</mark>`,
-        );
+        const replacement = (match: any) => `<mark style="color: #ea650d">${match}</mark>`;
+        let highlightedTitle = text.title.replace(new RegExp(string, "gi"), replacement);
+        let highlightedLabel = text.label.replace(new RegExp(string, "gi"), replacement);
         let highlightedDescription = text.description.replace(
           new RegExp(string, "gi"),
-          (match: any) => `<mark style="color: #ea650d">${match}</mark>`,
+          replacement,
         );
         return {
           ...text,
@@ -69,13 +63,21 @@ export const SearchBar = () => {
         type="text"
       ></Styled.Input>
       <Styled.List>
-        {state.queryData.map((data: any) => (
-          <Styled.ListItem key={data.id}>
-            <Styled.Title dangerouslySetInnerHTML={{ __html: data.title }} />
-            <Styled.Label dangerouslySetInnerHTML={{ __html: data.label }} />
-            <Styled.Description dangerouslySetInnerHTML={{ __html: data.description }} />
-          </Styled.ListItem>
-        ))}
+        {state.query.length > 0
+          ? state.queryData.map((data: any) => (
+              <Styled.ListItem key={data.id}>
+                <Styled.Title dangerouslySetInnerHTML={{ __html: data.title }} />
+                <Styled.Label dangerouslySetInnerHTML={{ __html: data.label }} />
+                <Styled.Description dangerouslySetInnerHTML={{ __html: data.description }} />
+              </Styled.ListItem>
+            ))
+          : state.data.map((data: any) => (
+              <Styled.ListItem key={data.id}>
+                <Styled.Title>{data.title}</Styled.Title>
+                <Styled.Label>{data.label}</Styled.Label>
+                <Styled.Description>{data.description}</Styled.Description>
+              </Styled.ListItem>
+            ))}
       </Styled.List>
     </div>
   );
