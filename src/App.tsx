@@ -35,13 +35,11 @@ function App() {
     const newArr = state.data
       .filter(
         (text: any) =>
-          // TODO put this in helper function?
           text.title.toLowerCase().includes(string.toLowerCase()) ||
           text.label.toLowerCase().includes(string.toLowerCase()) ||
           text.description.toLowerCase().includes(string.toLowerCase()),
       )
       .map((text: any) => {
-        // TODO put this in helper function?
         const replacement = (match: any) => `<mark style="color: #ea650d">${match}</mark>`;
         const regex = new RegExp(string, "gi");
         let markedTitle = text.title.replace(regex, replacement);

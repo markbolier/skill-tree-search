@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "dompurify": "^2.4.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "styled-components": "^5.3.6",
@@ -17,6 +18,7 @@
   "devDependencies": {
     "@humanoids/eslint-config": "^0.0.14",
     "@humanoids/prettier-config": "^0.0.4",
+    "@types/dompurify": "^2.4.0",
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.9",
     "@types/styled-components": "^5.1.26",
