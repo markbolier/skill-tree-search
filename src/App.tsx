@@ -29,22 +29,24 @@ function App() {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   const handleInput = (event: React.FormEvent<HTMLInputElement>) => {
-    let string = event.currentTarget.value.toLowerCase();
-    let substring = new RegExp(`\\b${string}\\b`, "gi");
-    dispatch({ type: "SEARCH_INPUT", payload: string });
+    let input = event.currentTarget.value.toLowerCase();
+    // TODO support for searching with multiple words
+    let string = input;
+    let formattedQuery = new RegExp(`\\b(${string})\\b`, "gi");
+    dispatch({ type: "SEARCH_INPUT", payload: input });
 
     const filteredData = state.data
       .filter(
         (text: { title: string; label: string; description: string }) =>
-          text.title.match(substring) ||
-          text.label.match(substring) ||
-          text.description.match(substring),
+          text.title.match(formattedQuery) ||
+          text.label.match(formattedQuery) ||
+          text.description.match(formattedQuery),
       )
       .map((text: { title: string; label: string; description: string }) => {
         const replacement = (match: string) => `<mark style="color: #ea650d">${match}</mark>`;
-        let markedTitle = text.title.replace(substring, replacement);
-        let markedLabel = text.label.replace(substring, replacement);
-        let markedDescription = text.description.replace(substring, replacement);
+        let markedTitle = text.title.replace(formattedQuery, replacement);
+        let markedLabel = text.label.replace(formattedQuery, replacement);
+        let markedDescription = text.description.replace(formattedQuery, replacement);
         return {
           ...text,
           title: markedTitle,
