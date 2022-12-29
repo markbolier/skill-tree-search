@@ -30,8 +30,7 @@ function App() {
 
   const handleInput = (event: React.FormEvent<HTMLInputElement>) => {
     let input = event.currentTarget.value.toLowerCase();
-    // TODO support for searching with multiple words
-    let string = input;
+    let string = input.trim().split(" ").join("|");
     let formattedQuery = new RegExp(`\\b(${string})\\b`, "gi");
     dispatch({ type: "SEARCH_INPUT", payload: input });
 
