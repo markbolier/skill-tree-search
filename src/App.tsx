@@ -1,4 +1,4 @@
-import { Key, useReducer } from "react";
+import { useReducer } from "react";
 
 import { Header } from "./components/header";
 import { Item } from "./components/item";
@@ -29,22 +29,22 @@ function App() {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   const handleInput = (event: React.FormEvent<HTMLInputElement>) => {
-    let string = event.currentTarget.value;
+    let string = event.currentTarget.value.toLowerCase();
+    let substring = new RegExp(`\\b${string}\\b`, "gi");
     dispatch({ type: "SEARCH_INPUT", payload: string });
 
-    const newArr = state.data
+    const filteredData = state.data
       .filter(
         (text: { title: string; label: string; description: string }) =>
-          text.title.toLowerCase().includes(string.toLowerCase()) ||
-          text.label.toLowerCase().includes(string.toLowerCase()) ||
-          text.description.toLowerCase().includes(string.toLowerCase()),
+          text.title.match(substring) ||
+          text.label.match(substring) ||
+          text.description.match(substring),
       )
       .map((text: { title: string; label: string; description: string }) => {
         const replacement = (match: string) => `<mark style="color: #ea650d">${match}</mark>`;
-        const regex = new RegExp(string, "gi");
-        let markedTitle = text.title.replace(regex, replacement);
-        let markedLabel = text.label.replace(regex, replacement);
-        let markedDescription = text.description.replace(regex, replacement);
+        let markedTitle = text.title.replace(substring, replacement);
+        let markedLabel = text.label.replace(substring, replacement);
+        let markedDescription = text.description.replace(substring, replacement);
         return {
           ...text,
           title: markedTitle,
@@ -53,7 +53,7 @@ function App() {
         };
       });
 
-    dispatch({ type: "SEARCH_DATA", payload: newArr });
+    dispatch({ type: "SEARCH_DATA", payload: filteredData });
   };
 
   return (
