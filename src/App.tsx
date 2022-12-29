@@ -1,10 +1,10 @@
-import * as Styled from "./App.styled";
-import { useReducer } from "react";
+import { Key, useReducer } from "react";
 
 import { Header } from "./components/header";
-import { SearchBar } from "./components/search-bar";
-import mockData from "../src/mock-data/example-data.json";
 import { Item } from "./components/item";
+import { SearchBar } from "./components/search-bar";
+import * as Styled from "./App.styled";
+import mockData from "../src/mock-data/example-data.json";
 
 function App() {
   const initialState = {
@@ -34,13 +34,13 @@ function App() {
 
     const newArr = state.data
       .filter(
-        (text: any) =>
+        (text: { title: string; label: string; description: string }) =>
           text.title.toLowerCase().includes(string.toLowerCase()) ||
           text.label.toLowerCase().includes(string.toLowerCase()) ||
           text.description.toLowerCase().includes(string.toLowerCase()),
       )
-      .map((text: any) => {
-        const replacement = (match: any) => `<mark style="color: #ea650d">${match}</mark>`;
+      .map((text: { title: string; label: string; description: string }) => {
+        const replacement = (match: string) => `<mark style="color: #ea650d">${match}</mark>`;
         const regex = new RegExp(string, "gi");
         let markedTitle = text.title.replace(regex, replacement);
         let markedLabel = text.label.replace(regex, replacement);
@@ -62,24 +62,28 @@ function App() {
       <SearchBar handleInput={handleInput} />
       <Styled.List>
         {state.query.length > 0
-          ? state.queryData.map((data: any) => (
-              <Item
-                key={data.id}
-                id={data.id}
-                title={data.title}
-                label={data.label}
-                description={data.description}
-              />
-            ))
-          : state.data.map((data: any) => (
-              <Item
-                key={data.id}
-                id={data.id}
-                title={data.title}
-                label={data.label}
-                description={data.description}
-              />
-            ))}
+          ? state.queryData.map(
+              (data: { id: string; title: string; label: string; description: string }) => (
+                <Item
+                  key={data.id}
+                  id={data.id}
+                  title={data.title}
+                  label={data.label}
+                  description={data.description}
+                />
+              ),
+            )
+          : state.data.map(
+              (data: { id: string; title: string; label: string; description: string }) => (
+                <Item
+                  key={data.id}
+                  id={data.id}
+                  title={data.title}
+                  label={data.label}
+                  description={data.description}
+                />
+              ),
+            )}
       </Styled.List>
     </div>
   );
