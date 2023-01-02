@@ -1,4 +1,4 @@
-import { useReducer } from "react";
+import { useReducer, useState } from "react";
 
 import { Header } from "./components/header";
 import { Item } from "./components/item";
@@ -12,6 +12,8 @@ function App() {
     query: "",
     queryData: [],
   };
+
+  const [paginate, setPaginate] = useState(5);
 
   const reducer = (state: any, action: any) => {
     switch (action.type) {
@@ -57,34 +59,28 @@ function App() {
     dispatch({ type: "SEARCH_DATA", payload: filteredData });
   };
 
+  const loadMore = () => {
+    setPaginate(paginate + 5);
+  };
+
   return (
     <div className="App">
       <Header />
       <SearchBar handleInput={handleInput} />
       <Styled.List>
-        {state.query.length > 0
-          ? state.queryData.map(
-              (data: { id: string; title: string; label: string; description: string }) => (
-                <Item
-                  key={data.id}
-                  id={data.id}
-                  title={data.title}
-                  label={data.label}
-                  description={data.description}
-                />
-              ),
-            )
-          : state.data.map(
-              (data: { id: string; title: string; label: string; description: string }) => (
-                <Item
-                  key={data.id}
-                  id={data.id}
-                  title={data.title}
-                  label={data.label}
-                  description={data.description}
-                />
-              ),
-            )}
+        {state.query.length > 0 &&
+          state.queryData
+            .map((data: { id: string; title: string; label: string; description: string }) => (
+              <Item
+                key={data.id}
+                id={data.id}
+                title={data.title}
+                label={data.label}
+                description={data.description}
+              />
+            ))
+            .slice(0, paginate)}
+        <button onClick={loadMore}>Load more</button>
       </Styled.List>
     </div>
   );
