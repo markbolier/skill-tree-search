@@ -1,4 +1,4 @@
-import { useReducer, useState } from "react";
+import { useReducer, useState, useRef } from "react";
 
 import { ClearInputButton } from "./components/clear-input-button";
 import { Header } from "./components/header";
@@ -11,40 +11,45 @@ function App() {
   const initialState = {
     data: mockData,
     query: "",
-    queryData: [],
+    results: [],
   };
 
-  const [paginate, setPaginate] = useState(5);
-
   const ACTIONS = {
-    SET_DATA: "SET_DATA",
     SET_QUERY: "SET_QUERY",
     SET_RESULTS: "SET_RESULTS",
   };
 
   const reducer = (state: any, action: any) => {
     switch (action.type) {
-      case ACTIONS.SET_DATA:
-        return { ...state, data: action.payload };
       case ACTIONS.SET_QUERY:
         return { ...state, query: action.payload };
       case ACTIONS.SET_RESULTS:
-        return { ...state, queryData: action.payload };
+        return { ...state, results: action.payload };
       default:
         throw new Error();
     }
   };
 
   const [state, dispatch] = useReducer(reducer, initialState);
+  const [paginate, setPaginate] = useState(5);
+
+  //TODO also clear input value of the input field
+  const clearInput = () => {
+    dispatch({ type: ACTIONS.SET_RESULTS, payload: [] });
+    dispatch({ type: ACTIONS.SET_QUERY, payload: "" });
+  };
 
   const handleInput = (event: React.FormEvent<HTMLInputElement>) => {
     let input = event.currentTarget.value.toLowerCase();
     let string = input.trim().split(" ").join("|");
     let query = new RegExp(`\\b(${string})\\b`, "gi");
-
     dispatch({ type: ACTIONS.SET_QUERY, payload: string });
-
     showResults(query);
+  };
+
+  //TODO hide load more button when there are no (more) results👇
+  const loadMore = () => {
+    setPaginate(paginate + 5);
   };
 
   const showResults = (query: RegExp) => {
@@ -65,12 +70,7 @@ function App() {
           description: markedDescription,
         };
       });
-
     dispatch({ type: ACTIONS.SET_RESULTS, payload: filteredData });
-  };
-
-  const loadMore = () => {
-    setPaginate(paginate + 5);
   };
 
   return (
@@ -78,11 +78,11 @@ function App() {
       <Header />
       <Styled.InputContainer>
         <SearchBar handleInput={handleInput} />
-        <ClearInputButton />
+        <ClearInputButton clearInput={clearInput} />
       </Styled.InputContainer>
       <Styled.List>
         {state.query.length > 0 &&
-          state.queryData
+          state.results
             .map((data: { id: string; title: string; label: string; description: string }) => (
               <Item
                 key={data.id}

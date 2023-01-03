@@ -1,3 +1,4 @@
+import { Ref } from "react";
 import * as Styled from "./SearchBar.styled";
 
 interface SearchBarProps {

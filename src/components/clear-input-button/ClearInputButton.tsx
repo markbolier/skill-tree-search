@@ -1,7 +1,11 @@
 import * as Styled from "./ClearInputButton.styled";
 
-export const ClearInputButton = () => {
-  return <Styled.Button>X</Styled.Button>;
+interface ClearInputButtonProps {
+  clearInput: () => void;
+}
+
+export const ClearInputButton = ({ clearInput }: ClearInputButtonProps) => {
+  return <Styled.Button onClick={clearInput}>X</Styled.Button>;
 };
 
 export default ClearInputButton;
