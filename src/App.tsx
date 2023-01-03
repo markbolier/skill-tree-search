@@ -1,5 +1,6 @@
 import { useReducer, useState } from "react";
 
+import { ClearInputButton } from "./components/clear-input-button";
 import { Header } from "./components/header";
 import { Item } from "./components/item";
 import { SearchBar } from "./components/search-bar";
@@ -40,7 +41,9 @@ function App() {
     let input = event.currentTarget.value.toLowerCase();
     let string = input.trim().split(" ").join("|");
     let query = new RegExp(`\\b(${string})\\b`, "gi");
+
     dispatch({ type: ACTIONS.SET_QUERY, payload: string });
+
     showResults(query);
   };
 
@@ -73,7 +76,10 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <SearchBar handleInput={handleInput} />
+      <Styled.InputContainer>
+        <SearchBar handleInput={handleInput} />
+        <ClearInputButton />
+      </Styled.InputContainer>
       <Styled.List>
         {state.query.length > 0 &&
           state.queryData
@@ -87,7 +93,7 @@ function App() {
               />
             ))
             .slice(0, paginate)}
-        <button onClick={loadMore}>Load more</button>
+        <Styled.Button onClick={loadMore}>Load more</Styled.Button>
       </Styled.List>
     </div>
   );
