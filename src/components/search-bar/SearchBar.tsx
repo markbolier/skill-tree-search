@@ -1,6 +1,7 @@
 import * as Styled from "./SearchBar.styled";
 
 interface SearchBarProps {
+  // todo type the props
   handleInput: any;
 }
 

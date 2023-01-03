@@ -15,13 +15,19 @@ function App() {
 
   const [paginate, setPaginate] = useState(5);
 
+  const ACTIONS = {
+    SET_DATA: "SET_DATA",
+    SET_QUERY: "SET_QUERY",
+    SET_RESULTS: "SET_RESULTS",
+  };
+
   const reducer = (state: any, action: any) => {
     switch (action.type) {
-      case "SET_DATA":
+      case ACTIONS.SET_DATA:
         return { ...state, data: action.payload };
-      case "SEARCH_INPUT":
+      case ACTIONS.SET_QUERY:
         return { ...state, query: action.payload };
-      case "SEARCH_DATA":
+      case ACTIONS.SET_RESULTS:
         return { ...state, queryData: action.payload };
       default:
         throw new Error();
@@ -33,21 +39,22 @@ function App() {
   const handleInput = (event: React.FormEvent<HTMLInputElement>) => {
     let input = event.currentTarget.value.toLowerCase();
     let string = input.trim().split(" ").join("|");
-    let formattedQuery = new RegExp(`\\b(${string})\\b`, "gi");
-    dispatch({ type: "SEARCH_INPUT", payload: input });
+    let query = new RegExp(`\\b(${string})\\b`, "gi");
+    dispatch({ type: ACTIONS.SET_QUERY, payload: string });
+    showResults(query);
+  };
 
+  const showResults = (query: RegExp) => {
     const filteredData = state.data
       .filter(
         (text: { title: string; label: string; description: string }) =>
-          text.title.match(formattedQuery) ||
-          text.label.match(formattedQuery) ||
-          text.description.match(formattedQuery),
+          text.title.match(query) || text.label.match(query) || text.description.match(query),
       )
       .map((text: { title: string; label: string; description: string }) => {
         const replacement = (match: string) => `<mark style="color: #ea650d">${match}</mark>`;
-        let markedTitle = text.title.replace(formattedQuery, replacement);
-        let markedLabel = text.label.replace(formattedQuery, replacement);
-        let markedDescription = text.description.replace(formattedQuery, replacement);
+        let markedTitle = text.title.replace(query, replacement);
+        let markedLabel = text.label.replace(query, replacement);
+        let markedDescription = text.description.replace(query, replacement);
         return {
           ...text,
           title: markedTitle,
@@ -56,7 +63,7 @@ function App() {
         };
       });
 
-    dispatch({ type: "SEARCH_DATA", payload: filteredData });
+    dispatch({ type: ACTIONS.SET_RESULTS, payload: filteredData });
   };
 
   const loadMore = () => {
