@@ -1,4 +1,4 @@
-import { useReducer, useState, useRef } from "react";
+import { useReducer, useState } from "react";
 
 import { ClearInputButton } from "./components/clear-input-button";
 import { Header } from "./components/header";
