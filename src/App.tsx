@@ -34,15 +34,14 @@ function App() {
   const [paginate, setPaginate] = useState(5);
 
   const clearInput = () => {
-    console.log("fires");
     dispatch({ type: ACTIONS.SET_QUERY, payload: "" });
   };
 
   const handleInput = (event: React.FormEvent<HTMLInputElement>) => {
     let input = event.currentTarget.value;
-    let string = input.toLowerCase().trim().split(" ").join("|");
-    let query = new RegExp(`\\b(${string})\\b`, "gi");
-    dispatch({ type: ACTIONS.SET_QUERY, payload: string });
+    let formattedString = input.toLowerCase().trim().split(" ").join("|");
+    let query = new RegExp(`\\b(${formattedString})\\b`, "gi");
+    dispatch({ type: ACTIONS.SET_QUERY, payload: formattedString });
     showResults(query);
   };
 
