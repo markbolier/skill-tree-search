@@ -35,6 +35,7 @@ function App() {
 
   const clearInput = () => {
     dispatch({ type: ACTIONS.SET_QUERY, payload: "" });
+    setPaginate(5);
   };
 
   const handleInput = (event: React.FormEvent<HTMLInputElement>) => {
@@ -43,6 +44,7 @@ function App() {
     let query = new RegExp(`\\b(${formattedString})\\b`, "gi");
     dispatch({ type: ACTIONS.SET_QUERY, payload: formattedString });
     showResults(query);
+    setPaginate(5);
   };
 
   //TODO hide load more button when there are no (more) results👇
@@ -91,9 +93,12 @@ function App() {
               />
             ))
             .slice(0, paginate)}
-        {state.query !== "" && state.results.length !== 0 && state.results.length >= paginate && (
-          <Styled.Button onClick={loadMore}>Load more</Styled.Button>
-        )}
+        {state.query !== "" &&
+          state.results.length !== 0 &&
+          state.results.length !== paginate &&
+          state.results.length > paginate && (
+            <Styled.Button onClick={loadMore}>Load more</Styled.Button>
+          )}
       </Styled.List>
     </div>
   );
