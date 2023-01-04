@@ -33,15 +33,14 @@ function App() {
   const [state, dispatch] = useReducer(reducer, initialState);
   const [paginate, setPaginate] = useState(5);
 
-  //TODO also clear input value of the input field
   const clearInput = () => {
-    dispatch({ type: ACTIONS.SET_RESULTS, payload: [] });
+    console.log("fires");
     dispatch({ type: ACTIONS.SET_QUERY, payload: "" });
   };
 
   const handleInput = (event: React.FormEvent<HTMLInputElement>) => {
-    let input = event.currentTarget.value.toLowerCase();
-    let string = input.trim().split(" ").join("|");
+    let input = event.currentTarget.value;
+    let string = input.toLowerCase().trim().split(" ").join("|");
     let query = new RegExp(`\\b(${string})\\b`, "gi");
     dispatch({ type: ACTIONS.SET_QUERY, payload: string });
     showResults(query);
@@ -77,7 +76,7 @@ function App() {
     <div className="App">
       <Header />
       <Styled.InputContainer>
-        <SearchBar handleInput={handleInput} />
+        <SearchBar query={state.query} handleInput={handleInput} />
         <ClearInputButton clearInput={clearInput} />
       </Styled.InputContainer>
       <Styled.List>
