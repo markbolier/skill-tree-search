@@ -1,4 +1,4 @@
-import { useReducer, useState } from "react";
+import { useEffect, useReducer, useState } from "react";
 
 import { ClearInputButton } from "./components/clear-input-button";
 import { Header } from "./components/header";
@@ -50,6 +50,12 @@ function App() {
   const loadMore = () => {
     setPaginate(paginate + 5);
   };
+
+  const debouncer = useEffect(() => {
+    const getResults = setTimeout(() => {}, 2000);
+
+    return () => clearTimeout(getResults);
+  });
 
   const showResults = (query: RegExp) => {
     const filteredData = state.data
