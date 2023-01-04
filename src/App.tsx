@@ -79,7 +79,7 @@ function App() {
         <ClearInputButton clearInput={clearInput} />
       </Styled.InputContainer>
       <Styled.List>
-        {state.query.length > 0 &&
+        {state.results.length !== 0 &&
           state.results
             .map((data: { id: string; title: string; label: string; description: string }) => (
               <Item
@@ -91,7 +91,9 @@ function App() {
               />
             ))
             .slice(0, paginate)}
-        <Styled.Button onClick={loadMore}>Load more</Styled.Button>
+        {state.query !== "" && state.results.length !== 0 && state.results.length >= paginate && (
+          <Styled.Button onClick={loadMore}>Load more</Styled.Button>
+        )}
       </Styled.List>
     </div>
   );
