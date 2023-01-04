@@ -47,7 +47,6 @@ function App() {
     setPaginate(5);
   };
 
-  //TODO hide load more button when there are no (more) results👇
   const loadMore = () => {
     setPaginate(paginate + 5);
   };
