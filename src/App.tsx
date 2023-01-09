@@ -33,30 +33,35 @@ function App() {
   const [state, dispatch] = useReducer(reducer, initialState);
   const [paginate, setPaginate] = useState(5);
 
-  const clearInput = () => {
+  function clearInput() {
     dispatch({ type: ACTIONS.SET_QUERY, payload: "" });
     setPaginate(5);
-  };
+  }
 
-  const handleInput = (event: React.FormEvent<HTMLInputElement>) => {
+  function handleInput(event: React.FormEvent<HTMLInputElement>) {
     let input = event.currentTarget.value;
     let formattedString = input.toLowerCase().trim().split(" ").join("|");
     let query = new RegExp(`\\b(${formattedString})\\b`, "gi");
     dispatch({ type: ACTIONS.SET_QUERY, payload: input });
     showResults(query);
     setPaginate(5);
-  };
+  }
 
-  const loadMore = () => {
+  function loadMore() {
     setPaginate(paginate + 5);
-  };
+  }
 
   // const debouncer = useEffect(() => {
   //   const showResults = setTimeout(() => {}, 2000);
   //   return () => clearTimeout(showResults);
   // });
 
-  const showResults = (query: RegExp) => {
+  useEffect(() => {
+    const showResults = setTimeout(() => {}, 2000);
+    return () => clearTimeout(showResults);
+  });
+
+  function showResults(query: RegExp) {
     const filteredData = state.data
       .filter(
         (text: { title: string; label: string; description: string }) =>
@@ -75,7 +80,7 @@ function App() {
         };
       });
     dispatch({ type: ACTIONS.SET_RESULTS, payload: filteredData });
-  };
+  }
 
   return (
     <div className="App">
