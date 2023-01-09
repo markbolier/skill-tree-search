@@ -42,7 +42,7 @@ function App() {
     let input = event.currentTarget.value;
     let formattedString = input.toLowerCase().trim().split(" ").join("|");
     let query = new RegExp(`\\b(${formattedString})\\b`, "gi");
-    dispatch({ type: ACTIONS.SET_QUERY, payload: formattedString });
+    dispatch({ type: ACTIONS.SET_QUERY, payload: input });
     showResults(query);
     setPaginate(5);
   };
@@ -51,11 +51,10 @@ function App() {
     setPaginate(paginate + 5);
   };
 
-  const debouncer = useEffect(() => {
-    const getResults = setTimeout(() => {}, 2000);
-
-    return () => clearTimeout(getResults);
-  });
+  // const debouncer = useEffect(() => {
+  //   const showResults = setTimeout(() => {}, 2000);
+  //   return () => clearTimeout(showResults);
+  // });
 
   const showResults = (query: RegExp) => {
     const filteredData = state.data
