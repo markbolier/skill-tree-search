@@ -19,6 +19,7 @@ function App() {
     SET_RESULTS: "SET_RESULTS",
   };
 
+  // TODO type parameters for this
   const reducer = (state: any, action: any) => {
     switch (action.type) {
       case ACTIONS.SET_QUERY:
@@ -50,16 +51,6 @@ function App() {
   function loadMore() {
     setPaginate(paginate + 5);
   }
-
-  // const debouncer = useEffect(() => {
-  //   const showResults = setTimeout(() => {}, 2000);
-  //   return () => clearTimeout(showResults);
-  // });
-
-  useEffect(() => {
-    const showResults = setTimeout(() => {}, 2000);
-    return () => clearTimeout(showResults);
-  });
 
   function showResults(query: RegExp) {
     const filteredData = state.data
