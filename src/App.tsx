@@ -6,15 +6,18 @@ import { Item } from "./components/item";
 import { SearchBar } from "./components/search-bar";
 import * as Styled from "./App.styled";
 import mockData from "../src/mock-data/example-data.json";
+import useDebounce from "./hooks/useDebounce";
 
 function App() {
   const initialState = {
     data: mockData,
+    input: "",
     query: "",
     results: [],
   };
 
   const ACTIONS = {
+    SET_INPUT: "SET_INPUT",
     SET_QUERY: "SET_QUERY",
     SET_RESULTS: "SET_RESULTS",
   };
@@ -22,6 +25,8 @@ function App() {
   // TODO type parameters for this
   const reducer = (state: any, action: any) => {
     switch (action.type) {
+      case ACTIONS.SET_INPUT:
+        return { ...state, input: action.payload };
       case ACTIONS.SET_QUERY:
         return { ...state, query: action.payload };
       case ACTIONS.SET_RESULTS:
@@ -35,34 +40,42 @@ function App() {
   const [paginate, setPaginate] = useState(5);
 
   function clearInput() {
-    dispatch({ type: ACTIONS.SET_QUERY, payload: "" });
+    dispatch({ type: ACTIONS.SET_INPUT, payload: "" });
     setPaginate(5);
   }
 
-  function handleInput(event: React.FormEvent<HTMLInputElement>) {
+  const handleInput = (event: React.FormEvent<HTMLInputElement>) => {
     let input = event.currentTarget.value;
     let formattedString = input.toLowerCase().trim().split(" ").join("|");
     let query = new RegExp(`\\b(${formattedString})\\b`, "gi");
-    dispatch({ type: ACTIONS.SET_QUERY, payload: input });
-    showResults(query);
+    dispatch({ type: ACTIONS.SET_INPUT, payload: input });
+    dispatch({ type: ACTIONS.SET_QUERY, payload: query });
     setPaginate(5);
-  }
+  };
+
+  const searchQuery = useDebounce(state.query, 1000);
+
+  useEffect(() => {
+    showResults(searchQuery);
+  }, [searchQuery]);
 
   function loadMore() {
     setPaginate(paginate + 5);
   }
 
-  function showResults(query: RegExp) {
+  function showResults(searchQuery: RegExp) {
     const filteredData = state.data
       .filter(
         (text: { title: string; label: string; description: string }) =>
-          text.title.match(query) || text.label.match(query) || text.description.match(query),
+          text.title.match(searchQuery) ||
+          text.label.match(searchQuery) ||
+          text.description.match(searchQuery),
       )
       .map((text: { title: string; label: string; description: string }) => {
         const replacement = (match: string) => `<mark style="color: #ea650d">${match}</mark>`;
-        let markedTitle = text.title.replace(query, replacement);
-        let markedLabel = text.label.replace(query, replacement);
-        let markedDescription = text.description.replace(query, replacement);
+        let markedTitle = text.title.replace(searchQuery, replacement);
+        let markedLabel = text.label.replace(searchQuery, replacement);
+        let markedDescription = text.description.replace(searchQuery, replacement);
         return {
           ...text,
           title: markedTitle,
@@ -77,7 +90,7 @@ function App() {
     <div className="App">
       <Header />
       <Styled.InputContainer>
-        <SearchBar query={state.query} handleInput={handleInput} />
+        <SearchBar query={state.input} handleInput={handleInput} />
         <ClearInputButton clearInput={clearInput} />
       </Styled.InputContainer>
       <Styled.List>
