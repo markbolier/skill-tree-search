@@ -1,4 +1,5 @@
 import { useEffect, useReducer, useState } from "react";
+import Fuse from "fuse.js";
 
 import { ClearInputButton } from "./components/clear-input-button";
 import { Header } from "./components/header";
@@ -86,6 +87,12 @@ function App() {
     dispatch({ type: ACTIONS.SET_RESULTS, payload: filteredData });
   }
 
+  const fuse = new Fuse(state.data, { keys: ["title", "description", "label"] });
+
+  const result = fuse.search("kube");
+  console.log(result);
+  console.log(result[0].item.title);
+
   return (
     <div className="App">
       <Header />
@@ -94,6 +101,9 @@ function App() {
         <ClearInputButton clearInput={clearInput} />
       </Styled.InputContainer>
       <Styled.List>
+        {result.map((item, i) => {
+          <Item key={i} title={item.title} />;
+        })}
         {state.results.length !== 0 &&
           state.results
             .map((data: { id: string; title: string; label: string; description: string }) => (
