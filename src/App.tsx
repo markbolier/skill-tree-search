@@ -90,8 +90,6 @@ function App() {
   const fuse = new Fuse(state.data, { keys: ["title", "description", "label"] });
 
   const result = fuse.search("kube");
-  console.log(result);
-  console.log(result[0].item.title);
 
   return (
     <div className="App">
@@ -102,9 +100,17 @@ function App() {
       </Styled.InputContainer>
       <Styled.List>
         {result.map((item, i) => {
-          <Item key={i} title={item.title} />;
+          return (
+            <Item
+              key={i}
+              id={i}
+              title={item.item.title}
+              description={item.item.description}
+              label={item.item.label}
+            />
+          );
         })}
-        {state.results.length !== 0 &&
+        {/* {state.results.length !== 0 &&
           state.results
             .map((data: { id: string; title: string; label: string; description: string }) => (
               <Item
@@ -115,13 +121,13 @@ function App() {
                 description={data.description}
               />
             ))
-            .slice(0, paginate)}
-        {state.query !== "" &&
+            .slice(0, paginate)} */}
+        {/* {state.query !== "" &&
           state.results.length !== 0 &&
           state.results.length !== paginate &&
           state.results.length > paginate && (
             <Styled.Button onClick={loadMore}>Load more</Styled.Button>
-          )}
+          )} */}
       </Styled.List>
     </div>
   );

@@ -3,10 +3,10 @@ import DOMPurify from "dompurify";
 import * as Styled from "./Item.styled";
 
 interface ItemProps {
-  description: string;
-  id: string;
-  label: string;
-  title: string;
+  description: any;
+  id: any;
+  label: any;
+  title: any;
 }
 
 export const Item = ({ description, id, label, title }: ItemProps) => {
