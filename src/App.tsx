@@ -55,57 +55,8 @@ function App() {
   };
 
   const fuse = new Fuse(state.data, { keys: ["title", "description", "label"] });
-  const searchQuery = useDebounce(state.query, 1000);
 
   const result = fuse.search(state.input);
-  // showFuzzyResults(result);
-
-  // useEffect(() => {
-  //   showResults(searchQuery);
-  // }, [searchQuery]);
-
-  // useEffect(() => {
-  //   showFuzzyResults(result);
-  // }, [searchQuery]);
-
-  // function showFuzzyResults(result: any) {
-  //   const fuzzyData = result.map((text: any) => {
-  //     const highlight = (match: string) => `<mark style="color: #ea650d">${match}</mark>`;
-  //     let markedTitle = text.title.replace(searchQuery, highlight);
-  //     let markedLabel = text.label.replace(searchQuery, highlight);
-  //     let markedDescription = text.description.replace(searchQuery, highlight);
-  //     return {
-  //       ...text,
-  //       title: markedTitle,
-  //       label: markedLabel,
-  //       description: markedDescription,
-  //     };
-  //   });
-  //   dispatch({ type: ACTIONS.SET_RESULTS, payload: fuzzyData });
-  // }
-
-  // function showResults(searchQuery: RegExp) {
-  //   const filteredData = state.data
-  //     .filter(
-  //       (text: { title: string; label: string; description: string }) =>
-  //         text.title.match(searchQuery) ||
-  //         text.label.match(searchQuery) ||
-  //         text.description.match(searchQuery),
-  //     )
-  //     .map((text: { title: string; label: string; description: string }) => {
-  //       const replacement = (match: string) => `<mark style="color: #ea650d">${match}</mark>`;
-  //       let markedTitle = text.title.replace(searchQuery, replacement);
-  //       let markedLabel = text.label.replace(searchQuery, replacement);
-  //       let markedDescription = text.description.replace(searchQuery, replacement);
-  //       return {
-  //         ...text,
-  //         title: markedTitle,
-  //         label: markedLabel,
-  //         description: markedDescription,
-  //       };
-  //     });
-  //   dispatch({ type: ACTIONS.SET_RESULTS, payload: filteredData });
-  // }
 
   function loadMore() {
     setPaginate(paginate + 5);
