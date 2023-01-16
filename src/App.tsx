@@ -10,16 +10,16 @@ import mockData from "../src/mock-data/example-data.json";
 import useDebounce from "./hooks/useDebounce";
 
 function App() {
+  const ACTIONS = {
+    SET_INPUT: "SET_INPUT",
+    SET_RESULTS: "SET_RESULTS",
+  };
+
   const initialState = {
     data: mockData,
     input: "",
     query: "",
     results: [],
-  };
-
-  const ACTIONS = {
-    SET_INPUT: "SET_INPUT",
-    SET_RESULTS: "SET_RESULTS",
   };
 
   // TODO type parameters
@@ -42,11 +42,29 @@ function App() {
     setPaginate(5);
   }
 
-  const handleInput = (event: React.FormEvent<HTMLInputElement>) => {
-    let input = event.currentTarget.value;
+  function handleInput(event: React.FormEvent<HTMLInputElement>) {
+    const input = event.currentTarget.value;
     dispatch({ type: ACTIONS.SET_INPUT, payload: input });
     setPaginate(5);
-  };
+  }
+
+  function highlightMatches() {
+    const items = state.results;
+    items.filter((item: any) => {
+      console.log(item.matches);
+    });
+  }
+
+  highlightMatches();
+
+  function loadMore() {
+    setPaginate(paginate + 5);
+  }
+
+  function showResults() {
+    const results = fuse.search(state.input);
+    dispatch({ type: ACTIONS.SET_RESULTS, payload: results });
+  }
 
   const options = {
     includeMatches: true,
@@ -56,25 +74,12 @@ function App() {
       { name: "label", weight: 1 },
     ],
   };
-
   const fuse = new Fuse(state.data, options);
-
   const searchQuery = useDebounce(state.input, 1000);
-
-  function showResults() {
-    const results = fuse.search(state.input);
-    dispatch({ type: ACTIONS.SET_RESULTS, payload: results });
-  }
 
   useEffect(() => {
     showResults();
   }, [searchQuery]);
-
-  function loadMore() {
-    setPaginate(paginate + 5);
-  }
-
-  console.log(Object.keys(state.results).length);
 
   return (
     <div className="App">
