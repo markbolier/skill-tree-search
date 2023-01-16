@@ -1,4 +1,4 @@
-import { useEffect, useReducer, useState } from "react";
+import { useReducer, useState } from "react";
 import Fuse from "fuse.js";
 
 import { ClearInputButton } from "./components/clear-input-button";
@@ -7,7 +7,6 @@ import { Item } from "./components/item";
 import { SearchBar } from "./components/search-bar";
 import * as Styled from "./App.styled";
 import mockData from "../src/mock-data/example-data.json";
-import useDebounce from "./hooks/useDebounce";
 
 function App() {
   const initialState = {
@@ -23,7 +22,7 @@ function App() {
     SET_RESULTS: "SET_RESULTS",
   };
 
-  // TODO type parameters for this
+  // TODO type parameters
   const reducer = (state: any, action: any) => {
     switch (action.type) {
       case ACTIONS.SET_INPUT:
@@ -54,9 +53,18 @@ function App() {
     setPaginate(5);
   };
 
-  const fuse = new Fuse(state.data, { keys: ["title", "description", "label"] });
+  const options = {
+    includeMatches: true,
+    keys: [
+      { name: "title", weight: 2 },
+      { name: "description", weight: 1 },
+      { name: "label", weight: 0.5 },
+    ],
+  };
+  const fuse = new Fuse(state.data, options);
+  const results = fuse.search(state.input);
 
-  const result = fuse.search(state.input);
+  console.log(results);
 
   function loadMore() {
     setPaginate(paginate + 5);
@@ -70,17 +78,19 @@ function App() {
         <ClearInputButton clearInput={clearInput} />
       </Styled.InputContainer>
       <Styled.List>
-        {result.map((item, i) => {
-          return (
-            <Item
-              key={i}
-              id={i}
-              title={`FUZZY ${item.item.title}`}
-              description={item.item.description}
-              label={item.item.label}
-            />
-          );
-        })}
+        {results
+          .map((obj, i) => {
+            return (
+              <Item
+                key={i}
+                id={i}
+                title={`FUZZY ${obj.item.title}`}
+                description={obj.item.description}
+                label={obj.item.label}
+              />
+            );
+          })
+          .slice(0, paginate)}
         {/* {state.results.length !== 0 &&
           state.results
             .map((data: { id: string; title: string; label: string; description: string }) => (
@@ -92,13 +102,11 @@ function App() {
                 description={data.description}
               />
             ))
-            .slice(0, paginate)}
+            .slice(0, paginate)} */}
         {state.query !== "" &&
-          state.results.length !== 0 &&
-          state.results.length !== paginate &&
-          state.results.length > paginate && (
-            <Styled.Button onClick={loadMore}>Load more</Styled.Button>
-          )} */}
+          results.length !== 0 &&
+          results.length !== paginate &&
+          results.length > paginate && <Styled.Button onClick={loadMore}>Load more</Styled.Button>}
       </Styled.List>
     </div>
   );
