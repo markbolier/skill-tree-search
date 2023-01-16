@@ -1,4 +1,4 @@
-import { useReducer, useState } from "react";
+import { useReducer, useState, useEffect } from "react";
 import Fuse from "fuse.js";
 
 import { ClearInputButton } from "./components/clear-input-button";
@@ -7,6 +7,7 @@ import { Item } from "./components/item";
 import { SearchBar } from "./components/search-bar";
 import * as Styled from "./App.styled";
 import mockData from "../src/mock-data/example-data.json";
+import useDebounce from "./hooks/useDebounce";
 
 function App() {
   const initialState = {
@@ -18,7 +19,6 @@ function App() {
 
   const ACTIONS = {
     SET_INPUT: "SET_INPUT",
-    SET_QUERY: "SET_QUERY",
     SET_RESULTS: "SET_RESULTS",
   };
 
@@ -27,8 +27,6 @@ function App() {
     switch (action.type) {
       case ACTIONS.SET_INPUT:
         return { ...state, input: action.payload };
-      case ACTIONS.SET_QUERY:
-        return { ...state, query: action.payload };
       case ACTIONS.SET_RESULTS:
         return { ...state, results: action.payload };
       default:
@@ -46,29 +44,37 @@ function App() {
 
   const handleInput = (event: React.FormEvent<HTMLInputElement>) => {
     let input = event.currentTarget.value;
-    let formattedString = input.toLowerCase().trim().split(" ").join("|");
-    let query = new RegExp(`\\b(${formattedString})\\b`, "gi");
     dispatch({ type: ACTIONS.SET_INPUT, payload: input });
-    dispatch({ type: ACTIONS.SET_QUERY, payload: query });
     setPaginate(5);
   };
 
   const options = {
     includeMatches: true,
     keys: [
-      { name: "title", weight: 2 },
-      { name: "description", weight: 1 },
-      { name: "label", weight: 0.5 },
+      { name: "title", weight: 3 },
+      { name: "description", weight: 2 },
+      { name: "label", weight: 1 },
     ],
   };
-  const fuse = new Fuse(state.data, options);
-  const results = fuse.search(state.input);
 
-  console.log(results);
+  const fuse = new Fuse(state.data, options);
+
+  const searchQuery = useDebounce(state.input, 1000);
+
+  function showResults() {
+    const results = fuse.search(state.input);
+    dispatch({ type: ACTIONS.SET_RESULTS, payload: results });
+  }
+
+  useEffect(() => {
+    showResults();
+  }, [searchQuery]);
 
   function loadMore() {
     setPaginate(paginate + 5);
   }
+
+  console.log(Object.keys(state.results).length);
 
   return (
     <div className="App">
@@ -78,35 +84,22 @@ function App() {
         <ClearInputButton clearInput={clearInput} />
       </Styled.InputContainer>
       <Styled.List>
-        {results
-          .map((obj, i) => {
+        {state.results
+          .map((hit, i) => {
             return (
               <Item
                 key={i}
                 id={i}
-                title={`FUZZY ${obj.item.title}`}
-                description={obj.item.description}
-                label={obj.item.label}
+                title={hit.item.title}
+                description={hit.item.description}
+                label={hit.item.label}
               />
             );
           })
           .slice(0, paginate)}
-        {/* {state.results.length !== 0 &&
-          state.results
-            .map((data: { id: string; title: string; label: string; description: string }) => (
-              <Item
-                key={data.id}
-                id={data.id}
-                title={data.title}
-                label={data.label}
-                description={data.description}
-              />
-            ))
-            .slice(0, paginate)} */}
-        {state.query !== "" &&
-          results.length !== 0 &&
-          results.length !== paginate &&
-          results.length > paginate && <Styled.Button onClick={loadMore}>Load more</Styled.Button>}
+        {state.results.length !== paginate && state.results.length > paginate && (
+          <Styled.Button onClick={loadMore}>Load more</Styled.Button>
+        )}
       </Styled.List>
     </div>
   );
