@@ -19,6 +19,7 @@ const App = () => {
 
   const ACTIONS = {
     SET_INPUT: "SET_INPUT",
+    SET_QUERY: "SET_QUERY",
     SET_RESULTS: "SET_RESULTS",
   };
 
@@ -26,6 +27,8 @@ const App = () => {
   const reducer = (state: any, action: any) => {
     switch (action.type) {
       case ACTIONS.SET_INPUT:
+        return { ...state, input: action.payload };
+      case ACTIONS.SET_QUERY:
         return { ...state, input: action.payload };
       case ACTIONS.SET_RESULTS:
         return { ...state, results: action.payload };
@@ -59,6 +62,8 @@ const App = () => {
 
   const options = {
     includeMatches: true,
+    minMatchCharLength: 2,
+    isCaseSensitive: false,
     keys: [
       { name: "title", weight: 3 },
       { name: "description", weight: 2 },
