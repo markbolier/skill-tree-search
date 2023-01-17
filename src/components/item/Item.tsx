@@ -2,13 +2,13 @@ import { FuseHighlight } from "../fuse-highlight";
 
 import * as Styled from "./Item.styled";
 
-// TODO type these
 interface ItemProps {
-  description: any;
-  hit: any;
+  description: string;
+  hit: string;
+  //TODO type id
   id: any;
-  label: any;
-  title: any;
+  label: string;
+  title: string;
 }
 
 export const Item = ({ description, hit, id, label, title }: ItemProps) => {
