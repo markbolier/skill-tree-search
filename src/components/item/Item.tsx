@@ -1,4 +1,3 @@
-import DOMPurify from "dompurify";
 import { FuseHighlight } from "../fuse-highlight";
 
 import * as Styled from "./Item.styled";

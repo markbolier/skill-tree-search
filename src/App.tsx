@@ -8,7 +8,6 @@ import { SearchBar } from "./components/search-bar";
 import * as Styled from "./App.styled";
 import mockData from "../src/mock-data/example-data.json";
 import useDebounce from "./hooks/useDebounce";
-import { FuseHighlight } from "./components/fuse-highlight/FuseHighlight";
 
 const App = () => {
   const ACTIONS = {
@@ -48,15 +47,6 @@ const App = () => {
     dispatch({ type: ACTIONS.SET_INPUT, payload: input });
     setPaginate(5);
   }
-
-  // function highlightMatches() {
-  //   const items = state.results;
-  //   items.filter((item: any) => {
-  //     console.log(item.matches);
-  //   });
-  // }
-
-  // highlightMatches();
 
   function loadMore() {
     setPaginate(paginate + 5);
