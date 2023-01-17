@@ -49,14 +49,14 @@ const App = () => {
     setPaginate(5);
   }
 
-  function highlightMatches() {
-    const items = state.results;
-    items.filter((item: any) => {
-      console.log(item.matches);
-    });
-  }
+  // function highlightMatches() {
+  //   const items = state.results;
+  //   items.filter((item: any) => {
+  //     console.log(item.matches);
+  //   });
+  // }
 
-  highlightMatches();
+  // highlightMatches();
 
   function loadMore() {
     setPaginate(paginate + 5);
@@ -94,14 +94,13 @@ const App = () => {
           .map((hit: any, i: number) => {
             return (
               <>
-                <FuseHighlight hit={hit} target="title"></FuseHighlight>
-                <FuseHighlight hit={hit} target="description"></FuseHighlight>
                 <Item
-                  key={i}
-                  id={i}
-                  title={hit.item.title}
                   description={hit.item.description}
+                  hit={hit}
+                  id={i}
+                  key={i}
                   label={hit.item.label}
+                  title={hit.item.title}
                 ></Item>
               </>
             );
