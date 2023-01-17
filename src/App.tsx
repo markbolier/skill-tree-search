@@ -8,8 +8,9 @@ import { SearchBar } from "./components/search-bar";
 import * as Styled from "./App.styled";
 import mockData from "../src/mock-data/example-data.json";
 import useDebounce from "./hooks/useDebounce";
+import { FuseHighlight } from "./components/fuse-highlight/FuseHighlight";
 
-function App() {
+const App = () => {
   const ACTIONS = {
     SET_INPUT: "SET_INPUT",
     SET_RESULTS: "SET_RESULTS",
@@ -90,15 +91,19 @@ function App() {
       </Styled.InputContainer>
       <Styled.List>
         {state.results
-          .map((hit, i) => {
+          .map((hit: any, i: number) => {
             return (
-              <Item
-                key={i}
-                id={i}
-                title={hit.item.title}
-                description={hit.item.description}
-                label={hit.item.label}
-              />
+              <>
+                <FuseHighlight hit={hit} target="title"></FuseHighlight>
+                <FuseHighlight hit={hit} target="description"></FuseHighlight>
+                <Item
+                  key={i}
+                  id={i}
+                  title={hit.item.title}
+                  description={hit.item.description}
+                  label={hit.item.label}
+                ></Item>
+              </>
             );
           })
           .slice(0, paginate)}
@@ -108,6 +113,6 @@ function App() {
       </Styled.List>
     </div>
   );
-}
+};
 
 export default App;
