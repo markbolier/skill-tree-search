@@ -32,5 +32,3 @@ export const Item = ({ description, hit, id, label, title }: ItemProps) => {
     </Styled.List>
   );
 };
-
-export default Item;

@@ -10,16 +10,16 @@ import mockData from "../src/mock-data/example-data.json";
 import useDebounce from "./hooks/useDebounce";
 
 const App = () => {
-  const ACTIONS = {
-    SET_INPUT: "SET_INPUT",
-    SET_RESULTS: "SET_RESULTS",
-  };
-
   const initialState = {
     data: mockData,
     input: "",
     query: "",
     results: [],
+  };
+
+  const ACTIONS = {
+    SET_INPUT: "SET_INPUT",
+    SET_RESULTS: "SET_RESULTS",
   };
 
   // TODO type parameters
@@ -88,7 +88,7 @@ const App = () => {
                   description={hit.item.description}
                   hit={hit}
                   id={i}
-                  key={i}
+                  key={hit.refIndex}
                   label={hit.item.label}
                   title={hit.item.title}
                 ></Item>
