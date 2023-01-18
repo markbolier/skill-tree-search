@@ -16,10 +16,7 @@ const highlight: any = (value: string, position = [], i = 1) => {
 };
 
 export const FuseHighlight = ({ hit, target }: any) => {
-  const matches =
-    typeof hit.item === "string"
-      ? hit.matches?.[0]
-      : hit.matches?.find((match: { key: number }) => match.key === target);
-  const fallback = typeof hit.item === "string" ? hit.item : Fuse.config.getFn(hit.item, target);
+  const matches = hit.matches?.find((match: { key: number }) => match.key === target);
+  const fallback = Fuse.config.getFn(hit.item, target);
   return highlight(matches?.value || fallback, matches?.indices);
 };

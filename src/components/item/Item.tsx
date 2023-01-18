@@ -5,7 +5,6 @@ import * as Styled from "./Item.styled";
 interface ItemProps {
   description: string;
   hit: string;
-  //TODO type id
   id: any;
   label: string;
   title: string;

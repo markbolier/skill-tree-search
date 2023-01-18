@@ -92,7 +92,7 @@ const App = () => {
                 <Item
                   description={hit.item.description}
                   hit={hit}
-                  id={i}
+                  id={hit.refIndex}
                   key={hit.refIndex}
                   label={hit.item.label}
                   title={hit.item.title}
