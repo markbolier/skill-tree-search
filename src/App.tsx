@@ -58,12 +58,16 @@ const App = () => {
   function showResults() {
     const results = fuse.search(state.input);
     dispatch({ type: ACTIONS.SET_RESULTS, payload: results });
+    console.log(results);
   }
 
   const options = {
     includeMatches: true,
     minMatchCharLength: 2,
     isCaseSensitive: false,
+    location: 0,
+    distance: 125,
+    threshold: 0.24,
     keys: [
       { name: "title", weight: 3 },
       { name: "description", weight: 2 },
@@ -71,7 +75,7 @@ const App = () => {
     ],
   };
   const fuse = new Fuse(state.data, options);
-  const searchQuery = useDebounce(state.input, 1000);
+  const searchQuery = useDebounce(state.input, 500);
 
   useEffect(() => {
     showResults();
