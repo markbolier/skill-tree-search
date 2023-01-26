@@ -1,4 +1,5 @@
-import { useEffect, useReducer, useState } from "react";
+import { useReducer, useState, useEffect } from "react";
+import Fuse from "fuse.js";
 
 import { ClearInputButton } from "./components/clear-input-button";
 import { Header } from "./components/header";
@@ -8,7 +9,7 @@ import * as Styled from "./App.styled";
 import mockData from "../src/mock-data/example-data.json";
 import useDebounce from "./hooks/useDebounce";
 
-function App() {
+const App = () => {
   const initialState = {
     data: mockData,
     input: "",
@@ -22,13 +23,13 @@ function App() {
     SET_RESULTS: "SET_RESULTS",
   };
 
-  // TODO type parameters for this
+  // TODO type parameters
   const reducer = (state: any, action: any) => {
     switch (action.type) {
       case ACTIONS.SET_INPUT:
         return { ...state, input: action.payload };
       case ACTIONS.SET_QUERY:
-        return { ...state, query: action.payload };
+        return { ...state, input: action.payload };
       case ACTIONS.SET_RESULTS:
         return { ...state, results: action.payload };
       default:
@@ -44,47 +45,41 @@ function App() {
     setPaginate(5);
   }
 
-  const handleInput = (event: React.FormEvent<HTMLInputElement>) => {
-    let input = event.currentTarget.value;
-    let formattedString = input.toLowerCase().trim().split(" ").join("|");
-    let query = new RegExp(`\\b(${formattedString})\\b`, "gi");
+  function handleInput(event: React.FormEvent<HTMLInputElement>) {
+    const input = event.currentTarget.value;
     dispatch({ type: ACTIONS.SET_INPUT, payload: input });
-    dispatch({ type: ACTIONS.SET_QUERY, payload: query });
     setPaginate(5);
-  };
-
-  const searchQuery = useDebounce(state.query, 1000);
-
-  useEffect(() => {
-    showResults(searchQuery);
-  }, [searchQuery]);
+  }
 
   function loadMore() {
     setPaginate(paginate + 5);
   }
 
-  function showResults(searchQuery: RegExp) {
-    const filteredData = state.data
-      .filter(
-        (text: { title: string; label: string; description: string }) =>
-          text.title.match(searchQuery) ||
-          text.label.match(searchQuery) ||
-          text.description.match(searchQuery),
-      )
-      .map((text: { title: string; label: string; description: string }) => {
-        const replacement = (match: string) => `<mark style="color: #ea650d">${match}</mark>`;
-        let markedTitle = text.title.replace(searchQuery, replacement);
-        let markedLabel = text.label.replace(searchQuery, replacement);
-        let markedDescription = text.description.replace(searchQuery, replacement);
-        return {
-          ...text,
-          title: markedTitle,
-          label: markedLabel,
-          description: markedDescription,
-        };
-      });
-    dispatch({ type: ACTIONS.SET_RESULTS, payload: filteredData });
+  function showResults() {
+    const results = fuse.search(state.input);
+    dispatch({ type: ACTIONS.SET_RESULTS, payload: results });
+    console.log(results);
   }
+
+  const options = {
+    includeMatches: true,
+    minMatchCharLength: 2,
+    isCaseSensitive: false,
+    location: 0,
+    distance: 125,
+    threshold: 0.24,
+    keys: [
+      { name: "title", weight: 3 },
+      { name: "description", weight: 2 },
+      { name: "label", weight: 1 },
+    ],
+  };
+  const fuse = new Fuse(state.data, options);
+  const searchQuery = useDebounce(state.input, 500);
+
+  useEffect(() => {
+    showResults();
+  }, [searchQuery]);
 
   return (
     <div className="App">
@@ -94,27 +89,28 @@ function App() {
         <ClearInputButton clearInput={clearInput} />
       </Styled.InputContainer>
       <Styled.List>
-        {state.results.length !== 0 &&
-          state.results
-            .map((data: { id: string; title: string; label: string; description: string }) => (
-              <Item
-                key={data.id}
-                id={data.id}
-                title={data.title}
-                label={data.label}
-                description={data.description}
-              />
-            ))
-            .slice(0, paginate)}
-        {state.query !== "" &&
-          state.results.length !== 0 &&
-          state.results.length !== paginate &&
-          state.results.length > paginate && (
-            <Styled.Button onClick={loadMore}>Load more</Styled.Button>
-          )}
+        {state.results
+          .map((hit: any, i: number) => {
+            return (
+              <>
+                <Item
+                  description={hit.item.description}
+                  query={state.input}
+                  id={hit.refIndex}
+                  key={hit.refIndex}
+                  label={hit.item.label}
+                  title={hit.item.title}
+                ></Item>
+              </>
+            );
+          })
+          .slice(0, paginate)}
+        {state.results.length !== paginate && state.results.length > paginate && (
+          <Styled.Button onClick={loadMore}>Load more</Styled.Button>
+        )}
       </Styled.List>
     </div>
   );
-}
+};
 
 export default App;

@@ -1,22 +1,36 @@
-import DOMPurify from "dompurify";
-
 import * as Styled from "./Item.styled";
 
 interface ItemProps {
   description: string;
-  id: string;
+  query: string;
+  id: any;
   label: string;
   title: string;
 }
 
-export const Item = ({ description, id, label, title }: ItemProps) => {
+const highlightQuery = (text: string, query: string) => {
+  const parts = text.split(new RegExp(`(${query})`, "gi"));
   return (
-    <Styled.List id={id}>
-      <Styled.Title dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(title) }} />
-      <Styled.Label dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(label) }} />
-      <Styled.Description dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(description) }} />
-    </Styled.List>
+    <span>
+      {" "}
+      {parts.map((part: any, i: number) => (
+        <span
+          key={i}
+          style={part.toLowerCase() === query.toLowerCase() ? { backgroundColor: "yellow" } : {}}
+        >
+          {part}
+        </span>
+      ))}{" "}
+    </span>
   );
 };
 
-export default Item;
+export const Item = ({ description, query, id, label, title }: ItemProps) => {
+  return (
+    <Styled.List id={id}>
+      <Styled.Title>{highlightQuery(title, query)}</Styled.Title>
+      <Styled.Label>{highlightQuery(label, query)}</Styled.Label>
+      <Styled.Description>{highlightQuery(description, query)}</Styled.Description>
+    </Styled.List>
+  );
+};
