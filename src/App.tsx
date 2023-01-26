@@ -81,7 +81,7 @@ const App = () => {
       <Header />
       <Styled.InputContainer>
         <SearchBar query={state.input} handleInput={handleInput} />
-        <TypeaheadDropdown />
+        <TypeaheadDropdown allTitles={state.data} query={state.input} />
         <ClearInputButton clearInput={clearInput} />
       </Styled.InputContainer>
       <Styled.List>

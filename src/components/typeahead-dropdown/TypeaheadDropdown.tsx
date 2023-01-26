@@ -4,12 +4,21 @@ import {
   AutocompleteDropdown,
 } from "./TypeaheadDropdown.styled";
 
-export const TypeaheadDropdown = () => {
+interface TypeaheadDropdownProps {
+  allTitles: any;
+  query: string;
+}
+
+export const TypeaheadDropdown = ({ allTitles, query }: TypeaheadDropdownProps) => {
+  const filteredTitles = allTitles.filter((item: any) =>
+    item.title.toLowerCase().includes(query.toLowerCase()),
+  );
   return (
     <AutocompleteDropdown>
       <AutocompleteList>
-        <AutocompleteItem>Autocomplete item</AutocompleteItem>
-        <AutocompleteItem>Autocomplete item</AutocompleteItem>
+        {filteredTitles.map((item: any) => (
+          <AutocompleteItem>{item.title}</AutocompleteItem>
+        ))}
       </AutocompleteList>
     </AutocompleteDropdown>
   );
