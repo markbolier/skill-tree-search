@@ -7,5 +7,3 @@ interface ClearInputButtonProps {
 export const ClearInputButton = ({ clearInput }: ClearInputButtonProps) => {
   return <Styled.Button onClick={clearInput}>X</Styled.Button>;
 };
-
-export default ClearInputButton;

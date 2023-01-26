@@ -8,6 +8,7 @@ import { SearchBar } from "./components/search-bar";
 import * as Styled from "./App.styled";
 import mockData from "../src/mock-data/example-data.json";
 import useDebounce from "./hooks/useDebounce";
+import { TypeaheadDropdown } from "./components/typeahead-dropdown";
 
 const App = () => {
   const initialState = {
@@ -53,7 +54,6 @@ const App = () => {
   function showResults() {
     const results = fuse.search(state.input);
     dispatch({ type: ACTIONS.SET_RESULTS, payload: results });
-    console.log(results);
   }
 
   const options = {
@@ -81,6 +81,7 @@ const App = () => {
       <Header />
       <Styled.InputContainer>
         <SearchBar query={state.input} handleInput={handleInput} />
+        <TypeaheadDropdown />
         <ClearInputButton clearInput={clearInput} />
       </Styled.InputContainer>
       <Styled.List>

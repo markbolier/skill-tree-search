@@ -7,7 +7,6 @@ export const Button = styled.button`
 `;
 
 export const InputContainer = styled.div`
-  display: flex;
   margin: 0 10px 20px 10px;
 `;
 

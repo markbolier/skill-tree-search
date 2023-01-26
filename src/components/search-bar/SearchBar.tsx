@@ -1,4 +1,3 @@
-import { useState } from "react";
 import * as Styled from "./SearchBar.styled";
 
 interface SearchBarProps {
@@ -10,5 +9,3 @@ interface SearchBarProps {
 export const SearchBar = ({ handleInput, query }: SearchBarProps) => {
   return <Styled.Input value={query} onChange={handleInput} placeholder="Search..." type="text" />;
 };
-
-export default SearchBar;
