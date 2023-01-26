@@ -13,7 +13,7 @@ const highlightQuery = (text: string, query: string) => {
   return (
     <span>
       {" "}
-      {parts.map((part: any, i: number) => (
+      {parts.map((part: string, i: number) => (
         <span
           key={i}
           style={part.toLowerCase() === query.toLowerCase() ? { backgroundColor: "yellow" } : {}}

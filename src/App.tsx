@@ -13,22 +13,17 @@ const App = () => {
   const initialState = {
     data: mockData,
     input: "",
-    query: "",
     results: [],
   };
 
   const ACTIONS = {
     SET_INPUT: "SET_INPUT",
-    SET_QUERY: "SET_QUERY",
     SET_RESULTS: "SET_RESULTS",
   };
 
-  // TODO type parameters
   const reducer = (state: any, action: any) => {
     switch (action.type) {
       case ACTIONS.SET_INPUT:
-        return { ...state, input: action.payload };
-      case ACTIONS.SET_QUERY:
         return { ...state, input: action.payload };
       case ACTIONS.SET_RESULTS:
         return { ...state, results: action.payload };
@@ -66,8 +61,8 @@ const App = () => {
     minMatchCharLength: 2,
     isCaseSensitive: false,
     location: 0,
-    distance: 125,
-    threshold: 0.24,
+    distance: 10000,
+    threshold: 0.4,
     keys: [
       { name: "title", weight: 3 },
       { name: "description", weight: 2 },
@@ -75,7 +70,7 @@ const App = () => {
     ],
   };
   const fuse = new Fuse(state.data, options);
-  const searchQuery = useDebounce(state.input, 500);
+  const searchQuery = useDebounce(state.input, 700);
 
   useEffect(() => {
     showResults();
@@ -96,8 +91,8 @@ const App = () => {
                 <Item
                   description={hit.item.description}
                   query={state.input}
-                  id={hit.refIndex}
-                  key={hit.refIndex}
+                  id={i}
+                  key={i}
                   label={hit.item.label}
                   title={hit.item.title}
                 ></Item>
