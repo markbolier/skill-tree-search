@@ -1,8 +1,4 @@
-import {
-  AutocompleteItem,
-  AutocompleteList,
-  AutocompleteDropdown,
-} from "./TypeaheadDropdown.styled";
+import * as Styled from "./TypeaheadDropdown.styled";
 
 interface TypeaheadDropdownProps {
   allTitles: any;
@@ -14,12 +10,12 @@ export const TypeaheadDropdown = ({ allTitles, query }: TypeaheadDropdownProps) 
     item.title.toLowerCase().includes(query.toLowerCase()),
   );
   return (
-    <AutocompleteDropdown>
-      <AutocompleteList>
+    <Styled.AutocompleteDropdown>
+      <Styled.AutocompleteList>
         {filteredTitles.map((item: any) => (
-          <AutocompleteItem>{item.title}</AutocompleteItem>
+          <Styled.AutocompleteItem>{item.title}</Styled.AutocompleteItem>
         ))}
-      </AutocompleteList>
-    </AutocompleteDropdown>
+      </Styled.AutocompleteList>
+    </Styled.AutocompleteDropdown>
   );
 };
