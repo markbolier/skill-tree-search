@@ -5,14 +5,21 @@ export const AutocompleteDropdown = styled.div`
   border: 1px solid grey;
   display: flex;
   font-size: 15px;
-  padding: 5px 10px;
-  width: fill-available;
 `;
 
 export const AutocompleteList = styled.ul`
   list-style: none;
   margin: 0;
   padding: 0;
+  width: 100%;
 `;
 
-export const AutocompleteItem = styled.li``;
+export const AutocompleteItem = styled.li`
+  cursor: default;
+  margin: 0;
+  padding: 5px 10px;
+
+  &:hover {
+    background-color: lightgrey;
+  }
+`;
