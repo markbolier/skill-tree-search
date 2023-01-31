@@ -1,7 +1,6 @@
 import { useReducer, useState, useEffect } from "react";
 import Fuse from "fuse.js";
 
-import { ClearInputButton } from "./components/clear-input-button";
 import { Header } from "./components/header";
 import { Item } from "./components/item";
 import { SearchBar } from "./components/search-bar";
