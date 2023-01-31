@@ -16,7 +16,7 @@ export const TypeaheadDropdown = ({ data, query, updateInput }: TypeaheadDropdow
   const titles = [...data.map((obj: any) => obj.title.toLowerCase())];
   const allWords = [].concat(...titles.map((title) => title.match(regex) || []));
   const uniqueWords = [...new Set(allWords)];
-  const autocompleteData = uniqueWords.filter((item: any) => item.includes(query.toLowerCase()));
+  const autocompleteData = uniqueWords.filter((item: string) => item.includes(query.toLowerCase()));
 
   const handleClick = (event: any) => {
     console.log(event.currentTarget.innerText);
@@ -29,7 +29,7 @@ export const TypeaheadDropdown = ({ data, query, updateInput }: TypeaheadDropdow
       {autocompleteData.length > 0 && query.length > 1 && isOpen && (
         <Styled.AutocompleteDropdown>
           <Styled.AutocompleteList>
-            {autocompleteData.slice(0, 10).map((item: any, i: number) => (
+            {autocompleteData.slice(0, 10).map((item: string, i: number) => (
               <Styled.AutocompleteItem onClick={(event) => handleClick(event)} key={i}>
                 {item}
               </Styled.AutocompleteItem>
