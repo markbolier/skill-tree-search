@@ -15,11 +15,12 @@ export const AutocompleteList = styled.ul`
 `;
 
 export const AutocompleteItem = styled.li`
+  color: black;
   cursor: default;
   margin: 0;
   padding: 5px 10px;
 
   &:hover {
-    background-color: lightgrey;
+    background-color: #ffe7db;
   }
 `;
