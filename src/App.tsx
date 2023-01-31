@@ -84,18 +84,16 @@ const App = () => {
       </Styled.InputContainer>
       <Styled.List>
         {state.results
-          .map((hit: any) => {
+          .map((hit: any, i: number) => {
             return (
-              <>
-                <Item
-                  description={hit.item.description}
-                  id={hit.refIndex}
-                  key={hit.refIndex}
-                  label={hit.item.label}
-                  query={state.input}
-                  title={hit.item.title}
-                ></Item>
-              </>
+              <Item
+                description={hit.item.description}
+                id={hit.refIndex}
+                key={hit.refIndex}
+                label={hit.item.label}
+                query={state.input}
+                title={hit.item.title}
+              />
             );
           })
           .slice(0, paginate)}
