@@ -19,7 +19,6 @@ export const TypeaheadDropdown = ({ data, query, updateInput }: TypeaheadDropdow
   const autocompleteData = uniqueWords.filter((item: string) => item.includes(query.toLowerCase()));
 
   const handleClick = (event: any) => {
-    console.log(event.currentTarget.innerText);
     setIsOpen(!isOpen);
     updateInput(event.currentTarget.innerText);
   };
