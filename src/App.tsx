@@ -84,13 +84,13 @@ const App = () => {
       </Styled.InputContainer>
       <Styled.List>
         {state.results
-          .map((hit: any, i: number) => {
+          .map((hit: any) => {
             return (
               <>
                 <Item
                   description={hit.item.description}
-                  id={i}
-                  key={i}
+                  id={hit.refIndex}
+                  key={hit.refIndex}
                   label={hit.item.label}
                   query={state.input}
                   title={hit.item.title}
