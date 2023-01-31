@@ -85,15 +85,13 @@ const App = () => {
   return (
     <div className="App">
       <Header />
-      <Styled.InputContainer>
-        <SearchBar
-          clearInput={clearInput}
-          data={state.data}
-          handleInput={handleInput}
-          updateInput={updateInput}
-          query={state.input}
-        />
-      </Styled.InputContainer>
+      <SearchBar
+        clearInput={clearInput}
+        data={state.data}
+        handleInput={handleInput}
+        updateInput={updateInput}
+        query={state.input}
+      />
       <Styled.List>
         {state.results
           .map((hit: any) => {

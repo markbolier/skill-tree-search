@@ -17,3 +17,10 @@ export const Input = styled.input`
     outline: 1px solid #ea650d;
   }
 `;
+
+export const SearchBarContainer = styled.div`
+  margin: 0 10px 20px 10px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+`;

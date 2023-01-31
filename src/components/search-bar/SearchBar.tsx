@@ -19,10 +19,10 @@ export const SearchBar = ({
   updateInput,
 }: SearchBarProps) => {
   return (
-    <>
+    <Styled.SearchBarContainer>
       <Styled.Input value={query} onChange={handleInput} placeholder="Search..." type="text" />
       {query !== "" && <TypeaheadDropdown data={data} query={query} updateInput={updateInput} />}
       {query !== "" && <ClearInputButton clearInput={clearInput} />}
-    </>
+    </Styled.SearchBarContainer>
   );
 };

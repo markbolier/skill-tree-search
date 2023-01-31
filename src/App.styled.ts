@@ -6,10 +6,6 @@ export const Button = styled.button`
   width: fit-content;
 `;
 
-export const InputContainer = styled.div`
-  margin: 0 10px 20px 10px;
-`;
-
 export const List = styled.ul`
   display: flex;
   flex-direction: column;
