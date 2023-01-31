@@ -87,12 +87,12 @@ const App = () => {
       <Header />
       <Styled.InputContainer>
         <SearchBar
+          clearInput={clearInput}
           data={state.data}
           handleInput={handleInput}
           updateInput={updateInput}
           query={state.input}
         />
-        <ClearInputButton clearInput={clearInput} />
       </Styled.InputContainer>
       <Styled.List>
         {state.results
