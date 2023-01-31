@@ -55,6 +55,7 @@ const App = () => {
     dispatch({ type: ACTIONS.SET_RESULTS, payload: results });
   };
 
+  //TODO type updateInput
   const updateInput = (event: any) => {
     const input = event;
     dispatch({ type: ACTIONS.SET_INPUT, payload: input });

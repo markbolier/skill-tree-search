@@ -3,9 +3,10 @@ import { useState } from "react";
 import * as Styled from "./TypeaheadDropdown.styled";
 
 interface TypeaheadDropdownProps {
+  // TODO type data en updateInput
   data: any;
   query: string;
-  updateInput: any;
+  updateInput: (event: any) => void;
 }
 
 export const TypeaheadDropdown = ({ data, query, updateInput }: TypeaheadDropdownProps) => {

@@ -4,11 +4,11 @@ import { TypeaheadDropdown } from "../typeahead-dropdown";
 import * as Styled from "./SearchBar.styled";
 
 interface SearchBarProps {
-  // todo type the props
+  // TODO type data en updateInput
   data: any;
-  handleInput: any;
-  query: any;
-  updateInput: any;
+  handleInput: (event: React.FormEvent<HTMLInputElement>) => void;
+  query: string;
+  updateInput: (event: any) => void;
 }
 
 export const SearchBar = ({ data, handleInput, query, updateInput }: SearchBarProps) => {
