@@ -6,13 +6,10 @@ interface TypeaheadDropdownProps {
 }
 
 export const TypeaheadDropdown = ({ data, query }: TypeaheadDropdownProps) => {
-  // const regex = new RegExp("\b[^s]+\b", "gi");
-  // // const filteredTitles = allTitles.filter((item: any) =>
-  // //   item.title.toLowerCase().includes(query.toLowerCase()),
-  // // );
-
-  // const titleSet = new Set(allTitles.replace(\b[^s]+\, ''));
-  // console.log(titleSet);
+  const regex = /\b[^\s]+\b/g;
+  const titles = [...data.map((obj: any) => obj.title.toLowerCase())];
+  const allWords = [...titles.map((title) => title.match(regex))];
+  console.log(allWords);
 
   const autocompleteData = data.filter((item: any) =>
     item.title.toLowerCase().includes(query.toLowerCase()),
