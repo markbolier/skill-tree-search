@@ -84,7 +84,7 @@ const App = () => {
       </Styled.InputContainer>
       <Styled.List>
         {state.results
-          .map((hit: any, i: number) => {
+          .map((hit: any) => {
             return (
               <Item
                 description={hit.item.description}
