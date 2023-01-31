@@ -15,7 +15,7 @@ export const TypeaheadDropdown = ({ data, query }: TypeaheadDropdownProps) => {
   return (
     <Styled.AutocompleteDropdown>
       <Styled.AutocompleteList>
-        {autocompleteData.map((item: any) => (
+        {autocompleteData.slice(0, 10).map((item: any) => (
           <Styled.AutocompleteItem>{item}</Styled.AutocompleteItem>
         ))}
       </Styled.AutocompleteList>
