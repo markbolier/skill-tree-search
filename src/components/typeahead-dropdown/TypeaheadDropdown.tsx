@@ -13,14 +13,16 @@ export const TypeaheadDropdown = ({ data, query }: TypeaheadDropdownProps) => {
   const autocompleteData = uniqueWords.filter((item: any) => item.includes(query.toLowerCase()));
 
   return (
-    autocompleteData.length > 0 && (
-      <Styled.AutocompleteDropdown>
-        <Styled.AutocompleteList>
-          {autocompleteData.slice(0, 10).map((item: any) => (
-            <Styled.AutocompleteItem>{item}</Styled.AutocompleteItem>
-          ))}
-        </Styled.AutocompleteList>
-      </Styled.AutocompleteDropdown>
-    )
+    <>
+      {autocompleteData.length > 0 && query.length > 1 && (
+        <Styled.AutocompleteDropdown>
+          <Styled.AutocompleteList>
+            {autocompleteData.slice(0, 10).map((item: any) => (
+              <Styled.AutocompleteItem>{item}</Styled.AutocompleteItem>
+            ))}
+          </Styled.AutocompleteList>
+        </Styled.AutocompleteDropdown>
+      )}
+    </>
   );
 };
