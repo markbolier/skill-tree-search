@@ -36,25 +36,25 @@ const App = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
   const [paginate, setPaginate] = useState(5);
 
-  function clearInput() {
+  const clearInput = () => {
     dispatch({ type: ACTIONS.SET_INPUT, payload: "" });
     setPaginate(5);
-  }
+  };
 
-  function handleInput(event: React.FormEvent<HTMLInputElement>) {
+  const handleInput = (event: React.FormEvent<HTMLInputElement>) => {
     const input = event.currentTarget.value;
     dispatch({ type: ACTIONS.SET_INPUT, payload: input });
     setPaginate(5);
-  }
+  };
 
-  function loadMore() {
+  const loadMore = () => {
     setPaginate(paginate + 5);
-  }
+  };
 
-  function showResults() {
+  const showResults = () => {
     const results = fuse.search(state.input);
     dispatch({ type: ACTIONS.SET_RESULTS, payload: results });
-  }
+  };
 
   const options = {
     includeMatches: true,

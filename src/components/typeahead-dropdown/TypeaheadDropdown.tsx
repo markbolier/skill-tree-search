@@ -1,4 +1,3 @@
-import { Title } from "../header/Header.styled";
 import * as Styled from "./TypeaheadDropdown.styled";
 
 interface TypeaheadDropdownProps {
@@ -11,9 +10,6 @@ export const TypeaheadDropdown = ({ data, query }: TypeaheadDropdownProps) => {
   const titles = [...data.map((obj: any) => obj.title.toLowerCase())];
   const allWords = [].concat(...titles.map((title) => title.match(regex) || []));
   const uniqueWords = Array.from(new Set(allWords));
-
-  console.log(uniqueWords);
-
   const autocompleteData = uniqueWords.filter((item: any) => item.includes(query.toLowerCase()));
 
   return (
