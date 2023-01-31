@@ -8,7 +8,6 @@ import { SearchBar } from "./components/search-bar";
 import * as Styled from "./App.styled";
 import mockData from "../src/mock-data/example-data.json";
 import useDebounce from "./hooks/useDebounce";
-import { TypeaheadDropdown } from "./components/typeahead-dropdown";
 
 const App = () => {
   const initialState = {
@@ -57,17 +56,17 @@ const App = () => {
   };
 
   const options = {
-    includeMatches: true,
-    minMatchCharLength: 2,
-    isCaseSensitive: false,
-    location: 0,
     distance: 10000,
-    threshold: 0.4,
+    includeMatches: true,
+    isCaseSensitive: false,
     keys: [
       { name: "title", weight: 3 },
       { name: "description", weight: 2 },
       { name: "label", weight: 1 },
     ],
+    location: 0,
+    minMatchCharLength: 2,
+    threshold: 0.4,
   };
   const fuse = new Fuse(state.data, options);
   const searchQuery = useDebounce(state.input, 700);
@@ -80,8 +79,7 @@ const App = () => {
     <div className="App">
       <Header />
       <Styled.InputContainer>
-        <SearchBar query={state.input} handleInput={handleInput} />
-        {state.input !== "" && <TypeaheadDropdown data={state.data} query={state.input} />}
+        <SearchBar data={state.data} handleInput={handleInput} query={state.input} />
         <ClearInputButton clearInput={clearInput} />
       </Styled.InputContainer>
       <Styled.List>
@@ -91,10 +89,10 @@ const App = () => {
               <>
                 <Item
                   description={hit.item.description}
-                  query={state.input}
                   id={i}
                   key={i}
                   label={hit.item.label}
+                  query={state.input}
                   title={hit.item.title}
                 ></Item>
               </>
