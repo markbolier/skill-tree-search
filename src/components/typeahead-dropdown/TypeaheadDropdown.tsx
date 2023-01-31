@@ -1,12 +1,14 @@
 import { useState } from "react";
+
 import * as Styled from "./TypeaheadDropdown.styled";
 
 interface TypeaheadDropdownProps {
   data: any;
   query: string;
+  updateInput: any;
 }
 
-export const TypeaheadDropdown = ({ data, query }: TypeaheadDropdownProps) => {
+export const TypeaheadDropdown = ({ data, query, updateInput }: TypeaheadDropdownProps) => {
   const [isOpen, setIsOpen] = useState(true);
 
   const regex = /\b[^\s]+\b/g;
@@ -15,8 +17,10 @@ export const TypeaheadDropdown = ({ data, query }: TypeaheadDropdownProps) => {
   const uniqueWords = [...new Set(allWords)];
   const autocompleteData = uniqueWords.filter((item: any) => item.includes(query.toLowerCase()));
 
-  const handleClick = () => {
+  const handleClick = (event: any) => {
+    console.log(event.currentTarget.innerText);
     setIsOpen(!isOpen);
+    updateInput(event.currentTarget.innerText);
   };
 
   return (
@@ -25,7 +29,7 @@ export const TypeaheadDropdown = ({ data, query }: TypeaheadDropdownProps) => {
         <Styled.AutocompleteDropdown>
           <Styled.AutocompleteList>
             {autocompleteData.slice(0, 10).map((item: any, i: number) => (
-              <Styled.AutocompleteItem onClick={handleClick} key={i}>
+              <Styled.AutocompleteItem onClick={(event) => handleClick(event)} key={i}>
                 {item}
               </Styled.AutocompleteItem>
             ))}

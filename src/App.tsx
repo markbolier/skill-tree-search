@@ -55,6 +55,12 @@ const App = () => {
     dispatch({ type: ACTIONS.SET_RESULTS, payload: results });
   };
 
+  const updateInput = (event: any) => {
+    const input = event;
+    dispatch({ type: ACTIONS.SET_INPUT, payload: input });
+    setPaginate(5);
+  };
+
   const options = {
     distance: 10000,
     includeMatches: true,
@@ -79,7 +85,12 @@ const App = () => {
     <div className="App">
       <Header />
       <Styled.InputContainer>
-        <SearchBar data={state.data} handleInput={handleInput} query={state.input} />
+        <SearchBar
+          data={state.data}
+          handleInput={handleInput}
+          updateInput={updateInput}
+          query={state.input}
+        />
         <ClearInputButton clearInput={clearInput} />
       </Styled.InputContainer>
       <Styled.List>
