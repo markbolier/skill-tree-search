@@ -10,7 +10,7 @@ interface TypeaheadDropdownProps {
 }
 
 export const TypeaheadDropdown = ({ data, query, updateInput }: TypeaheadDropdownProps) => {
-  const [focusIndex, setFocusIndex] = useState(0);
+  const [focusIndex, setFocusIndex] = useState(-1);
   const [isOpen, setIsOpen] = useState(true);
 
   const regex = /\b[^\s]+\b/g;
@@ -32,7 +32,13 @@ export const TypeaheadDropdown = ({ data, query, updateInput }: TypeaheadDropdow
           setFocusIndex(focusIndex - 1);
         }
         break;
-      case "ArrowDown" || "Tab":
+      case "ArrowDown":
+        event.preventDefault();
+        if (focusIndex < autocompleteData.length - 1) {
+          setFocusIndex(focusIndex + 1);
+        }
+        break;
+      case "Tab":
         event.preventDefault();
         if (focusIndex < autocompleteData.length - 1) {
           setFocusIndex(focusIndex + 1);
@@ -48,8 +54,6 @@ export const TypeaheadDropdown = ({ data, query, updateInput }: TypeaheadDropdow
     }
   };
 
-  console.log(focusIndex);
-
   return (
     <>
       {autocompleteData.length > 0 && query.length > 1 && isOpen && (
@@ -62,7 +66,6 @@ export const TypeaheadDropdown = ({ data, query, updateInput }: TypeaheadDropdow
                 onClick={handleClick}
                 onKeyDown={handleKeyDown}
                 suggestionIndex={i}
-                tabIndex={i}
               >
                 {item}
               </Styled.AutocompleteItem>

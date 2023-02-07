@@ -20,4 +20,8 @@ export const AutocompleteItem = styled.li<{ suggestionIndex: number; focusIndex:
   margin: 0;
   padding: 5px 10px;
   background-color: ${(props) => (props.suggestionIndex === props.focusIndex ? "lightgrey" : null)};
+
+  &:hover {
+    background-color: lightgrey;
+  }
 `;
