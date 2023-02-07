@@ -6,6 +6,12 @@ export const Button = styled.button`
   width: fit-content;
 `;
 
+export const Container = styled.div`
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+`;
+
 export const List = styled.ul`
   display: flex;
   flex-direction: column;

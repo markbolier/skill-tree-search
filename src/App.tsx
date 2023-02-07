@@ -82,7 +82,7 @@ const App = () => {
   }, [searchQuery]);
 
   return (
-    <div className="App">
+    <Styled.Container>
       <Header />
       <SearchBar
         clearInput={clearInput}
@@ -110,7 +110,7 @@ const App = () => {
           <Styled.Button onClick={loadMore}>Load more</Styled.Button>
         )}
       </Styled.List>
-    </div>
+    </Styled.Container>
   );
 };
 
