@@ -14,13 +14,10 @@ export const AutocompleteList = styled.ul`
   width: 100%;
 `;
 
-export const AutocompleteItem = styled.li`
+export const AutocompleteItem = styled.li<{ suggestionIndex: number; focusIndex: number }>`
   color: black;
   cursor: default;
   margin: 0;
   padding: 5px 10px;
-
-  &:hover {
-    background-color: #ffe7db;
-  }
+  background-color: ${(props) => (props.suggestionIndex === props.focusIndex ? "lightgrey" : null)};
 `;
