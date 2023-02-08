@@ -66,6 +66,7 @@ export const TypeaheadDropdown = ({ data, query, updateInput }: TypeaheadDropdow
                 onClick={handleClick}
                 onKeyDown={handleKeyDown}
                 suggestionIndex={i}
+                tabIndex={0}
               >
                 {item}
               </Styled.AutocompleteItem>
