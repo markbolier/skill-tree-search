@@ -1,5 +1,5 @@
-import { ClearInputButton } from "../clear-input-button";
 import { TypeaheadDropdown } from "../typeahead-dropdown";
+import { useRef } from "react";
 import * as Styled from "./SearchBar.styled";
 
 interface SearchBarProps {

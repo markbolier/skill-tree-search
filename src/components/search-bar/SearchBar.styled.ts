@@ -7,15 +7,6 @@ export const Input = styled.input`
   font-size: 15px;
   padding: 5px 10px;
   width: fill-available;
-
-  &:hover {
-    border: 1px solid #ea650d;
-  }
-
-  &:focus {
-    border: 1px solid #ea650d;
-    outline: 1px solid #ea650d;
-  }
 `;
 
 export const SearchBarContainer = styled.div`
