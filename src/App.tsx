@@ -34,11 +34,6 @@ const App = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
   const [paginate, setPaginate] = useState(5);
 
-  const clearInput = () => {
-    dispatch({ type: ACTIONS.SET_INPUT, payload: "" });
-    setPaginate(5);
-  };
-
   const handleInput = (event: React.FormEvent<HTMLInputElement>) => {
     const input = event.currentTarget.value;
     dispatch({ type: ACTIONS.SET_INPUT, payload: input });
@@ -85,7 +80,6 @@ const App = () => {
     <Styled.Container>
       <Header />
       <SearchBar
-        clearInput={clearInput}
         data={state.data}
         handleInput={handleInput}
         updateInput={updateInput}
