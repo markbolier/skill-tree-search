@@ -26,6 +26,7 @@ export const TypeaheadDropdown = ({ data, query, updateInput }: TypeaheadDropdow
   };
 
   const handleKeyDown = (event: any) => {
+    console.log(autocompleteData.length);
     switch (event.key) {
       case "ArrowUp":
         event.preventDefault();
@@ -35,13 +36,13 @@ export const TypeaheadDropdown = ({ data, query, updateInput }: TypeaheadDropdow
         break;
       case "ArrowDown":
         event.preventDefault();
-        if (focusIndex < autocompleteData.length - 1) {
+        if (focusIndex < autocompleteData.length - 1 && focusIndex < 9) {
           setFocusIndex(focusIndex + 1);
         }
         break;
       case "Tab":
         event.preventDefault();
-        if (focusIndex < autocompleteData.length - 1) {
+        if (focusIndex < autocompleteData.length - 1 && focusIndex < 9) {
           setFocusIndex(focusIndex + 1);
         }
         break;
