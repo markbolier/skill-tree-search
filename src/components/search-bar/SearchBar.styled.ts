@@ -10,7 +10,6 @@ export const Input = styled.input`
   &:focus,
   :focus-visible,
   :focus-within {
-    border: none;
     outline: none;
   }
 `;
