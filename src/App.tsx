@@ -1,4 +1,4 @@
-import { useReducer, useState, useEffect } from "react";
+import { useReducer, useState, useEffect, ObjectHTMLAttributes, Key } from "react";
 import Fuse from "fuse.js";
 
 import { Header } from "./components/header";
@@ -49,8 +49,7 @@ const App = () => {
     dispatch({ type: ACTIONS.SET_RESULTS, payload: results });
   };
 
-  //TODO type updateInput
-  const updateInput = (event: any) => {
+  const updateInput = (event: React.FormEvent<HTMLInputElement>) => {
     const input = event;
     dispatch({ type: ACTIONS.SET_INPUT, payload: input });
     setPaginate(5);
