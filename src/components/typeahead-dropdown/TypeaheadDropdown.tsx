@@ -35,11 +35,6 @@ export const TypeaheadDropdown = ({ data, query, updateInput }: TypeaheadDropdow
         }
         break;
       case "ArrowDown":
-        event.preventDefault();
-        if (focusIndex < autocompleteData.length - 1 && focusIndex < 9) {
-          setFocusIndex(focusIndex + 1);
-        }
-        break;
       case "Tab":
         event.preventDefault();
         if (focusIndex < autocompleteData.length - 1 && focusIndex < 9) {
