@@ -26,7 +26,6 @@ export const TypeaheadDropdown = ({ data, query, updateInput }: TypeaheadDropdow
   };
 
   const handleKeyDown = (event: any) => {
-    console.log(autocompleteData.length);
     switch (event.key) {
       case "ArrowUp":
         event.preventDefault();
