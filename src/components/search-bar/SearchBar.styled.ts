@@ -21,6 +21,7 @@ export const SearchBarContainer = styled.div`
   display: flex;
   flex-direction: column;
   font-size: 15px;
-  width: fill-available;
   margin: 0 10px 30px 10px;
+  overflow: hidden;
+  width: fill-available;
 `;
