@@ -18,6 +18,12 @@ export const AutocompleteItem = styled.li<{ suggestionIndex: number; focusIndex:
   cursor: default;
   padding: 10px;
 
+  &:focus,
+  :focus-visible,
+  :focus-within {
+    outline: none;
+  }
+
   &:hover {
     background-color: lightgrey;
   }
