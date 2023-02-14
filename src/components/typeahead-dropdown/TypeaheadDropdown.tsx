@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 import * as Styled from "./TypeaheadDropdown.styled";
 
@@ -12,6 +12,7 @@ interface TypeaheadDropdownProps {
 export const TypeaheadDropdown = ({ data, query, updateInput }: TypeaheadDropdownProps) => {
   const [focusIndex, setFocusIndex] = useState(-1);
   const [isOpen, setIsOpen] = useState(true);
+  const autoCompleteRef = useRef(null);
 
   const regex = /\b[^\s]+\b/g;
   const titles = [...data.map((obj: any) => obj.title.toLowerCase())];
@@ -67,6 +68,7 @@ export const TypeaheadDropdown = ({ data, query, updateInput }: TypeaheadDropdow
                 onKeyDown={handleKeyDown}
                 suggestionIndex={i}
                 tabIndex={0}
+                ref={autoCompleteRef}
               >
                 {item}
               </Styled.AutocompleteItem>
