@@ -1,4 +1,4 @@
-import { useReducer, useState, useEffect, ObjectHTMLAttributes, Key } from "react";
+import { useReducer, useState, useEffect } from "react";
 import Fuse from "fuse.js";
 
 import { Header } from "./components/header";
@@ -81,8 +81,8 @@ const App = () => {
       <SearchBar
         data={state.data}
         handleInput={handleInput}
-        updateInput={updateInput}
         query={state.input}
+        updateInput={updateInput}
       />
       <Styled.List>
         {state.results

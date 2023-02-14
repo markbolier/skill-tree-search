@@ -2,9 +2,9 @@ import * as Styled from "./Item.styled";
 
 interface ItemProps {
   description: string;
-  query: string;
-  id: any;
+  id: string;
   label: string;
+  query: string;
   title: string;
 }
 
