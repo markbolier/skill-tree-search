@@ -12,6 +12,7 @@ interface SearchBarProps {
 
 export const SearchBar = ({ data, handleInput, query, updateInput }: SearchBarProps) => {
   const [focusIndex, setFocusIndex] = useState(-1);
+  // Maybe it's because isOpen doesnt update that Typeahead doesnt open the second time?
   const [isOpen, setIsOpen] = useState(true);
   const autoCompleteRef = useRef(null);
 
