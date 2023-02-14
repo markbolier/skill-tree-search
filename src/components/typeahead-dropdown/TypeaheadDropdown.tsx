@@ -3,7 +3,6 @@ import { useRef, useState } from "react";
 import * as Styled from "./TypeaheadDropdown.styled";
 
 interface TypeaheadDropdownProps {
-  // TODO type data en updateInput
   data: any;
   query: string;
   updateInput: (event: any) => void;
@@ -20,12 +19,12 @@ export const TypeaheadDropdown = ({ data, query, updateInput }: TypeaheadDropdow
   const uniqueWords = [...new Set(allWords)];
   const autocompleteData = uniqueWords.filter((item: string) => item.includes(query.toLowerCase()));
 
-  const handleClick = (event: any) => {
+  const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     setIsOpen(!isOpen);
     updateInput(event.currentTarget.innerText);
   };
 
-  const handleKeyDown = (event: any) => {
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLElement>) => {
     switch (event.key) {
       case "ArrowUp":
         event.preventDefault();
