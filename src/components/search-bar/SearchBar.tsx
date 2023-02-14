@@ -12,11 +12,7 @@ export const SearchBar = ({ data, handleInput, query, updateInput }: SearchBarPr
   return (
     <Styled.SearchBarContainer>
       <Styled.Input value={query} onChange={handleInput} placeholder="Search..." type="search" />
-      {query !== "" && (
-        <>
-          <TypeaheadDropdown data={data} query={query} updateInput={updateInput} />
-        </>
-      )}
+      {query !== "" && <TypeaheadDropdown data={data} query={query} updateInput={updateInput} />}
     </Styled.SearchBarContainer>
   );
 };
