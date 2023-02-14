@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Button = styled.button`
   display: flex;
+  margin: 10px;
   padding: 8px 10px;
   width: fit-content;
 `;
