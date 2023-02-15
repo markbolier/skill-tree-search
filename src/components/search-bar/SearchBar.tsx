@@ -26,6 +26,10 @@ export const SearchBar = ({ data, handleInput, query, updateInput }: SearchBarPr
     updateInput(event.currentTarget.innerText);
   };
 
+  const handleFocus = () => {
+    setIsFocused(true);
+  };
+
   const handleKeyDown = (event: React.KeyboardEvent<HTMLElement>) => {
     switch (event.key) {
       case "ArrowUp":
@@ -59,7 +63,9 @@ export const SearchBar = ({ data, handleInput, query, updateInput }: SearchBarPr
         autoCompleteData={autocompleteData}
         focusIndex={focusIndex}
         handleClick={handleClick}
+        handleFocus={handleFocus}
         handleKeyDown={handleKeyDown}
+        isFocused={isFocused}
         isOpen={isOpen}
         query={query}
       />
