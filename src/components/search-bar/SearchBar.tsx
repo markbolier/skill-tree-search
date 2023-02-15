@@ -54,17 +54,15 @@ export const SearchBar = ({ data, handleInput, query, updateInput }: SearchBarPr
   return (
     <Styled.SearchBarContainer>
       <Styled.Input value={query} onChange={handleInput} placeholder="Search..." type="search" />
-      {query !== "" && (
-        <TypeaheadDropdown
-          autoCompleteData={autocompleteData}
-          focusIndex={focusIndex}
-          handleClick={handleClick}
-          handleKeyDown={handleKeyDown}
-          isOpen={isOpen}
-          itemsRef={itemsRef}
-          query={query}
-        />
-      )}
+      <TypeaheadDropdown
+        autoCompleteData={autocompleteData}
+        focusIndex={focusIndex}
+        handleClick={handleClick}
+        handleKeyDown={handleKeyDown}
+        isOpen={isOpen}
+        itemsRef={itemsRef}
+        query={query}
+      />
     </Styled.SearchBarContainer>
   );
 };
