@@ -6,7 +6,6 @@ interface TypeaheadDropdownProps {
   handleClick: any;
   handleKeyDown: any;
   isOpen: any;
-  itemsRef: any;
   query: string;
 }
 
@@ -16,7 +15,6 @@ export const TypeaheadDropdown = ({
   handleClick,
   handleKeyDown,
   isOpen,
-  itemsRef,
   query,
 }: TypeaheadDropdownProps) => {
   return (
@@ -30,7 +28,6 @@ export const TypeaheadDropdown = ({
               key={i}
               onClick={handleClick}
               onKeyDown={handleKeyDown}
-              ref={itemsRef}
               suggestionIndex={i}
               tabIndex={0}
             >

@@ -13,7 +13,7 @@ interface SearchBarProps {
 export const SearchBar = ({ data, handleInput, query, updateInput }: SearchBarProps) => {
   const [focusIndex, setFocusIndex] = useState(0);
   const [isOpen, setIsOpen] = useState(true);
-  const itemsRef = useRef([]);
+  const [isFocused, setIsFocused] = useState(false);
 
   const regex = /\b[^\s]+\b/g;
   const titles = [...data.map((obj: any) => obj.title.toLowerCase())];
@@ -61,7 +61,6 @@ export const SearchBar = ({ data, handleInput, query, updateInput }: SearchBarPr
         handleClick={handleClick}
         handleKeyDown={handleKeyDown}
         isOpen={isOpen}
-        itemsRef={itemsRef}
         query={query}
       />
     </Styled.SearchBarContainer>
