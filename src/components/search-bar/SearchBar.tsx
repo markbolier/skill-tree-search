@@ -12,9 +12,8 @@ interface SearchBarProps {
 
 export const SearchBar = ({ data, handleInput, query, updateInput }: SearchBarProps) => {
   const [focusIndex, setFocusIndex] = useState(-1);
-  // Maybe it's because isOpen doesnt update that Typeahead doesnt open the second time?
   const [isOpen, setIsOpen] = useState(true);
-  const autoCompleteRef = useRef(null);
+  const itemsRef = useRef([]);
 
   const regex = /\b[^\s]+\b/g;
   const titles = [...data.map((obj: any) => obj.title.toLowerCase())];
@@ -47,7 +46,7 @@ export const SearchBar = ({ data, handleInput, query, updateInput }: SearchBarPr
         const suggestion = autocompleteData[focusIndex];
         updateInput(suggestion);
         setFocusIndex(0);
-        setIsOpen(false);
+        setIsOpen(!isOpen);
         break;
     }
   };
@@ -58,11 +57,11 @@ export const SearchBar = ({ data, handleInput, query, updateInput }: SearchBarPr
       {query !== "" && (
         <TypeaheadDropdown
           autoCompleteData={autocompleteData}
-          autoCompleteRef={autoCompleteRef}
           focusIndex={focusIndex}
           handleClick={handleClick}
           handleKeyDown={handleKeyDown}
           isOpen={isOpen}
+          itemsRef={itemsRef}
           query={query}
         />
       )}
