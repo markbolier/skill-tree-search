@@ -22,8 +22,10 @@ export const SearchBar = ({ data, handleInput, query, updateInput }: SearchBarPr
   const autocompleteData = uniqueWords.filter((item: string) => item.includes(query.toLowerCase()));
 
   const handleClick = (event: any) => {
-    setIsOpen(!isOpen);
     updateInput(event.target.innerText);
+    setFocusIndex(0);
+    setIsOpen(!isOpen);
+    setIsFocused(!isFocused);
   };
 
   const handleFocus = () => {
