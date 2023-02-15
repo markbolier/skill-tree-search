@@ -21,9 +21,11 @@ export const TypeaheadDropdown = ({
 }: TypeaheadDropdownProps) => {
   return (
     <Styled.AutocompleteDropdown tabIndex={-1}>
-      {autoCompleteData.length > 0 && query.length > 1 && isOpen && (
-        <Styled.AutocompleteList tabIndex={-1}>
-          {autoCompleteData.slice(0, 10).map((item: string, i: number) => (
+      <Styled.AutocompleteList tabIndex={-1}>
+        {autoCompleteData.length > 0 &&
+          query.length > 1 &&
+          isOpen &&
+          autoCompleteData.slice(0, 10).map((item: string, i: number) => (
             <Styled.AutocompleteItem
               focusIndex={focusIndex}
               key={i}
@@ -36,8 +38,7 @@ export const TypeaheadDropdown = ({
               {item}
             </Styled.AutocompleteItem>
           ))}
-        </Styled.AutocompleteList>
-      )}
+      </Styled.AutocompleteList>
     </Styled.AutocompleteDropdown>
   );
 };
