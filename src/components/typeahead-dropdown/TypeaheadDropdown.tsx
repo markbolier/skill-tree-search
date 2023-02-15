@@ -1,13 +1,15 @@
+import { KeyboardEvent } from "react";
+
 import * as Styled from "./TypeaheadDropdown.styled";
 
 interface TypeaheadDropdownProps {
   autoCompleteData: any;
   focusIndex: number;
-  handleClick: any;
+  handleClick: (event: any) => void;
   handleFocus: () => void;
-  handleKeyDown: any;
+  handleKeyDown: (event: KeyboardEvent<HTMLElement>) => void;
   isFocused: boolean;
-  isOpen: any;
+  isOpen: boolean;
   query: string;
 }
 

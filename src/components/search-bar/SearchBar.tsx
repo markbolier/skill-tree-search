@@ -1,13 +1,13 @@
-import { useEffect, useState } from "react";
+import { FormEvent, KeyboardEvent, MouseEvent, useEffect, useState } from "react";
 
 import { TypeaheadDropdown } from "../typeahead-dropdown";
 import * as Styled from "./SearchBar.styled";
 
 interface SearchBarProps {
   data: any;
-  handleInput: (event: React.FormEvent<HTMLInputElement>) => void;
+  handleInput: (event: FormEvent<HTMLInputElement>) => void;
   query: string;
-  updateInput: (event: React.FormEvent<HTMLInputElement>) => void;
+  updateInput: (event: FormEvent<HTMLInputElement>) => void;
 }
 
 export const SearchBar = ({ data, handleInput, query, updateInput }: SearchBarProps) => {
@@ -23,14 +23,14 @@ export const SearchBar = ({ data, handleInput, query, updateInput }: SearchBarPr
 
   const handleClick = (event: any) => {
     setIsOpen(!isOpen);
-    updateInput(event.currentTarget.innerText);
+    updateInput(event.target.innerText);
   };
 
   const handleFocus = () => {
     setIsFocused(true);
   };
 
-  const handleKeyDown = (event: React.KeyboardEvent<HTMLElement>) => {
+  const handleKeyDown = (event: KeyboardEvent<HTMLElement>) => {
     switch (event.key) {
       case "ArrowUp":
         if (focusIndex > 0) {
