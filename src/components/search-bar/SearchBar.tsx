@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import { TypeaheadDropdown } from "../typeahead-dropdown";
 import * as Styled from "./SearchBar.styled";
@@ -11,7 +11,7 @@ interface SearchBarProps {
 }
 
 export const SearchBar = ({ data, handleInput, query, updateInput }: SearchBarProps) => {
-  const [focusIndex, setFocusIndex] = useState(-1);
+  const [focusIndex, setFocusIndex] = useState(0);
   const [isOpen, setIsOpen] = useState(true);
   const itemsRef = useRef([]);
 
@@ -29,20 +29,17 @@ export const SearchBar = ({ data, handleInput, query, updateInput }: SearchBarPr
   const handleKeyDown = (event: React.KeyboardEvent<HTMLElement>) => {
     switch (event.key) {
       case "ArrowUp":
-        event.preventDefault();
-        if (focusIndex > -1) {
+        if (focusIndex > 0) {
           setFocusIndex(focusIndex - 1);
         }
         break;
       case "ArrowDown":
       case "Tab":
-        event.preventDefault();
         if (focusIndex < autocompleteData.length - 1 && focusIndex < 9) {
           setFocusIndex(focusIndex + 1);
         }
         break;
       case "Enter":
-        event.preventDefault();
         const suggestion = autocompleteData[focusIndex];
         updateInput(suggestion);
         setFocusIndex(0);
@@ -50,6 +47,10 @@ export const SearchBar = ({ data, handleInput, query, updateInput }: SearchBarPr
         break;
     }
   };
+
+  useEffect(() => {
+    setIsOpen(true);
+  }, [query != ""]);
 
   return (
     <Styled.SearchBarContainer>
