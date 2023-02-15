@@ -48,6 +48,7 @@ export const SearchBar = ({ data, handleInput, query, updateInput }: SearchBarPr
         updateInput(suggestion);
         setFocusIndex(0);
         setIsOpen(!isOpen);
+        setIsFocused(!isFocused);
         break;
     }
   };
