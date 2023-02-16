@@ -22,6 +22,16 @@ export const Label = styled.button`
   margin: 5px 0;
   padding: 5px;
   width: fit-content;
+
+  &:hover {
+    background-color: lightgrey;
+    outline: 1px solid grey;
+  }
+
+  &:active {
+    background-color: grey;
+    outline: none;
+  }
 `;
 
 export const Description = styled.p`
