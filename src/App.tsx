@@ -9,21 +9,25 @@ import mockData from "../src/mock-data/example-data.json";
 import useDebounce from "./hooks/useDebounce";
 
 const App = () => {
-  const initialState = {
-    data: mockData,
-    input: "",
-    results: [],
-  };
-
   const ACTIONS = {
     SET_INPUT: "SET_INPUT",
+    SET_FILTER: "SET_FILTER",
     SET_RESULTS: "SET_RESULTS",
+  };
+
+  const initialState = {
+    data: mockData,
+    filter: "",
+    input: "",
+    results: [],
   };
 
   const reducer = (state: any, action: any) => {
     switch (action.type) {
       case ACTIONS.SET_INPUT:
         return { ...state, input: action.payload };
+      case ACTIONS.SET_FILTER:
+        return { ...state, filter: action.payload };
       case ACTIONS.SET_RESULTS:
         return { ...state, results: action.payload };
       default:
@@ -68,7 +72,9 @@ const App = () => {
     minMatchCharLength: 2,
     threshold: 0.4,
   };
+
   const fuse = new Fuse(state.data, options);
+
   const searchQuery = useDebounce(state.input, 700);
 
   useEffect(() => {
@@ -80,6 +86,7 @@ const App = () => {
       <Header />
       <SearchBar
         data={state.data}
+        filter={state.filter}
         handleInput={handleInput}
         query={state.input}
         updateInput={updateInput}
