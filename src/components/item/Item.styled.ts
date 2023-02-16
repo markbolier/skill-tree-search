@@ -13,8 +13,9 @@ export const Title = styled.h2`
   padding: 0;
 `;
 
-export const Label = styled.h3`
+export const Label = styled.button`
   background-color: #f1edeb;
+  border: none;
   border-radius: 5px;
   font-size: 0.9rem;
   font-weight: 400;

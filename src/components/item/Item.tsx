@@ -29,7 +29,7 @@ export const Item = ({ description, id, label, query, title }: ItemProps) => {
   return (
     <Styled.List id={id}>
       <Styled.Title>{highlightQuery(title, query)}</Styled.Title>
-      <Styled.Label>{highlightQuery(label, query)}</Styled.Label>
+      <Styled.Label>{highlightQuery(`#${label}`, query)}</Styled.Label>
       <Styled.Description>{highlightQuery(description, query)}</Styled.Description>
     </Styled.List>
   );
