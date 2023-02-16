@@ -14,8 +14,9 @@ export const Input = styled.input`
   }
 `;
 
-export const Label = styled.button`
+export const Label = styled.div`
   background-color: #f1edeb;
+  color: black;
   border: none;
   border-radius: 5px;
   font-size: 0.9rem;

@@ -5,12 +5,13 @@ import * as Styled from "./SearchBar.styled";
 
 interface SearchBarProps {
   data: any;
+  filter: string;
   handleInput: (event: FormEvent<HTMLInputElement>) => void;
   query: string;
   updateInput: (event: FormEvent<HTMLInputElement>) => void;
 }
 
-export const SearchBar = ({ data, handleInput, query, updateInput }: SearchBarProps) => {
+export const SearchBar = ({ data, filter, handleInput, query, updateInput }: SearchBarProps) => {
   const [focusIndex, setFocusIndex] = useState(0);
   const [isOpen, setIsOpen] = useState(true);
   const [isFocused, setIsFocused] = useState(false);
@@ -64,7 +65,7 @@ export const SearchBar = ({ data, handleInput, query, updateInput }: SearchBarPr
   return (
     <Styled.SearchBarContainer>
       <Styled.Wrapper>
-        {query && <Styled.Label>#Cloud</Styled.Label>}
+        {filter && <Styled.Label>#Cloud</Styled.Label>}
         <Styled.Input value={query} onChange={handleInput} placeholder="Search..." type="search" />
       </Styled.Wrapper>
       <TypeaheadDropdown
