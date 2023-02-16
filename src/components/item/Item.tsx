@@ -6,6 +6,7 @@ interface ItemProps {
   label: string;
   query: string;
   title: string;
+  handleFilter: any;
 }
 
 const highlightQuery = (text: string, query: string) => {
@@ -25,11 +26,11 @@ const highlightQuery = (text: string, query: string) => {
   );
 };
 
-export const Item = ({ description, id, label, query, title }: ItemProps) => {
+export const Item = ({ handleFilter, description, id, label, query, title }: ItemProps) => {
   return (
     <Styled.List id={id}>
       <Styled.Title>{highlightQuery(title, query)}</Styled.Title>
-      <Styled.Label>{highlightQuery(`#${label}`, query)}</Styled.Label>
+      <Styled.Label onClick={handleFilter}>{highlightQuery(`#${label}`, query)}</Styled.Label>
       <Styled.Description>{highlightQuery(description, query)}</Styled.Description>
     </Styled.List>
   );

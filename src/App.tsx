@@ -38,6 +38,11 @@ const App = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
   const [paginate, setPaginate] = useState(5);
 
+  const handleFilter = (event: any) => {
+    const filter = event.currentTarget.innerText;
+    dispatch({ type: ACTIONS.SET_FILTER, payload: filter });
+  };
+
   const handleInput = (event: React.FormEvent<HTMLInputElement>) => {
     const input = event.currentTarget.value;
     dispatch({ type: ACTIONS.SET_INPUT, payload: input });
@@ -100,6 +105,7 @@ const App = () => {
                 id={hit.refIndex}
                 key={hit.refIndex}
                 label={hit.item.label}
+                handleFilter={handleFilter}
                 query={state.input}
                 title={hit.item.title}
               />
