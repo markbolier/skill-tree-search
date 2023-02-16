@@ -23,9 +23,7 @@ export const SearchBar = ({ data, handleInput, query, updateInput }: SearchBarPr
 
   const handleClick = (event: any) => {
     updateInput(event.target.innerText);
-    setFocusIndex(0);
-    setIsOpen(!isOpen);
-    setIsFocused(!isFocused);
+    resetFocus();
   };
 
   const handleFocus = () => {
@@ -48,11 +46,15 @@ export const SearchBar = ({ data, handleInput, query, updateInput }: SearchBarPr
       case "Enter":
         const suggestion = autocompleteData[focusIndex];
         updateInput(suggestion);
-        setFocusIndex(0);
-        setIsOpen(!isOpen);
-        setIsFocused(!isFocused);
+        resetFocus();
         break;
     }
+  };
+
+  const resetFocus = () => {
+    setFocusIndex(0);
+    setIsOpen(!isOpen);
+    setIsFocused(!isFocused);
   };
 
   useEffect(() => {
