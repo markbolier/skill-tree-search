@@ -7,5 +7,3 @@ export const Header = () => {
     </Styled.Container>
   );
 };
-
-export default Header;

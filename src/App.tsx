@@ -1,7 +1,6 @@
 import { useReducer, useState, useEffect } from "react";
 import Fuse from "fuse.js";
 
-import { ClearInputButton } from "./components/clear-input-button";
 import { Header } from "./components/header";
 import { Item } from "./components/item";
 import { SearchBar } from "./components/search-bar";
@@ -35,39 +34,39 @@ const App = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
   const [paginate, setPaginate] = useState(5);
 
-  function clearInput() {
-    dispatch({ type: ACTIONS.SET_INPUT, payload: "" });
-    setPaginate(5);
-  }
-
-  function handleInput(event: React.FormEvent<HTMLInputElement>) {
+  const handleInput = (event: React.FormEvent<HTMLInputElement>) => {
     const input = event.currentTarget.value;
     dispatch({ type: ACTIONS.SET_INPUT, payload: input });
     setPaginate(5);
-  }
+  };
 
-  function loadMore() {
+  const loadMore = () => {
     setPaginate(paginate + 5);
-  }
+  };
 
-  function showResults() {
+  const showResults = () => {
     const results = fuse.search(state.input);
     dispatch({ type: ACTIONS.SET_RESULTS, payload: results });
-    console.log(results);
-  }
+  };
+
+  const updateInput = (event: React.FormEvent<HTMLInputElement>) => {
+    const input = event;
+    dispatch({ type: ACTIONS.SET_INPUT, payload: input });
+    setPaginate(5);
+  };
 
   const options = {
-    includeMatches: true,
-    minMatchCharLength: 2,
-    isCaseSensitive: false,
-    location: 0,
     distance: 10000,
-    threshold: 0.4,
+    includeMatches: true,
+    isCaseSensitive: false,
     keys: [
       { name: "title", weight: 3 },
       { name: "description", weight: 2 },
       { name: "label", weight: 1 },
     ],
+    location: 0,
+    minMatchCharLength: 2,
+    threshold: 0.4,
   };
   const fuse = new Fuse(state.data, options);
   const searchQuery = useDebounce(state.input, 700);
@@ -77,26 +76,26 @@ const App = () => {
   }, [searchQuery]);
 
   return (
-    <div className="App">
+    <Styled.Container>
       <Header />
-      <Styled.InputContainer>
-        <SearchBar query={state.input} handleInput={handleInput} />
-        <ClearInputButton clearInput={clearInput} />
-      </Styled.InputContainer>
+      <SearchBar
+        data={state.data}
+        handleInput={handleInput}
+        query={state.input}
+        updateInput={updateInput}
+      />
       <Styled.List>
         {state.results
-          .map((hit: any, i: number) => {
+          .map((hit: any) => {
             return (
-              <>
-                <Item
-                  description={hit.item.description}
-                  query={state.input}
-                  id={i}
-                  key={i}
-                  label={hit.item.label}
-                  title={hit.item.title}
-                ></Item>
-              </>
+              <Item
+                description={hit.item.description}
+                id={hit.refIndex}
+                key={hit.refIndex}
+                label={hit.item.label}
+                query={state.input}
+                title={hit.item.title}
+              />
             );
           })
           .slice(0, paginate)}
@@ -104,7 +103,7 @@ const App = () => {
           <Styled.Button onClick={loadMore}>Load more</Styled.Button>
         )}
       </Styled.List>
-    </div>
+    </Styled.Container>
   );
 };
 

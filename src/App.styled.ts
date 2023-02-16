@@ -2,13 +2,15 @@ import styled from "styled-components";
 
 export const Button = styled.button`
   display: flex;
+  margin: 10px;
   padding: 8px 10px;
   width: fit-content;
 `;
 
-export const InputContainer = styled.div`
-  display: flex;
-  margin: 0 10px 20px 10px;
+export const Container = styled.div`
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 `;
 
 export const List = styled.ul`

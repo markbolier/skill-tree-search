@@ -1,19 +1,26 @@
 import styled from "styled-components";
 
 export const Input = styled.input`
-  border-radius: 5px;
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
+  padding: 10px;
+  width: 100%;
+
+  &:focus,
+  :focus-visible,
+  :focus-within {
+    outline: none;
+  }
+`;
+
+export const SearchBarContainer = styled.div`
+  border-radius: 10px;
   border: 1px solid grey;
   display: flex;
+  flex-direction: column;
   font-size: 15px;
-  padding: 5px 10px;
+  margin: 0 10px 30px 10px;
+  overflow: hidden;
   width: fill-available;
-
-  &:hover {
-    border: 1px solid #ea650d;
-  }
-
-  &:focus {
-    border: 1px solid #ea650d;
-    outline: 1px solid #ea650d;
-  }
 `;

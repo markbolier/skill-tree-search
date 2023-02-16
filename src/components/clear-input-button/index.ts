@@ -1,1 +1,0 @@
-export { ClearInputButton } from "./ClearInputButton";
