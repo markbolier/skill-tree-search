@@ -10,8 +10,8 @@ import useDebounce from "./hooks/useDebounce";
 
 const App = () => {
   const ACTIONS = {
-    SET_INPUT: "SET_INPUT",
     SET_FILTER: "SET_FILTER",
+    SET_INPUT: "SET_INPUT",
     SET_RESULTS: "SET_RESULTS",
   };
 
@@ -24,10 +24,10 @@ const App = () => {
 
   const reducer = (state: any, action: any) => {
     switch (action.type) {
-      case ACTIONS.SET_INPUT:
-        return { ...state, input: action.payload };
       case ACTIONS.SET_FILTER:
         return { ...state, filter: action.payload };
+      case ACTIONS.SET_INPUT:
+        return { ...state, input: action.payload };
       case ACTIONS.SET_RESULTS:
         return { ...state, results: action.payload };
       default:
@@ -51,6 +51,10 @@ const App = () => {
 
   const loadMore = () => {
     setPaginate(paginate + 5);
+  };
+
+  const handleRemove = () => {
+    dispatch({ type: ACTIONS.SET_FILTER, payload: "" });
   };
 
   const showResults = () => {
@@ -93,6 +97,7 @@ const App = () => {
         data={state.data}
         filter={state.filter}
         handleInput={handleInput}
+        handleRemove={handleRemove}
         query={state.input}
         updateInput={updateInput}
       />
@@ -102,10 +107,10 @@ const App = () => {
             return (
               <Item
                 description={hit.item.description}
+                handleFilter={handleFilter}
                 id={hit.refIndex}
                 key={hit.refIndex}
                 label={hit.item.label}
-                handleFilter={handleFilter}
                 query={state.input}
                 title={hit.item.title}
               />

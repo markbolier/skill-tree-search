@@ -14,16 +14,26 @@ export const Input = styled.input`
   }
 `;
 
-export const Label = styled.div`
+export const Label = styled.button`
   background-color: #f1edeb;
   color: black;
   border: none;
   border-radius: 5px;
   font-size: 0.9rem;
   font-weight: 400;
-  margin: 6px 0 6px 6px;
+  margin: 6px 1px 6px 6px;
   padding: 5px;
   width: fit-content;
+
+  &:hover {
+    background-color: lightgrey;
+    outline: 1px solid grey;
+  }
+
+  &:active {
+    background-color: grey;
+    outline: none;
+  }
 `;
 
 export const SearchBarContainer = styled.div`

@@ -2,11 +2,11 @@ import * as Styled from "./Item.styled";
 
 interface ItemProps {
   description: string;
+  handleFilter: (event: any) => void;
   id: string;
   label: string;
   query: string;
   title: string;
-  handleFilter: any;
 }
 
 const highlightQuery = (text: string, query: string) => {
@@ -26,7 +26,7 @@ const highlightQuery = (text: string, query: string) => {
   );
 };
 
-export const Item = ({ handleFilter, description, id, label, query, title }: ItemProps) => {
+export const Item = ({ description, handleFilter, id, label, query, title }: ItemProps) => {
   return (
     <Styled.List id={id}>
       <Styled.Title>{highlightQuery(title, query)}</Styled.Title>
