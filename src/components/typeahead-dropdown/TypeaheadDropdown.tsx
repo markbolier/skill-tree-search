@@ -24,8 +24,8 @@ export const TypeaheadDropdown = ({
   query,
 }: TypeaheadDropdownProps) => {
   return (
-    <Styled.AutocompleteDropdown tabIndex={-1}>
-      <Styled.AutocompleteList tabIndex={-1}>
+    <Styled.AutocompleteDropdown>
+      <Styled.AutocompleteList>
         {query.length > 1 &&
           isOpen &&
           autoCompleteData.slice(0, 10).map((item: string, i: number) => (

@@ -58,8 +58,12 @@ const App = () => {
   };
 
   const showResults = () => {
-    const results = fuse.search(state.input);
-    dispatch({ type: ACTIONS.SET_RESULTS, payload: results });
+    const searchTerms = state.input.trim().split(" ");
+    const results = searchTerms.map((term: string) => {
+      return fuse.search(term);
+    });
+    // const results = fuse.search(state.input);
+    dispatch({ type: ACTIONS.SET_RESULTS, payload: results.flat() });
   };
 
   const updateInput = (event: React.FormEvent<HTMLInputElement>) => {
