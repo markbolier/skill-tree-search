@@ -62,7 +62,6 @@ const App = () => {
     const results = searchTerms.map((term: string) => {
       return fuse.search(term);
     });
-    // const results = fuse.search(state.input);
     dispatch({ type: ACTIONS.SET_RESULTS, payload: results.flat() });
   };
 
