@@ -10,18 +10,24 @@ interface ItemProps {
 }
 
 const highlightQuery = (text: string, query: string) => {
-  const parts = text.split(new RegExp(`(${query})`, "gi"));
+  const queryTerms = query
+    .trim()
+    .split(" ")
+    .filter((term) => term.length > 1);
+  const regex = new RegExp(`(${queryTerms.join("|")})`, "gi");
+  const parts = text.split(regex);
+
   return (
     <span>
       {" "}
-      {parts.map((part: string, i: number) => (
-        <span
-          key={i}
-          style={part.toLowerCase() === query.toLowerCase() ? { backgroundColor: "yellow" } : {}}
-        >
-          {part}
-        </span>
-      ))}{" "}
+      {parts.map((part: string, i: number) => {
+        const queryTerm = queryTerms.find((term) => part.toLowerCase() === term.toLowerCase());
+        return (
+          <span key={i} style={queryTerm ? { backgroundColor: "yellow" } : {}}>
+            {part}
+          </span>
+        );
+      })}{" "}
     </span>
   );
 };
