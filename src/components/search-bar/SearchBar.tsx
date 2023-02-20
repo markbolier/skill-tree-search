@@ -73,7 +73,7 @@ export const SearchBar = ({
   return (
     <Styled.SearchBarContainer>
       <Styled.Wrapper>
-        {filter && <Styled.Label onClick={handleRemove}>#Cloud</Styled.Label>}
+        {filter && <Styled.Label onClick={handleRemove}>{filter}</Styled.Label>}
         <Styled.Input value={query} onChange={handleInput} placeholder="Search..." type="search" />
       </Styled.Wrapper>
       <TypeaheadDropdown
