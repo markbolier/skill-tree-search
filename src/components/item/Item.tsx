@@ -19,7 +19,6 @@ const highlightQuery = (text: string, query: string) => {
 
   return (
     <span>
-      {" "}
       {parts.map((part: string, i: number) => {
         const queryTerm = queryTerms.find((term) => part.toLowerCase() === term.toLowerCase());
         return (
@@ -27,7 +26,7 @@ const highlightQuery = (text: string, query: string) => {
             {part}
           </span>
         );
-      })}{" "}
+      })}
     </span>
   );
 };
