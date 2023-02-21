@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-import { SearchBarProps } from "../../types/types";
+import { Data, SearchBarProps } from "../../types/types";
 import { TypeaheadDropdown } from "../typeahead-dropdown";
 import * as Styled from "./SearchBar.styled";
 
@@ -19,7 +19,7 @@ export const SearchBar = ({
   const searchBarRef = useRef<HTMLDivElement>(null);
 
   const regex = /\b[^\s]+\b/g;
-  const titles = [...data.map((obj: any) => obj.title.toLowerCase())];
+  const titles = [...data.map((obj: Data) => obj.title.toLowerCase())];
   const allWords = [].concat(...titles.map((title) => title.match(regex) || []));
   const uniqueWords = [...new Set(allWords)];
   const autocompleteData = uniqueWords.filter((item: string) => item.includes(query.toLowerCase()));
@@ -36,9 +36,9 @@ export const SearchBar = ({
     }
   };
 
-  const handleClick = (event: React.MouseEvent<HTMLLIElement>) => {
-    const text = event.currentTarget.innerText;
-    updateInput({ currentTarget: { value: text } } as React.FormEvent<HTMLInputElement>);
+  // TODO: type event
+  const handleClick = (event: any) => {
+    updateInput(event.currentTarget.innerText);
     closeDropdown();
   };
 

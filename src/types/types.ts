@@ -1,6 +1,15 @@
 export type Data = {
+  children?: [];
   description: string;
+  dreyfus?: number;
+  hasCertification?: boolean;
+  id?: number;
+  isFinished?: boolean;
   label: string;
+  level?: number;
+  other_resources?: any;
+  parents?: [];
+  slug?: string;
   title: string;
 };
 
@@ -14,7 +23,7 @@ export interface ItemProps {
 }
 
 export interface SearchBarProps {
-  data: any;
+  data: Data;
   filter: string;
   handleInput: (event: React.FormEvent<HTMLInputElement>) => void;
   handleRemove: () => void;
