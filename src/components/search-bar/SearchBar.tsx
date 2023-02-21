@@ -1,5 +1,4 @@
 import { FormEvent, KeyboardEvent, useEffect, useState } from "react";
-import useDebounce from "../../hooks/useDebounce";
 
 import { TypeaheadDropdown } from "../typeahead-dropdown";
 import * as Styled from "./SearchBar.styled";
@@ -91,7 +90,6 @@ export const SearchBar = ({
       <TypeaheadDropdown
         autoCompleteData={autocompleteData}
         focusIndex={focusIndex}
-        handleBlur={handleBlur}
         handleClick={handleClick}
         handleFocus={handleFocus}
         handleKeyDown={handleKeyDown}
