@@ -33,6 +33,7 @@ export const TypeaheadDropdown = ({
               focusIndex={focusIndex}
               isFocused={isFocused}
               key={i}
+              onBlur={handleFocus}
               onClick={handleClick}
               onFocus={handleFocus}
               onKeyDown={handleKeyDown}

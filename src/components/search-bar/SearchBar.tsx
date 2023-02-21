@@ -31,8 +31,6 @@ export const SearchBar = ({
   const uniqueWords = [...new Set(allWords)];
   const autocompleteData = uniqueWords.filter((item: string) => item.includes(query.toLowerCase()));
 
-  const stoppedSearching = useDebounce(query, 2000);
-
   const closeDropdown = () => {
     setFocusIndex(0);
     setIsOpen(false);
@@ -45,7 +43,7 @@ export const SearchBar = ({
   };
 
   const handleFocus = () => {
-    setIsFocused(true);
+    setIsFocused(!isFocused);
   };
 
   const handleKeyDown = (event: KeyboardEvent<HTMLElement>) => {
@@ -73,10 +71,6 @@ export const SearchBar = ({
     setIsOpen(true);
     setIsFocused(true);
   };
-
-  useEffect(() => {
-    closeDropdown();
-  }, [stoppedSearching]);
 
   useEffect(() => {
     openDropdown();
