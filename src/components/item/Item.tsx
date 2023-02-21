@@ -1,13 +1,5 @@
+import { ItemProps } from "../../types/types";
 import * as Styled from "./Item.styled";
-
-interface ItemProps {
-  description: string;
-  handleFilter: (event: any) => void;
-  id: string;
-  label: string;
-  query: string;
-  title: string;
-}
 
 const highlightQuery = (text: string, query: string) => {
   const queryTerms = query
