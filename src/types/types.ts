@@ -23,7 +23,7 @@ export interface ItemProps {
 }
 
 export interface SearchBarProps {
-  data: DataProps;
+  data: DataProps[];
   filter: string;
   handleInput: (event: React.FormEvent<HTMLInputElement>) => void;
   handleRemove: () => void;
