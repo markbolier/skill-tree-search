@@ -39,7 +39,8 @@ const App = () => {
   const [paginate, setPaginate] = useState(5);
 
   const handleFilter = (event: any) => {
-    const filter = event.currentTarget.innerText;
+    const filter = event.currentTarget.innerText.substring(1);
+    console.log(filter);
     dispatch({ type: ACTIONS.SET_FILTER, payload: filter });
   };
 
@@ -59,10 +60,16 @@ const App = () => {
 
   const showResults = () => {
     const searchTerms = state.input.trim().split(" ");
-    const results = searchTerms.map((term: string) => {
-      return fuse.search(term);
-    });
-    dispatch({ type: ACTIONS.SET_RESULTS, payload: results.flat() });
+    let results = searchTerms
+      .map((term: string) => {
+        return fuse.search(term);
+      })
+      .flat();
+
+    if (state.filter) {
+      results = results.filter((result: any) => result.item.label === state.filter);
+    }
+    dispatch({ type: ACTIONS.SET_RESULTS, payload: results });
   };
 
   const updateInput = (event: React.FormEvent<HTMLInputElement>) => {
@@ -91,7 +98,7 @@ const App = () => {
 
   useEffect(() => {
     showResults();
-  }, [searchQuery]);
+  }, [searchQuery, state.filter]);
 
   return (
     <Styled.Container>

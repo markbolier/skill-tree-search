@@ -77,7 +77,7 @@ export const SearchBar = ({
   }, [query !== ""]);
 
   return (
-    <Styled.SearchBarContainer ref={searchBarRef} onBlur={handleBlur}>
+    <Styled.SearchBarContainer onBlur={handleBlur} ref={searchBarRef}>
       <Styled.Wrapper>
         {filter && <Styled.Label onClick={handleRemove}>{filter}</Styled.Label>}
         <Styled.Input value={query} onChange={handleInput} placeholder="Search..." type="search" />
