@@ -70,7 +70,6 @@ export const SearchBar = ({
   const openDropdown = () => {
     setFocusIndex(0);
     setIsOpen(true);
-    setIsFocused(true);
   };
 
   useEffect(() => {
