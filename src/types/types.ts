@@ -1,5 +1,5 @@
-export type Data = {
-  children?: [];
+export interface DataProps {
+  children?: any[];
   description: string;
   dreyfus?: number;
   hasCertification?: boolean;
@@ -8,10 +8,10 @@ export type Data = {
   label: string;
   level?: number;
   other_resources?: any;
-  parents?: [];
+  parents?: any[];
   slug?: string;
   title: string;
-};
+}
 
 export interface ItemProps {
   description: string;
@@ -23,7 +23,7 @@ export interface ItemProps {
 }
 
 export interface SearchBarProps {
-  data: Data;
+  data: DataProps;
   filter: string;
   handleInput: (event: React.FormEvent<HTMLInputElement>) => void;
   handleRemove: () => void;
@@ -32,7 +32,7 @@ export interface SearchBarProps {
 }
 
 export interface TypeaheadDropdownProps {
-  autoCompleteData: any;
+  autoCompleteData: string[];
   focusIndex: number;
   handleClick: (event: React.MouseEvent) => void;
   handleFocus: () => void;
