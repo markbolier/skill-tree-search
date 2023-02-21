@@ -1,4 +1,5 @@
 import { FormEvent, KeyboardEvent, useEffect, useState } from "react";
+import useDebounce from "../../hooks/useDebounce";
 
 import { TypeaheadDropdown } from "../typeahead-dropdown";
 import * as Styled from "./SearchBar.styled";
@@ -30,9 +31,17 @@ export const SearchBar = ({
   const uniqueWords = [...new Set(allWords)];
   const autocompleteData = uniqueWords.filter((item: string) => item.includes(query.toLowerCase()));
 
+  const stoppedSearching = useDebounce(query, 2000);
+
+  const closeDropdown = () => {
+    setFocusIndex(0);
+    setIsOpen(false);
+    setIsFocused(false);
+  };
+
   const handleClick = (event: any) => {
     updateInput(event.target.innerText);
-    resetFocus();
+    closeDropdown();
   };
 
   const handleFocus = () => {
@@ -55,20 +64,23 @@ export const SearchBar = ({
       case "Enter":
         const suggestion = autocompleteData[focusIndex];
         updateInput(suggestion);
-        resetFocus();
+        closeDropdown();
         break;
     }
   };
 
-  const resetFocus = () => {
-    setFocusIndex(0);
-    setIsOpen(!isOpen);
-    setIsFocused(!isFocused);
+  const openDropdown = () => {
+    setIsOpen(true);
+    setIsFocused(true);
   };
 
   useEffect(() => {
-    setIsOpen(true);
-  }, [query != ""]);
+    closeDropdown();
+  }, [stoppedSearching]);
+
+  useEffect(() => {
+    openDropdown();
+  }, [query !== ""]);
 
   return (
     <Styled.SearchBarContainer>
