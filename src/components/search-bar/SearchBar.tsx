@@ -1,4 +1,4 @@
-import { FormEvent, KeyboardEvent, useEffect, useState } from "react";
+import { FormEvent, KeyboardEvent, useEffect, useRef, useState } from "react";
 
 import { TypeaheadDropdown } from "../typeahead-dropdown";
 import * as Styled from "./SearchBar.styled";
@@ -24,6 +24,8 @@ export const SearchBar = ({
   const [isOpen, setIsOpen] = useState(true);
   const [isFocused, setIsFocused] = useState(false);
 
+  const searchBarRef = useRef(null);
+
   const regex = /\b[^\s]+\b/g;
   const titles = [...data.map((obj: any) => obj.title.toLowerCase())];
   const allWords = [].concat(...titles.map((title) => title.match(regex) || []));
@@ -37,8 +39,9 @@ export const SearchBar = ({
   };
 
   const handleBlur = (event: any) => {
-    const blur = event;
-    console.log(blur);
+    if (searchBarRef.current && !searchBarRef.current.contains(event.relatedTarget)) {
+      closeDropdown();
+    }
   };
 
   const handleClick = (event: any) => {
@@ -82,7 +85,7 @@ export const SearchBar = ({
   }, [query !== ""]);
 
   return (
-    <Styled.SearchBarContainer>
+    <Styled.SearchBarContainer ref={searchBarRef} onBlur={handleBlur}>
       <Styled.Wrapper>
         {filter && <Styled.Label onClick={handleRemove}>{filter}</Styled.Label>}
         <Styled.Input value={query} onChange={handleInput} placeholder="Search..." type="search" />
