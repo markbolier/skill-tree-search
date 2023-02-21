@@ -37,13 +37,18 @@ export const SearchBar = ({
     setIsFocused(false);
   };
 
+  const handleBlur = (event: any) => {
+    const blur = event;
+    console.log(blur);
+  };
+
   const handleClick = (event: any) => {
     updateInput(event.target.innerText);
     closeDropdown();
   };
 
   const handleFocus = () => {
-    setIsFocused(!isFocused);
+    setIsFocused(true);
   };
 
   const handleKeyDown = (event: KeyboardEvent<HTMLElement>) => {
@@ -68,6 +73,7 @@ export const SearchBar = ({
   };
 
   const openDropdown = () => {
+    setFocusIndex(0);
     setIsOpen(true);
     setIsFocused(true);
   };
@@ -85,6 +91,7 @@ export const SearchBar = ({
       <TypeaheadDropdown
         autoCompleteData={autocompleteData}
         focusIndex={focusIndex}
+        handleBlur={handleBlur}
         handleClick={handleClick}
         handleFocus={handleFocus}
         handleKeyDown={handleKeyDown}

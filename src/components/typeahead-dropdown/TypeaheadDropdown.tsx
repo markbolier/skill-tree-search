@@ -5,6 +5,7 @@ import * as Styled from "./TypeaheadDropdown.styled";
 interface TypeaheadDropdownProps {
   autoCompleteData: any;
   focusIndex: number;
+  handleBlur: (event: any) => void;
   handleClick: (event: any) => void;
   handleFocus: () => void;
   handleKeyDown: (event: KeyboardEvent<HTMLElement>) => void;
@@ -16,6 +17,7 @@ interface TypeaheadDropdownProps {
 export const TypeaheadDropdown = ({
   autoCompleteData,
   focusIndex,
+  handleBlur,
   handleClick,
   handleFocus,
   handleKeyDown,
@@ -33,7 +35,7 @@ export const TypeaheadDropdown = ({
               focusIndex={focusIndex}
               isFocused={isFocused}
               key={i}
-              onBlur={handleFocus}
+              onBlur={handleBlur}
               onClick={handleClick}
               onFocus={handleFocus}
               onKeyDown={handleKeyDown}
