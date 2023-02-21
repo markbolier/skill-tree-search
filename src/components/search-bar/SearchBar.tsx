@@ -24,7 +24,7 @@ export const SearchBar = ({
   const [isOpen, setIsOpen] = useState(true);
   const [isFocused, setIsFocused] = useState(false);
 
-  const searchBarRef = useRef(null);
+  const searchBarRef = useRef<HTMLDivElement>(null);
 
   const regex = /\b[^\s]+\b/g;
   const titles = [...data.map((obj: any) => obj.title.toLowerCase())];
@@ -38,7 +38,7 @@ export const SearchBar = ({
     setIsFocused(false);
   };
 
-  const handleBlur = (event: any) => {
+  const handleBlur = (event: React.FocusEvent<HTMLDivElement>) => {
     if (searchBarRef.current && !searchBarRef.current.contains(event.relatedTarget)) {
       closeDropdown();
     }
