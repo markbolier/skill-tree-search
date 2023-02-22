@@ -26,10 +26,6 @@ export const Label = styled.button`
   &:hover {
     background-color: #cec8c4;
   }
-
-  &:active {
-    background-color: #beb8b4;
-  }
 `;
 
 export const Description = styled.p`
