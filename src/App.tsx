@@ -60,15 +60,9 @@ const App = () => {
 
   const showResults = () => {
     const searchTerms = state.input.trim().split(" ");
-    let results = searchTerms
-      .map((term: string) => {
-        return fuse.search(term);
-      })
-      .flat();
-
-    if (state.filter) {
-      results = results.filter((result: any) => result.item.label === state.filter);
-    }
+    const results = searchTerms
+      .flatMap((term: string) => fuse.search(term))
+      .filter((result: any) => !state.filter || result.item.label === state.filter);
     dispatch({ type: ACTIONS.SET_RESULTS, payload: results });
   };
 
