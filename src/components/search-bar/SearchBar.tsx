@@ -7,7 +7,7 @@ import * as Styled from "./SearchBar.styled";
 export const SearchBar = ({
   data,
   filter,
-  handleInput,
+  handleInputEvent,
   handleRemove,
   query,
   updateInput,
@@ -20,7 +20,6 @@ export const SearchBar = ({
   const searchBarRef = useRef<HTMLDivElement>(null);
 
   const regex = /\b[^\s]+\b/g;
-  // TODO: type obj
   const titles = [...data.map((obj: DataProps) => obj.title.toLowerCase())];
   const allWords = titles.map((title) => title.match(regex) || []).flat();
   const uniqueWords = [...new Set(allWords)];
@@ -63,7 +62,7 @@ export const SearchBar = ({
         break;
       case "Enter":
         const suggestion = autocompleteData[focusIndex];
-        updateInput(null, suggestion);
+        updateInput(suggestion);
         closeDropdown();
         break;
     }
@@ -91,7 +90,12 @@ export const SearchBar = ({
             {isShown && <Styled.CloseIcon />}
           </Styled.Label>
         )}
-        <Styled.Input value={query} onChange={handleInput} placeholder="Search..." type="search" />
+        <Styled.Input
+          value={query}
+          onChange={handleInputEvent}
+          placeholder="Search..."
+          type="search"
+        />
       </Styled.Wrapper>
       <TypeaheadDropdown
         autoCompleteData={autocompleteData}
