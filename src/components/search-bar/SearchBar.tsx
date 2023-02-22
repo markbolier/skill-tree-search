@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 
-import { DataProps, SearchBarProps } from "../../types/types";
+import { SearchBarProps } from "../../types/types";
+import { ReactComponent as CloseIcon } from "../../assets/icons/close.svg";
 import { TypeaheadDropdown } from "../typeahead-dropdown";
 import * as Styled from "./SearchBar.styled";
 
@@ -13,6 +14,7 @@ export const SearchBar = ({
   updateInput,
 }: SearchBarProps) => {
   const [focusIndex, setFocusIndex] = useState(0);
+  const [isShown, setIsShown] = useState(false);
   const [isOpen, setIsOpen] = useState(true);
   const [isFocused, setIsFocused] = useState(false);
 
@@ -79,7 +81,16 @@ export const SearchBar = ({
   return (
     <Styled.SearchBarContainer onBlur={handleBlur} ref={searchBarRef}>
       <Styled.Wrapper>
-        {filter && <Styled.Label onClick={handleRemove}>{filter}</Styled.Label>}
+        {filter && (
+          <Styled.Label
+            onClick={handleRemove}
+            onMouseEnter={() => setIsShown(true)}
+            onMouseLeave={() => setIsShown(false)}
+          >
+            #{filter}
+            {isShown && <CloseIcon />}
+          </Styled.Label>
+        )}
         <Styled.Input value={query} onChange={handleInput} placeholder="Search..." type="search" />
       </Styled.Wrapper>
       <TypeaheadDropdown

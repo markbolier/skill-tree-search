@@ -24,13 +24,11 @@ export const Label = styled.button`
   width: fit-content;
 
   &:hover {
-    background-color: lightgrey;
-    outline: 1px solid grey;
+    background-color: #cec8c4;
   }
 
   &:active {
-    background-color: grey;
-    outline: none;
+    background-color: #beb8b4;
   }
 `;
 
