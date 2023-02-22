@@ -13,14 +13,23 @@ export const Title = styled.h2`
   padding: 0;
 `;
 
-export const Label = styled.h3`
+export const Label = styled.button`
   background-color: #f1edeb;
+  border: none;
   border-radius: 5px;
   font-size: 0.9rem;
   font-weight: 400;
   margin: 5px 0;
   padding: 5px;
   width: fit-content;
+
+  &:hover {
+    background-color: #cec8c4;
+  }
+
+  &:active {
+    background-color: #beb8b4;
+  }
 `;
 
 export const Description = styled.p`

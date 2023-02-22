@@ -1,36 +1,53 @@
-import { FormEvent, KeyboardEvent, useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
+import { DataProps, SearchBarProps } from "../../types/types";
 import { TypeaheadDropdown } from "../typeahead-dropdown";
 import * as Styled from "./SearchBar.styled";
 
-interface SearchBarProps {
-  data: any;
-  handleInput: (event: FormEvent<HTMLInputElement>) => void;
-  query: string;
-  updateInput: (event: FormEvent<HTMLInputElement>) => void;
-}
-
-export const SearchBar = ({ data, handleInput, query, updateInput }: SearchBarProps) => {
+export const SearchBar = ({
+  data,
+  filter,
+  handleInputEvent,
+  handleRemove,
+  query,
+  updateInput,
+}: SearchBarProps) => {
   const [focusIndex, setFocusIndex] = useState(0);
+  const [isShown, setIsShown] = useState(false);
   const [isOpen, setIsOpen] = useState(true);
   const [isFocused, setIsFocused] = useState(false);
 
+  const searchBarRef = useRef<HTMLDivElement>(null);
+
   const regex = /\b[^\s]+\b/g;
-  const titles = [...data.map((obj: any) => obj.title.toLowerCase())];
-  const allWords = [].concat(...titles.map((title) => title.match(regex) || []));
+  const titles = [...data.map((obj: DataProps) => obj.title.toLowerCase())];
+  const allWords = titles.map((title) => title.match(regex) || []).flat();
   const uniqueWords = [...new Set(allWords)];
   const autocompleteData = uniqueWords.filter((item: string) => item.includes(query.toLowerCase()));
 
+  const closeDropdown = () => {
+    setFocusIndex(0);
+    setIsOpen(false);
+    setIsFocused(false);
+  };
+
+  const handleBlur = (event: React.FocusEvent<HTMLDivElement>) => {
+    if (searchBarRef.current && !searchBarRef.current.contains(event.relatedTarget)) {
+      closeDropdown();
+    }
+  };
+
+  // TODO: type event
   const handleClick = (event: any) => {
-    updateInput(event.target.innerText);
-    resetFocus();
+    updateInput(event.currentTarget.innerText);
+    closeDropdown();
   };
 
   const handleFocus = () => {
     setIsFocused(true);
   };
 
-  const handleKeyDown = (event: KeyboardEvent<HTMLElement>) => {
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLElement>) => {
     switch (event.key) {
       case "ArrowUp":
         if (focusIndex > 0) {
@@ -46,24 +63,40 @@ export const SearchBar = ({ data, handleInput, query, updateInput }: SearchBarPr
       case "Enter":
         const suggestion = autocompleteData[focusIndex];
         updateInput(suggestion);
-        resetFocus();
+        closeDropdown();
         break;
     }
   };
 
-  const resetFocus = () => {
+  const openDropdown = () => {
     setFocusIndex(0);
-    setIsOpen(!isOpen);
-    setIsFocused(!isFocused);
+    setIsOpen(true);
   };
 
   useEffect(() => {
-    setIsOpen(true);
-  }, [query != ""]);
+    openDropdown();
+  }, [query !== ""]);
 
   return (
-    <Styled.SearchBarContainer>
-      <Styled.Input value={query} onChange={handleInput} placeholder="Search..." type="search" />
+    <Styled.SearchBarContainer onBlur={handleBlur} ref={searchBarRef}>
+      <Styled.Wrapper>
+        {filter && (
+          <Styled.Label
+            onClick={handleRemove}
+            onMouseEnter={() => setIsShown(true)}
+            onMouseLeave={() => setIsShown(false)}
+          >
+            #{filter}
+            {isShown && <Styled.CloseIcon />}
+          </Styled.Label>
+        )}
+        <Styled.Input
+          value={query}
+          onChange={handleInputEvent}
+          placeholder="Search..."
+          type="search"
+        />
+      </Styled.Wrapper>
       <TypeaheadDropdown
         autoCompleteData={autocompleteData}
         focusIndex={focusIndex}

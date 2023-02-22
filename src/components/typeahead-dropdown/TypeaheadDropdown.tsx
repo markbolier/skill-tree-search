@@ -1,17 +1,5 @@
-import { KeyboardEvent } from "react";
-
+import { TypeaheadDropdownProps } from "../../types/types";
 import * as Styled from "./TypeaheadDropdown.styled";
-
-interface TypeaheadDropdownProps {
-  autoCompleteData: any;
-  focusIndex: number;
-  handleClick: (event: any) => void;
-  handleFocus: () => void;
-  handleKeyDown: (event: KeyboardEvent<HTMLElement>) => void;
-  isFocused: boolean;
-  isOpen: boolean;
-  query: string;
-}
 
 export const TypeaheadDropdown = ({
   autoCompleteData,
@@ -24,8 +12,8 @@ export const TypeaheadDropdown = ({
   query,
 }: TypeaheadDropdownProps) => {
   return (
-    <Styled.AutocompleteDropdown tabIndex={-1}>
-      <Styled.AutocompleteList tabIndex={-1}>
+    <Styled.AutocompleteDropdown>
+      <Styled.AutocompleteList>
         {query.length > 1 &&
           isOpen &&
           autoCompleteData.slice(0, 10).map((item: string, i: number) => (
