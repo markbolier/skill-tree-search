@@ -20,15 +20,11 @@ export const SearchBar = ({
 
   const searchBarRef = useRef<HTMLDivElement>(null);
 
-  const queries = query.split(" ");
-
   const regex = /\b[^\s]+\b/g;
   const titles = [...data.map((obj: Data) => obj.title.toLowerCase())];
   const allWords = titles.map((title) => title.match(regex) || []).flat();
   const uniqueWords = [...new Set(allWords)];
-  const autocompleteData = uniqueWords.filter((item: string) =>
-    queries.some((query: string) => item.includes(query.toLowerCase())),
-  );
+  const autocompleteData = uniqueWords.filter((item: string) => item.includes(query.toLowerCase()));
 
   const closeDropdown = () => {
     setFocusIndex(0);
