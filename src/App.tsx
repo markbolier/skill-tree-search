@@ -9,11 +9,11 @@ import mockData from "../src/mock-data/example-data.json";
 import useDebounce from "./hooks/useDebounce";
 
 const App = () => {
-  const ACTIONS = {
-    SET_FILTER: "SET_FILTER",
-    SET_INPUT: "SET_INPUT",
-    SET_RESULTS: "SET_RESULTS",
-  };
+  enum ACTIONS {
+    SET_FILTER = "SET_FILTER",
+    SET_INPUT = "SET_INPUT",
+    SET_RESULTS = "SET_RESULTS",
+  }
 
   const initialState = {
     data: mockData,
