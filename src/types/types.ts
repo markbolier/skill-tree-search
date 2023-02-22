@@ -1,4 +1,4 @@
-export interface DataProps {
+export interface Data {
   children?: any[];
   description: string;
   dreyfus?: number;
@@ -23,7 +23,7 @@ export interface ItemProps {
 }
 
 export interface SearchBarProps {
-  data: DataProps[];
+  data: Data[];
   filter: string;
   handleInputEvent: (event: React.FormEvent<HTMLInputElement>) => void;
   handleRemove: () => void;
@@ -36,7 +36,7 @@ export interface SearchBarProps {
 export interface TypeaheadDropdownProps {
   autoCompleteData: string[];
   focusIndex: number;
-  handleClick: (event: React.MouseEvent) => void;
+  handleClick: (event: React.MouseEvent<HTMLLIElement>) => void;
   handleFocus: () => void;
   handleKeyDown: (event: React.KeyboardEvent<HTMLElement>) => void;
   isFocused: boolean;
