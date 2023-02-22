@@ -35,6 +35,7 @@ const App = () => {
     }
   };
 
+  const [isShown, setIsShown] = useState(false);
   const [state, dispatch] = useReducer(reducer, initialState);
   const [paginate, setPaginate] = useState(5);
 
@@ -56,6 +57,7 @@ const App = () => {
 
   const handleRemove = () => {
     dispatch({ type: ACTIONS.SET_FILTER, payload: "" });
+    setIsShown(false);
   };
 
   const showResults = () => {
@@ -101,7 +103,9 @@ const App = () => {
         filter={state.filter}
         handleInputEvent={handleInputEvent}
         handleRemove={handleRemove}
+        isShown={isShown}
         query={state.input}
+        setIsShown={setIsShown}
         updateInput={updateInput}
       />
       <Styled.List>

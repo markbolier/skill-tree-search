@@ -9,11 +9,12 @@ export const SearchBar = ({
   filter,
   handleInputEvent,
   handleRemove,
+  isShown,
   query,
+  setIsShown,
   updateInput,
 }: SearchBarProps) => {
   const [focusIndex, setFocusIndex] = useState(0);
-  const [isShown, setIsShown] = useState(false);
   const [isOpen, setIsOpen] = useState(true);
   const [isFocused, setIsFocused] = useState(false);
 
