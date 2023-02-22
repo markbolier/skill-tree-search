@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
 import { SearchBarProps } from "../../types/types";
-import { ReactComponent as CloseIcon } from "../../assets/icons/close.svg";
 import { TypeaheadDropdown } from "../typeahead-dropdown";
 import * as Styled from "./SearchBar.styled";
 
@@ -88,7 +87,7 @@ export const SearchBar = ({
             onMouseLeave={() => setIsShown(false)}
           >
             #{filter}
-            {isShown && <CloseIcon />}
+            {isShown && <Styled.CloseIcon />}
           </Styled.Label>
         )}
         <Styled.Input value={query} onChange={handleInput} placeholder="Search..." type="search" />

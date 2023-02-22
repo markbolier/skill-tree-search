@@ -1,4 +1,10 @@
 import styled from "styled-components";
+import { ReactComponent as CloseSVG } from "../../assets/icons/close.svg";
+
+export const CloseIcon = styled(CloseSVG)`
+  height: 7px;
+  padding-left: 5px;
+`;
 
 export const Input = styled.input`
   border-radius: 10px;
@@ -15,10 +21,13 @@ export const Input = styled.input`
 `;
 
 export const Label = styled.button`
+  align-items: center;
   background-color: #f1edeb;
-  color: black;
-  border: none;
   border-radius: 5px;
+  border: none;
+  color: black;
+  display: flex;
+  flex-wrap: nowrap;
   font-size: 0.9rem;
   font-weight: 400;
   margin: 6px 1px 6px 6px;
