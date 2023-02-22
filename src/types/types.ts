@@ -1,4 +1,4 @@
-export interface Data {
+export type Data = {
   children?: any[];
   description: string;
   dreyfus?: number;
@@ -11,7 +11,7 @@ export interface Data {
   parents?: any[];
   slug?: string;
   title: string;
-}
+};
 
 export interface ItemProps {
   description: string;
