@@ -44,9 +44,15 @@ const App = () => {
     dispatch({ type: ACTIONS.SET_FILTER, payload: filter });
   };
 
-  const handleInput = (event: React.FormEvent<HTMLInputElement>) => {
-    const input = event.currentTarget.value;
-    dispatch({ type: ACTIONS.SET_INPUT, payload: input });
+  const handleInput = (event?: React.FormEvent<HTMLInputElement>, input?: string) => {
+    if (input) {
+      dispatch({ type: ACTIONS.SET_INPUT, payload: input });
+      return;
+    }
+    if (event) {
+      const value = event.currentTarget.value;
+      dispatch({ type: ACTIONS.SET_INPUT, payload: value });
+    }
     setPaginate(5);
   };
 
