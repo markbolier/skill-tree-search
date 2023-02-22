@@ -41,7 +41,6 @@ const App = () => {
 
   const handleFilter = (event: React.MouseEvent<HTMLButtonElement>) => {
     const filter = event.currentTarget.innerText.substring(1);
-    console.log(filter);
     dispatch({ type: ACTIONS.SET_FILTER, payload: filter });
   };
 
