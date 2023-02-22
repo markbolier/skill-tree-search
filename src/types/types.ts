@@ -15,7 +15,7 @@ export interface Data {
 
 export interface ItemProps {
   description: string;
-  handleFilter: (event: any) => void;
+  handleFilter: (event: React.MouseEvent<HTMLButtonElement>) => void;
   id: string;
   label: string;
   query: string;
@@ -38,7 +38,7 @@ export interface TypeaheadDropdownProps {
   focusIndex: number;
   handleClick: (event: React.MouseEvent<HTMLLIElement>) => void;
   handleFocus: () => void;
-  handleKeyDown: (event: React.KeyboardEvent<HTMLElement>) => void;
+  handleKeyDown: (event: React.KeyboardEvent<HTMLLIElement>) => void;
   isFocused: boolean;
   isOpen: boolean;
   query: string;

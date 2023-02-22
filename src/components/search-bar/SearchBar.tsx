@@ -38,7 +38,6 @@ export const SearchBar = ({
     }
   };
 
-  // TODO: type event
   const handleClick = (event: React.MouseEvent<HTMLLIElement>) => {
     updateInput(event.currentTarget.innerText);
     closeDropdown();
@@ -48,7 +47,7 @@ export const SearchBar = ({
     setIsFocused(true);
   };
 
-  const handleKeyDown = (event: React.KeyboardEvent<HTMLElement>) => {
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLLIElement>) => {
     switch (event.key) {
       case "ArrowUp":
         if (focusIndex > 0) {

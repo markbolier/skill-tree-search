@@ -39,7 +39,7 @@ const App = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
   const [paginate, setPaginate] = useState(5);
 
-  const handleFilter = (event: any) => {
+  const handleFilter = (event: React.MouseEvent<HTMLButtonElement>) => {
     const filter = event.currentTarget.innerText.substring(1);
     console.log(filter);
     dispatch({ type: ACTIONS.SET_FILTER, payload: filter });
