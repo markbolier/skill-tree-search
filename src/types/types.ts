@@ -29,7 +29,7 @@ export interface SearchBarProps {
   handleRemove: () => void;
   isShown: boolean;
   query: string;
-  setIsShown: any;
+  setIsShown: React.Dispatch<React.SetStateAction<boolean>>;
   updateInput: (value: string) => void;
 }
 
