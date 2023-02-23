@@ -75,7 +75,7 @@ export const SearchBar = ({
 
   useEffect(() => {
     openDropdown();
-  }, [query !== ""]);
+  }, [query !== "" && query]);
 
   return (
     <Styled.SearchBarContainer onBlur={handleBlur} ref={searchBarRef}>

@@ -11,6 +11,7 @@ export const TypeaheadDropdown = ({
   isOpen,
   query,
 }: TypeaheadDropdownProps) => {
+  console.log(isOpen);
   return (
     <Styled.AutocompleteDropdown>
       <Styled.AutocompleteList>
