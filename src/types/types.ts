@@ -37,9 +37,8 @@ export interface TypeaheadDropdownProps {
   autoCompleteData: string[];
   focusIndex: number;
   handleClick: (event: React.MouseEvent<HTMLLIElement>) => void;
-  // handleFocus: () => void;
+  handleFocus: (index: number) => void;
   handleKeyDown: (event: React.KeyboardEvent<HTMLLIElement>) => void;
-  // isFocused: boolean;
   isOpen: boolean;
   query: string;
 }

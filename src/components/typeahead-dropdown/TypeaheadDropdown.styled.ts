@@ -13,8 +13,8 @@ export const AutocompleteList = styled.ul`
 `;
 
 export const AutocompleteItem = styled.li<{
-  suggestionIndex: number;
   focusIndex: number;
+  suggestionIndex: number;
 }>`
   background-color: ${(props) => (props.suggestionIndex === props.focusIndex ? "lightgrey" : null)};
   color: black;

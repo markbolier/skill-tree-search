@@ -5,6 +5,7 @@ export const TypeaheadDropdown = ({
   autoCompleteData,
   focusIndex,
   handleClick,
+  handleFocus,
   handleKeyDown,
   isOpen,
   query,
@@ -19,6 +20,7 @@ export const TypeaheadDropdown = ({
               focusIndex={focusIndex}
               key={i}
               onClick={handleClick}
+              onFocus={() => handleFocus(i)}
               onKeyDown={handleKeyDown}
               suggestionIndex={i}
               tabIndex={0}

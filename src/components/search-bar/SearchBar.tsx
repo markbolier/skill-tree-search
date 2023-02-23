@@ -15,8 +15,8 @@ export const SearchBar = ({
   updateInput,
 }: SearchBarProps) => {
   const [focusIndex, setFocusIndex] = useState(0);
+  const [isFocused, setIsFocused] = useState(false);
   const [isOpen, setIsOpen] = useState(true);
-  const [, setIsFocused] = useState(false);
   const [isUserInput, setIsUserInput] = useState(false);
 
   const searchBarRef = useRef<HTMLDivElement>(null);
@@ -35,7 +35,6 @@ export const SearchBar = ({
   };
 
   const openDropdown = () => {
-    setFocusIndex(0);
     setIsOpen(true);
     setIsFocused(true);
   };
@@ -52,7 +51,8 @@ export const SearchBar = ({
     closeDropdown();
   };
 
-  const handleFocus = () => {
+  const handleFocus = (index: number) => {
+    setFocusIndex(index);
     openDropdown();
   };
 
@@ -86,7 +86,7 @@ export const SearchBar = ({
   }, [query]);
 
   return (
-    <Styled.SearchBarContainer onFocus={handleFocus} onBlur={handleBlur} ref={searchBarRef}>
+    <Styled.SearchBarContainer onBlur={handleBlur} ref={searchBarRef}>
       <Styled.Wrapper>
         {filter && (
           <Styled.Label
@@ -109,6 +109,7 @@ export const SearchBar = ({
         autoCompleteData={autocompleteData}
         focusIndex={focusIndex}
         handleClick={handleClick}
+        handleFocus={handleFocus}
         handleKeyDown={handleKeyDown}
         isOpen={isOpen}
         query={query}
