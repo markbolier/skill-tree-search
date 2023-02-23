@@ -16,7 +16,8 @@ export const AutocompleteItem = styled.li<{
   focusIndex: number;
   suggestionIndex: number;
 }>`
-  background-color: ${(props) => (props.suggestionIndex === props.focusIndex ? "lightgrey" : null)};
+  background-color: ${(props) =>
+    props.suggestionIndex === props.focusIndex && props.focusIndex > -1 ? "lightgrey" : null};
   color: black;
   cursor: default;
   padding: 10px;

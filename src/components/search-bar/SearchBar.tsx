@@ -14,8 +14,8 @@ export const SearchBar = ({
   setIsShown,
   updateInput,
 }: SearchBarProps) => {
-  const [focusIndex, setFocusIndex] = useState(0);
-  const [isFocused, setIsFocused] = useState(false);
+  const [focusIndex, setFocusIndex] = useState(-1);
+  const [, setIsFocused] = useState(false);
   const [isOpen, setIsOpen] = useState(true);
   const [isUserInput, setIsUserInput] = useState(false);
 
@@ -28,7 +28,7 @@ export const SearchBar = ({
   const autocompleteData = uniqueWords.filter((item: string) => item.includes(query.toLowerCase()));
 
   const closeDropdown = () => {
-    setFocusIndex(0);
+    setFocusIndex(-1);
     setIsOpen(false);
     setIsFocused(false);
     setIsUserInput(false);
@@ -59,7 +59,7 @@ export const SearchBar = ({
   const handleKeyDown = (event: React.KeyboardEvent<HTMLLIElement>) => {
     switch (event.key) {
       case "ArrowUp":
-        if (focusIndex > 0) {
+        if (focusIndex > -1) {
           setFocusIndex(focusIndex - 1);
         }
         break;
