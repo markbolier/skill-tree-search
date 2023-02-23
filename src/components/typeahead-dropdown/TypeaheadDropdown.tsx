@@ -5,13 +5,10 @@ export const TypeaheadDropdown = ({
   autoCompleteData,
   focusIndex,
   handleClick,
-  handleFocus,
   handleKeyDown,
-  isFocused,
   isOpen,
   query,
 }: TypeaheadDropdownProps) => {
-  console.log(isOpen);
   return (
     <Styled.AutocompleteDropdown>
       <Styled.AutocompleteList>
@@ -20,10 +17,8 @@ export const TypeaheadDropdown = ({
           autoCompleteData.slice(0, 10).map((item: string, i: number) => (
             <Styled.AutocompleteItem
               focusIndex={focusIndex}
-              isFocused={isFocused}
               key={i}
               onClick={handleClick}
-              onFocus={handleFocus}
               onKeyDown={handleKeyDown}
               suggestionIndex={i}
               tabIndex={0}

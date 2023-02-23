@@ -16,7 +16,8 @@ export const SearchBar = ({
 }: SearchBarProps) => {
   const [focusIndex, setFocusIndex] = useState(0);
   const [isOpen, setIsOpen] = useState(true);
-  const [isFocused, setIsFocused] = useState(false);
+  const [, setIsFocused] = useState(false);
+  const [isUserInput, setIsUserInput] = useState(false);
 
   const searchBarRef = useRef<HTMLDivElement>(null);
 
@@ -30,6 +31,13 @@ export const SearchBar = ({
     setFocusIndex(0);
     setIsOpen(false);
     setIsFocused(false);
+    setIsUserInput(false);
+  };
+
+  const openDropdown = () => {
+    setFocusIndex(0);
+    setIsOpen(true);
+    setIsFocused(true);
   };
 
   const handleBlur = (event: React.FocusEvent<HTMLDivElement>) => {
@@ -39,12 +47,13 @@ export const SearchBar = ({
   };
 
   const handleClick = (event: React.MouseEvent<HTMLLIElement>) => {
+    setIsUserInput(true);
     updateInput(event.currentTarget.innerText);
     closeDropdown();
   };
 
   const handleFocus = () => {
-    setIsFocused(true);
+    openDropdown();
   };
 
   const handleKeyDown = (event: React.KeyboardEvent<HTMLLIElement>) => {
@@ -61,6 +70,7 @@ export const SearchBar = ({
         }
         break;
       case "Enter":
+        setIsUserInput(true);
         const suggestion = autocompleteData[focusIndex];
         updateInput(suggestion);
         closeDropdown();
@@ -68,17 +78,15 @@ export const SearchBar = ({
     }
   };
 
-  const openDropdown = () => {
-    setFocusIndex(0);
-    setIsOpen(true);
-  };
-
   useEffect(() => {
+    if (isOpen || query !== "" || isUserInput) {
+      return;
+    }
     openDropdown();
-  }, [query !== "" && query]);
+  }, [query]);
 
   return (
-    <Styled.SearchBarContainer onBlur={handleBlur} ref={searchBarRef}>
+    <Styled.SearchBarContainer onFocus={handleFocus} onBlur={handleBlur} ref={searchBarRef}>
       <Styled.Wrapper>
         {filter && (
           <Styled.Label
@@ -101,9 +109,7 @@ export const SearchBar = ({
         autoCompleteData={autocompleteData}
         focusIndex={focusIndex}
         handleClick={handleClick}
-        handleFocus={handleFocus}
         handleKeyDown={handleKeyDown}
-        isFocused={isFocused}
         isOpen={isOpen}
         query={query}
       />
