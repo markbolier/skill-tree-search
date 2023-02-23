@@ -21,8 +21,6 @@ export const SearchBar = ({
   const searchBarRef = useRef<HTMLDivElement>(null);
 
   const regex = /\b[^\s]+\b/g;
-  // TODO: Resolve bug autocomplete not rendering for next words
-  const queries = query.split(" ");
   const titles = [...data.map((obj: Data) => obj.title.toLowerCase())];
   const allWords = titles.map((title) => title.match(regex) || []).flat();
   const uniqueWords = [...new Set(allWords)];
