@@ -31,7 +31,6 @@ export const SearchBar = ({
     setFocusIndex(-1);
     setIsOpen(false);
     setIsFocused(false);
-    setIsUserInput(false);
   };
 
   const openDropdown = () => {
@@ -48,12 +47,12 @@ export const SearchBar = ({
   const handleClick = (event: React.MouseEvent<HTMLLIElement>) => {
     setIsUserInput(true);
     updateInput(event.currentTarget.innerText);
-    closeDropdown();
   };
 
   const handleFocus = (index: number) => {
-    setFocusIndex(index);
+    setIsUserInput(true);
     openDropdown();
+    setFocusIndex(index);
   };
 
   const handleKeyDown = (event: React.KeyboardEvent<HTMLLIElement>) => {
@@ -73,13 +72,14 @@ export const SearchBar = ({
         setIsUserInput(true);
         const suggestion = autocompleteData[focusIndex];
         updateInput(suggestion);
-        closeDropdown();
         break;
     }
   };
 
   useEffect(() => {
-    if (isOpen || query !== "" || isUserInput) {
+    if (isUserInput) {
+      closeDropdown();
+      setIsUserInput(false);
       return;
     }
     openDropdown();
