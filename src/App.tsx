@@ -44,7 +44,7 @@ const App = () => {
     dispatch({ type: ACTIONS.SET_FILTER, payload: filter });
   };
 
-  const handleInputEvent = (event: React.FormEvent<HTMLInputElement>) => {
+  const handleInput = (event: React.FormEvent<HTMLInputElement>) => {
     const value = event.currentTarget.value;
     dispatch({ type: ACTIONS.SET_INPUT, payload: value });
     setPaginate(5);
@@ -100,7 +100,7 @@ const App = () => {
       <SearchBar
         data={state.data}
         filter={state.filter}
-        handleInputEvent={handleInputEvent}
+        handleInput={handleInput}
         handleRemove={handleRemove}
         isShown={isShown}
         query={state.input}

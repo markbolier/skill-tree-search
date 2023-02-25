@@ -25,7 +25,7 @@ export interface ItemProps {
 export interface SearchBarProps {
   data: Data[];
   filter: string;
-  handleInputEvent: (event: React.FormEvent<HTMLInputElement>) => void;
+  handleInput: (event: React.FormEvent<HTMLInputElement>) => void;
   handleRemove: () => void;
   isShown: boolean;
   query: string;

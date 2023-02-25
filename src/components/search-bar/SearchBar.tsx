@@ -7,7 +7,7 @@ import * as Styled from "./SearchBar.styled";
 export const SearchBar = ({
   data,
   filter,
-  handleInputEvent,
+  handleInput,
   handleRemove,
   isShown,
   query,
@@ -50,7 +50,6 @@ export const SearchBar = ({
   };
 
   const handleFocus = (index: number) => {
-    setIsUserInput(true);
     openDropdown();
     setFocusIndex(index);
   };
@@ -98,12 +97,7 @@ export const SearchBar = ({
             {isShown && <Styled.CloseIcon />}
           </Styled.Label>
         )}
-        <Styled.Input
-          value={query}
-          onChange={handleInputEvent}
-          placeholder="Search..."
-          type="search"
-        />
+        <Styled.Input value={query} onChange={handleInput} placeholder="Search..." type="search" />
       </Styled.Wrapper>
       <TypeaheadDropdown
         autoCompleteData={autocompleteData}
