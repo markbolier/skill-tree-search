@@ -69,6 +69,7 @@ export const SearchBar = ({
         break;
       case "Enter":
         setIsUserInput(true);
+        console.log("umm yea");
         const suggestion = autocompleteData[focusIndex];
         updateInput(suggestion);
         break;
@@ -82,7 +83,7 @@ export const SearchBar = ({
       return;
     }
     openDropdown();
-  }, [query]);
+  }, [query || updateInput]);
 
   return (
     <Styled.SearchBarContainer onBlur={handleBlur} ref={searchBarRef}>
