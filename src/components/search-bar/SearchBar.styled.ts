@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { ReactComponent as CloseSVG } from "../../assets/icons/close.svg";
 
 export const CloseIcon = styled(CloseSVG)`
+  display: none;
   height: 7px;
   padding-left: 5px;
 `;
@@ -36,6 +37,9 @@ export const Label = styled.button`
 
   &:hover {
     background-color: #cec8c4;
+    ${CloseIcon} {
+      display: inline-block;
+    }
   }
 `;
 

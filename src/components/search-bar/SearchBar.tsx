@@ -9,9 +9,7 @@ export const SearchBar = ({
   filter,
   handleInput,
   handleRemove,
-  isShown,
   query,
-  setIsShown,
   updateInput,
 }: SearchBarProps) => {
   const [focusIndex, setFocusIndex] = useState(-1);
@@ -90,13 +88,9 @@ export const SearchBar = ({
     <Styled.SearchBarContainer onBlur={handleBlur} ref={searchBarRef}>
       <Styled.Wrapper>
         {filter && (
-          <Styled.Label
-            onClick={handleRemove}
-            onMouseEnter={() => setIsShown(true)}
-            onMouseLeave={() => setIsShown(false)}
-          >
+          <Styled.Label onClick={handleRemove}>
             #{filter}
-            {isShown && <Styled.CloseIcon />}
+            <Styled.CloseIcon />
           </Styled.Label>
         )}
         <Styled.Input value={query} onChange={handleInput} placeholder="Search..." type="search" />

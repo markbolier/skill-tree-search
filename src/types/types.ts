@@ -27,9 +27,7 @@ export interface SearchBarProps {
   filter: string;
   handleInput: (event: React.FormEvent<HTMLInputElement>) => void;
   handleRemove: () => void;
-  isShown: boolean;
   query: string;
-  setIsShown: React.Dispatch<React.SetStateAction<boolean>>;
   updateInput: (value: string) => void;
 }
 
