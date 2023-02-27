@@ -47,6 +47,7 @@ export const SearchBar = ({
   const handleClick = (event: React.MouseEvent<HTMLLIElement>) => {
     setIsUserInput(true);
     updateInput(event.currentTarget.innerText);
+    closeDropdown();
   };
 
   const handleFocus = (index: number) => {
@@ -69,9 +70,9 @@ export const SearchBar = ({
         break;
       case "Enter":
         setIsUserInput(true);
-        console.log("umm yea");
         const suggestion = autocompleteData[focusIndex];
         updateInput(suggestion);
+        closeDropdown();
         break;
     }
   };
