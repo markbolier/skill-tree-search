@@ -13,12 +13,11 @@ export const AutocompleteList = styled.ul`
 `;
 
 export const AutocompleteItem = styled.li<{
-  suggestionIndex: number;
   focusIndex: number;
-  isFocused: boolean;
+  suggestionIndex: number;
 }>`
   background-color: ${(props) =>
-    props.suggestionIndex === props.focusIndex && props.isFocused ? "lightgrey" : null};
+    props.suggestionIndex === props.focusIndex && props.focusIndex > -1 ? "lightgrey" : null};
   color: black;
   cursor: default;
   padding: 10px;

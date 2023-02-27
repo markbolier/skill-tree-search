@@ -9,11 +9,11 @@ import mockData from "../src/mock-data/example-data.json";
 import useDebounce from "./hooks/useDebounce";
 
 const App = () => {
-  const ACTIONS = {
-    SET_FILTER: "SET_FILTER",
-    SET_INPUT: "SET_INPUT",
-    SET_RESULTS: "SET_RESULTS",
-  };
+  enum ACTIONS {
+    SET_FILTER = "SET_FILTER",
+    SET_INPUT = "SET_INPUT",
+    SET_RESULTS = "SET_RESULTS",
+  }
 
   const initialState = {
     data: mockData,
@@ -38,13 +38,12 @@ const App = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
   const [paginate, setPaginate] = useState(5);
 
-  const handleFilter = (event: any) => {
+  const handleFilter = (event: React.MouseEvent<HTMLButtonElement>) => {
     const filter = event.currentTarget.innerText.substring(1);
-    console.log(filter);
     dispatch({ type: ACTIONS.SET_FILTER, payload: filter });
   };
 
-  const handleInputEvent = (event: React.FormEvent<HTMLInputElement>) => {
+  const handleInput = (event: React.FormEvent<HTMLInputElement>) => {
     const value = event.currentTarget.value;
     dispatch({ type: ACTIONS.SET_INPUT, payload: value });
     setPaginate(5);
@@ -60,15 +59,9 @@ const App = () => {
 
   const showResults = () => {
     const searchTerms = state.input.trim().split(" ");
-    let results = searchTerms
-      .map((term: string) => {
-        return fuse.search(term);
-      })
-      .flat();
-
-    if (state.filter) {
-      results = results.filter((result: any) => result.item.label === state.filter);
-    }
+    const results = searchTerms
+      .flatMap((term: string) => fuse.search(term))
+      .filter((result: any) => !state.filter || result.item.label === state.filter);
     dispatch({ type: ACTIONS.SET_RESULTS, payload: results });
   };
 
@@ -105,7 +98,7 @@ const App = () => {
       <SearchBar
         data={state.data}
         filter={state.filter}
-        handleInputEvent={handleInputEvent}
+        handleInput={handleInput}
         handleRemove={handleRemove}
         query={state.input}
         updateInput={updateInput}

@@ -7,7 +7,6 @@ export const TypeaheadDropdown = ({
   handleClick,
   handleFocus,
   handleKeyDown,
-  isFocused,
   isOpen,
   query,
 }: TypeaheadDropdownProps) => {
@@ -19,10 +18,9 @@ export const TypeaheadDropdown = ({
           autoCompleteData.slice(0, 10).map((item: string, i: number) => (
             <Styled.AutocompleteItem
               focusIndex={focusIndex}
-              isFocused={isFocused}
               key={i}
               onClick={handleClick}
-              onFocus={handleFocus}
+              onFocus={() => handleFocus(i)}
               onKeyDown={handleKeyDown}
               suggestionIndex={i}
               tabIndex={0}
