@@ -2,6 +2,7 @@ import { useReducer, useState, useEffect } from "react";
 import Fuse from "fuse.js";
 
 import { Header } from "./components/header";
+import { Data, initialStateProps } from "./types/types";
 import { Item } from "./components/item";
 import { SearchBar } from "./components/search-bar";
 import * as Styled from "./App.styled";
@@ -22,7 +23,7 @@ const App = () => {
     results: [],
   };
 
-  const reducer = (state: any, action: any) => {
+  const reducer = (state: initialStateProps, action: any) => {
     switch (action.type) {
       case ACTIONS.SET_FILTER:
         return { ...state, filter: action.payload };

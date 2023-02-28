@@ -22,6 +22,13 @@ export interface ItemProps {
   title: string;
 }
 
+export interface initialStateProps {
+  data: any;
+  filter: string;
+  input: string;
+  results: [];
+}
+
 export interface SearchBarProps {
   data: Data[];
   filter: string;
