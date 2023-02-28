@@ -54,7 +54,7 @@ export const SearchBarContainer = styled.div`
   max-width: 800px;
   overflow: hidden;
   position: absolute;
-  width: 100%;
+  width: fill-available;
 `;
 
 export const Wrapper = styled.div`
