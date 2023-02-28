@@ -17,6 +17,6 @@ export const List = styled.ul`
   display: flex;
   flex-direction: column;
   list-style: none;
-  margin: 0;
+  margin-top: 75px;
   padding: 0;
 `;

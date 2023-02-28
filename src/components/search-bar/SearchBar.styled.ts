@@ -44,13 +44,17 @@ export const Label = styled.button`
 `;
 
 export const SearchBarContainer = styled.div`
+  background-color: white;
   border-radius: 10px;
   border: 1px solid grey;
   display: flex;
   flex-direction: column;
   font-size: 15px;
   margin: 0 10px 30px 10px;
+  max-width: 800px;
   overflow: hidden;
+  position: absolute;
+  width: 100%;
 `;
 
 export const Wrapper = styled.div`
