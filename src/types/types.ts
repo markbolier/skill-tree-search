@@ -13,6 +13,29 @@ export type Data = {
   title: string;
 };
 
+export enum ACTIONS {
+  SET_FILTER = "SET_FILTER",
+  SET_INPUT = "SET_INPUT",
+  SET_RESULTS = "SET_RESULTS",
+}
+
+interface SetFilterAction {
+  type: typeof ACTIONS.SET_FILTER;
+  payload: string;
+}
+
+interface SetInputAction {
+  type: typeof ACTIONS.SET_INPUT;
+  payload: string;
+}
+
+interface SetResultsAction {
+  type: typeof ACTIONS.SET_RESULTS;
+  payload: any;
+}
+
+export type Action = SetFilterAction | SetInputAction | SetResultsAction;
+
 export interface ItemProps {
   description: string;
   handleFilter: (event: React.MouseEvent<HTMLButtonElement>) => void;

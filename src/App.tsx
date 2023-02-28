@@ -2,7 +2,7 @@ import { useReducer, useState, useEffect } from "react";
 import Fuse from "fuse.js";
 
 import { Header } from "./components/header";
-import { Data, initialStateProps } from "./types/types";
+import { Action, ACTIONS, initialStateProps } from "./types/types";
 import { Item } from "./components/item";
 import { SearchBar } from "./components/search-bar";
 import * as Styled from "./App.styled";
@@ -10,12 +10,6 @@ import mockData from "../src/mock-data/example-data.json";
 import useDebounce from "./hooks/useDebounce";
 
 const App = () => {
-  enum ACTIONS {
-    SET_FILTER = "SET_FILTER",
-    SET_INPUT = "SET_INPUT",
-    SET_RESULTS = "SET_RESULTS",
-  }
-
   const initialState = {
     data: mockData,
     filter: "",
@@ -23,7 +17,7 @@ const App = () => {
     results: [],
   };
 
-  const reducer = (state: initialStateProps, action: any) => {
+  const reducer = (state: initialStateProps, action: Action) => {
     switch (action.type) {
       case ACTIONS.SET_FILTER:
         return { ...state, filter: action.payload };
