@@ -21,4 +21,9 @@ export const Container = styled.ul`
   width: fit-content;
 `;
 
-export const Link = styled.a``;
+export const Number = styled.a<{
+  currentPage?: number;
+  pageNumber?: number;
+}>`
+  color: ${(props) => (props.currentPage === props.pageNumber ? "blue" : null)};
+`;

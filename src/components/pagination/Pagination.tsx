@@ -20,21 +20,27 @@ export const Pagination = ({
   return (
     <Styled.Container>
       <Styled.Button>
-        <Styled.Link onClick={previousPage}>
+        <li onClick={previousPage}>
           <span>Previous</span>
-        </Styled.Link>
+        </li>
       </Styled.Button>
       {pageNumbers.map((pageNumber) => {
         return (
           <Styled.Button key={pageNumber}>
-            <Styled.Link onClick={() => setCurrentPage(pageNumber)}>{pageNumber}</Styled.Link>
+            <Styled.Number
+              currentPage={currentPage}
+              pageNumber={pageNumber}
+              onClick={() => setCurrentPage(pageNumber)}
+            >
+              {pageNumber}
+            </Styled.Number>
           </Styled.Button>
         );
       })}
       <Styled.Button>
-        <Styled.Link onClick={nextPage}>
+        <li onClick={nextPage}>
           <span>Next</span>
-        </Styled.Link>
+        </li>
       </Styled.Button>
     </Styled.Container>
   );
