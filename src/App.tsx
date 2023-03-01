@@ -40,13 +40,6 @@ const App = () => {
   const amountOfPages = Math.ceil(state.results.length / itemsPerPage);
   const currentItems = state.results.slice(indexOfFirstItem, indexOfLastItem);
 
-  const nextPage = () => {
-    if (currentPage !== amountOfPages) setCurrentPage(currentPage + 1);
-  };
-  const previousPage = () => {
-    if (currentPage !== 1) setCurrentPage(currentPage - 1);
-  };
-
   const handleFilter = (event: React.MouseEvent<HTMLButtonElement>) => {
     const filter = event.currentTarget.innerText.substring(1);
     dispatch({ type: ACTIONS.SET_FILTER, payload: filter });
@@ -59,6 +52,13 @@ const App = () => {
 
   const handleRemove = () => {
     dispatch({ type: ACTIONS.SET_FILTER, payload: "" });
+  };
+
+  const nextPage = () => {
+    if (currentPage !== amountOfPages) setCurrentPage(currentPage + 1);
+  };
+  const previousPage = () => {
+    if (currentPage !== 1) setCurrentPage(currentPage - 1);
   };
 
   const showResults = () => {
