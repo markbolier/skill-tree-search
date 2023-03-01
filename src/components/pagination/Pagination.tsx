@@ -12,9 +12,11 @@ export const Pagination = ({
   return (
     <Styled.Container>
       <Styled.Button>
-        <li onClick={previousPage}>
-          <span>Previous</span>
-        </li>
+        {currentPage !== 1 ? (
+          <li onClick={previousPage}>
+            <span>Previous</span>
+          </li>
+        ) : null}
       </Styled.Button>
       {pageNumbers.map((pageNumber) => {
         return (
@@ -30,9 +32,11 @@ export const Pagination = ({
         );
       })}
       <Styled.Button>
-        <li onClick={nextPage}>
-          <span>Next</span>
-        </li>
+        {currentPage !== pageNumbers.length ? (
+          <li onClick={nextPage}>
+            <span>Next</span>
+          </li>
+        ) : null}
       </Styled.Button>
     </Styled.Container>
   );
