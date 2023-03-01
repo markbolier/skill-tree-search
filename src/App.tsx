@@ -113,7 +113,7 @@ const App = () => {
             <Item
               description={hit.item.description}
               handleFilter={handleFilter}
-              id={hit.refIndex}
+              id={`${hit.refIndex}`}
               key={hit.refIndex}
               label={hit.item.label}
               query={state.input}

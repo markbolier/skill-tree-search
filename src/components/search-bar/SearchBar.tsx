@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-import { Data, SearchBarProps } from "../../types/types";
+import { DataProps, SearchBarProps } from "../../types/types";
 import { TypeaheadDropdown } from "../typeahead-dropdown";
 import * as Styled from "./SearchBar.styled";
 
@@ -20,7 +20,7 @@ export const SearchBar = ({
   const searchBarRef = useRef<HTMLDivElement>(null);
 
   const regex = /\b[^\s]+\b/g;
-  const titles = [...data.map((obj: Data) => obj.title.toLowerCase())];
+  const titles = [...data.map((obj: DataProps) => obj.title.toLowerCase())];
   const allWords = titles.map((title) => title.match(regex) || []).flat();
   const uniqueWords = [...new Set(allWords)];
   const autocompleteData = uniqueWords.filter((item: string) => item.includes(query.toLowerCase()));

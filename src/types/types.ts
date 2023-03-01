@@ -31,7 +31,7 @@ export interface initialStateProps {
 export interface ItemProps {
   description: string;
   handleFilter: (event: React.MouseEvent<HTMLButtonElement>) => void;
-  id: number;
+  id: string;
   label: string;
   query: string;
   title: string;

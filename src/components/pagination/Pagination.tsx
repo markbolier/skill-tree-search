@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { PaginationProps } from "../../types/types";
 import * as Styled from "./Pagination.styled";
 
@@ -8,7 +9,11 @@ export const Pagination = ({
   previousPage,
   setCurrentPage,
 }: PaginationProps) => {
+  const [pageLimit] = useState(10);
+
   const pageNumbers = [...Array(amountOfPages + 1).keys()].slice(1);
+  const pagesWithLimit = pageNumbers.slice(0, pageLimit);
+
   return (
     <Styled.Container>
       <Styled.Button>
@@ -18,7 +23,7 @@ export const Pagination = ({
           </li>
         ) : null}
       </Styled.Button>
-      {pageNumbers.map((pageNumber) => {
+      {pagesWithLimit.map((pageNumber) => {
         return (
           <Styled.Button key={pageNumber}>
             <Styled.Number
