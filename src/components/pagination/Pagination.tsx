@@ -1,13 +1,5 @@
-import { SetStateAction } from "react";
+import { PaginationProps } from "../../types/types";
 import * as Styled from "./Pagination.styled";
-
-interface PaginationProps {
-  amountOfPages: number;
-  currentPage: number;
-  setCurrentPage: React.Dispatch<SetStateAction<number>>;
-  nextPage: () => void;
-  previousPage: () => void;
-}
 
 export const Pagination = ({
   amountOfPages,

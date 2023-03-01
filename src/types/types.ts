@@ -1,3 +1,11 @@
+export type Action = SetFilterAction | SetInputAction | SetResultsAction;
+
+export enum ACTIONS {
+  SET_FILTER = "SET_FILTER",
+  SET_INPUT = "SET_INPUT",
+  SET_RESULTS = "SET_RESULTS",
+}
+
 export interface DataProps {
   children?: any[];
   description: string;
@@ -13,10 +21,37 @@ export interface DataProps {
   title: string;
 }
 
-export enum ACTIONS {
-  SET_FILTER = "SET_FILTER",
-  SET_INPUT = "SET_INPUT",
-  SET_RESULTS = "SET_RESULTS",
+export interface initialStateProps {
+  data: any;
+  filter: string;
+  input: string;
+  results: [];
+}
+
+export interface ItemProps {
+  description: string;
+  handleFilter: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  id: number;
+  label: string;
+  query: string;
+  title: string;
+}
+
+export interface PaginationProps {
+  amountOfPages: number;
+  currentPage: number;
+  setCurrentPage: React.Dispatch<React.SetStateAction<number>>;
+  nextPage: () => void;
+  previousPage: () => void;
+}
+
+export interface SearchBarProps {
+  data: DataProps[];
+  filter: string;
+  handleInput: (event: React.FormEvent<HTMLInputElement>) => void;
+  handleRemove: () => void;
+  query: string;
+  updateInput: (value: string) => void;
 }
 
 interface SetFilterAction {
@@ -32,33 +67,6 @@ interface SetInputAction {
 interface SetResultsAction {
   type: typeof ACTIONS.SET_RESULTS;
   payload: any;
-}
-
-export type Action = SetFilterAction | SetInputAction | SetResultsAction;
-
-export interface ItemProps {
-  description: string;
-  handleFilter: (event: React.MouseEvent<HTMLButtonElement>) => void;
-  id: number;
-  label: string;
-  query: string;
-  title: string;
-}
-
-export interface initialStateProps {
-  data: any;
-  filter: string;
-  input: string;
-  results: [];
-}
-
-export interface SearchBarProps {
-  data: DataProps[];
-  filter: string;
-  handleInput: (event: React.FormEvent<HTMLInputElement>) => void;
-  handleRemove: () => void;
-  query: string;
-  updateInput: (value: string) => void;
 }
 
 export interface TypeaheadDropdownProps {
