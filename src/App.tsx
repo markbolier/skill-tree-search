@@ -61,10 +61,6 @@ const App = () => {
     dispatch({ type: ACTIONS.SET_FILTER, payload: "" });
   };
 
-  // const loadMore = () => {
-  //   setItemsPerPage(itemsPerPage + 5);
-  // };
-
   const showResults = () => {
     const searchTerms = state.input.trim().split(" ");
     const results = searchTerms
