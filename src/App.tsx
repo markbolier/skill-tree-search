@@ -2,7 +2,7 @@ import { useReducer, useState, useEffect } from "react";
 import Fuse from "fuse.js";
 
 import { Header } from "./components/header";
-import { Action, ACTIONS, initialStateProps } from "./types/types";
+import { Action, ACTIONS, DataProps, initialStateProps, ItemProps } from "./types/types";
 import { Item } from "./components/item";
 import { SearchBar } from "./components/search-bar";
 import * as Styled from "./App.styled";
@@ -31,7 +31,11 @@ const App = () => {
   };
 
   const [state, dispatch] = useReducer(reducer, initialState);
-  const [paginate, setPaginate] = useState(5);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [itemsPerPage, setItemsPerPage] = useState(5);
+
+  // const indexOfLastItem = currentPage * recordsPerPage;
+  // const indexOfFirstItem = indexOfLastItem - recordsPerPage;
 
   const handleFilter = (event: React.MouseEvent<HTMLButtonElement>) => {
     const filter = event.currentTarget.innerText.substring(1);
@@ -41,28 +45,33 @@ const App = () => {
   const handleInput = (event: React.FormEvent<HTMLInputElement>) => {
     const value = event.currentTarget.value;
     dispatch({ type: ACTIONS.SET_INPUT, payload: value });
-    setPaginate(5);
+    setItemsPerPage(5);
   };
 
   const loadMore = () => {
-    setPaginate(paginate + 5);
+    setItemsPerPage(itemsPerPage + 5);
   };
 
   const handleRemove = () => {
     dispatch({ type: ACTIONS.SET_FILTER, payload: "" });
   };
 
+  interface item {}
+
   const showResults = () => {
     const searchTerms = state.input.trim().split(" ");
     const results = searchTerms
       .flatMap((term: string) => fuse.search(term))
-      .filter((result: any) => !state.filter || result.item.label === state.filter);
+      .filter(
+        (result: Fuse.FuseResult<any>) => !state.filter || result.item.label === state.filter,
+      );
     dispatch({ type: ACTIONS.SET_RESULTS, payload: results });
+    console.log(results);
   };
 
   const updateInput = (value: string) => {
     dispatch({ type: ACTIONS.SET_INPUT, payload: value });
-    setPaginate(5);
+    setItemsPerPage(5);
   };
 
   const options = {
@@ -100,7 +109,7 @@ const App = () => {
       />
       <Styled.List>
         {state.results
-          .map((hit: any) => {
+          .map((hit: Fuse.FuseResult<ItemProps>) => {
             return (
               <Item
                 description={hit.item.description}
@@ -113,8 +122,8 @@ const App = () => {
               />
             );
           })
-          .slice(0, paginate)}
-        {state.results.length !== paginate && state.results.length > paginate && (
+          .slice(0, itemsPerPage)}
+        {state.results.length !== itemsPerPage && state.results.length > itemsPerPage && (
           <Styled.Button onClick={loadMore}>Load more</Styled.Button>
         )}
       </Styled.List>

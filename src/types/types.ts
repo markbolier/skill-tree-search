@@ -1,4 +1,4 @@
-export type Data = {
+export interface DataProps {
   children?: any[];
   description: string;
   dreyfus?: number;
@@ -11,7 +11,7 @@ export type Data = {
   parents?: any[];
   slug?: string;
   title: string;
-};
+}
 
 export enum ACTIONS {
   SET_FILTER = "SET_FILTER",
@@ -39,7 +39,7 @@ export type Action = SetFilterAction | SetInputAction | SetResultsAction;
 export interface ItemProps {
   description: string;
   handleFilter: (event: React.MouseEvent<HTMLButtonElement>) => void;
-  id: string;
+  id: number;
   label: string;
   query: string;
   title: string;
@@ -53,7 +53,7 @@ export interface initialStateProps {
 }
 
 export interface SearchBarProps {
-  data: Data[];
+  data: DataProps[];
   filter: string;
   handleInput: (event: React.FormEvent<HTMLInputElement>) => void;
   handleRemove: () => void;
