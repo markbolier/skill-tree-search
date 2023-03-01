@@ -73,7 +73,7 @@ const App = () => {
         (result: Fuse.FuseResult<any>) => !state.filter || result.item.label === state.filter,
       );
     dispatch({ type: ACTIONS.SET_RESULTS, payload: results });
-    console.log(results);
+    setCurrentPage(1);
   };
 
   const updateInput = (value: string) => {
