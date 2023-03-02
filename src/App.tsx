@@ -10,7 +10,7 @@ import * as Styled from "./App.styled";
 import mockData from "../src/mock-data/example-data.json";
 import useDebounce from "./hooks/useDebounce";
 
-const App = () => {
+export const App = () => {
   const initialState = {
     data: mockData,
     filter: "",
@@ -141,5 +141,3 @@ const App = () => {
     </Styled.Container>
   );
 };
-
-export default App;
