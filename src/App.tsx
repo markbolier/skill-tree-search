@@ -70,7 +70,7 @@ export const App = () => {
 
   const previousPage = () => {
     if (currentPage !== 1) setCurrentPage(currentPage - 1);
-    if (currentPage > 5 && currentPage + 6 < amountOfPages) {
+    if (currentPage > 5 && currentPage + 5 < amountOfPages) {
       setPageLastInView(currentPage + 4);
       setPageFirstInView(currentPage - 5);
     }
