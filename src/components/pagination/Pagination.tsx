@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { PaginationProps } from "../../types/types";
 import * as Styled from "./Pagination.styled";
 

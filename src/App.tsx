@@ -57,20 +57,36 @@ export const App = () => {
   };
 
   const nextPage = () => {
-    if (currentPage !== amountOfPages) setCurrentPage(currentPage + 1);
-    if (currentPage > 4) {
+    if (currentPage < amountOfPages) setCurrentPage(currentPage + 1);
+    if (currentPage > 4 && currentPage + 4 < amountOfPages) {
       setPageLastInView(currentPage + 5);
       setPageFirstInView(currentPage - 4);
+    }
+    if (currentPage < 5) {
+      setPageLastInView(10);
+      setPageFirstInView(1);
     }
   };
 
   const previousPage = () => {
     if (currentPage !== 1) setCurrentPage(currentPage - 1);
-    if (currentPage > 5) {
+    if (currentPage > 5 && currentPage + 6 < amountOfPages) {
       setPageLastInView(currentPage + 4);
       setPageFirstInView(currentPage - 5);
     }
+    if (currentPage < 6) {
+      setPageLastInView(10);
+      setPageFirstInView(1);
+    }
   };
+
+  const resetPageHandling = () => {
+    setPageLastInView(10);
+    setPageFirstInView(1);
+    setCurrentPage(1);
+  };
+
+  console.log(currentPage);
 
   const showResults = () => {
     const searchTerms = state.input.trim().split(" ");
@@ -105,6 +121,7 @@ export const App = () => {
 
   useEffect(() => {
     showResults();
+    resetPageHandling();
   }, [searchQuery, state.filter]);
 
   return (
