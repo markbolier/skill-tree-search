@@ -57,27 +57,31 @@ export const App = () => {
   };
 
   const nextPage = () => {
-    if (currentPage < amountOfPages) setCurrentPage(currentPage + 1);
+    if (currentPage >= amountOfPages) {
+      return;
+    }
     if (currentPage > 4 && currentPage + 4 < amountOfPages) {
       setPageLastInView(currentPage + 5);
       setPageFirstInView(currentPage - 4);
-    }
-    if (currentPage < 5) {
+    } else if (currentPage < 5) {
       setPageLastInView(10);
       setPageFirstInView(1);
     }
+    setCurrentPage(currentPage + 1);
   };
 
   const previousPage = () => {
-    if (currentPage !== 1) setCurrentPage(currentPage - 1);
+    if (currentPage === 1) {
+      return;
+    }
     if (currentPage > 5 && currentPage + 5 < amountOfPages) {
       setPageLastInView(currentPage + 4);
       setPageFirstInView(currentPage - 5);
-    }
-    if (currentPage < 6) {
+    } else if (currentPage < 6) {
       setPageLastInView(10);
       setPageFirstInView(1);
     }
+    setCurrentPage(currentPage - 1);
   };
 
   const resetPageHandling = () => {
