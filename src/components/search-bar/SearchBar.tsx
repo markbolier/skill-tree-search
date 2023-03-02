@@ -88,6 +88,7 @@ export const SearchBar = ({
     <Styled.Container>
       <Styled.SearchBar onBlur={handleBlur} ref={searchBarRef}>
         <Styled.Wrapper>
+          <Styled.SearchIcon>🔍</Styled.SearchIcon>
           {filter && (
             <Styled.Label onClick={handleRemove}>
               #{filter}

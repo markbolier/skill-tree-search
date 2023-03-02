@@ -63,6 +63,13 @@ export const SearchBar = styled.div`
   width: 100%;
 `;
 
+export const SearchIcon = styled.div`
+  align-items: center;
+  display: flex;
+  font-size: 20px;
+  margin: 0 5px 0 10px;
+`;
+
 export const Wrapper = styled.div`
   display: flex;
 `;
