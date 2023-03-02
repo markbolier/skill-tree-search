@@ -7,16 +7,20 @@ export const Button = styled.button`
   width: fit-content;
 `;
 
+export const Bold = styled.span`
+  font-weight: 900;
+`;
+
 export const Container = styled.div`
   max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
+  padding: 20px;
 `;
 
 export const List = styled.ul`
   display: flex;
   flex-direction: column;
+  gap: 20px;
   list-style: none;
-  margin-top: 75px;
   padding: 0;
 `;

@@ -7,6 +7,14 @@ export const CloseIcon = styled(CloseSVG)`
   padding-left: 5px;
 `;
 
+export const Container = styled.div`
+  margin-bottom: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  width: fill-available;
+`;
+
 export const Input = styled.input`
   border-radius: 10px;
   border: none;
@@ -43,18 +51,23 @@ export const Label = styled.button`
   }
 `;
 
-export const SearchBarContainer = styled.div`
+export const SearchBar = styled.div`
   background-color: white;
   border-radius: 10px;
   border: 1px solid grey;
   display: flex;
   flex-direction: column;
   font-size: 15px;
-  margin: 0 10px 30px 10px;
-  max-width: 800px;
   overflow: hidden;
   position: absolute;
-  width: fill-available;
+  width: 100%;
+`;
+
+export const SearchIcon = styled.div`
+  align-items: center;
+  display: flex;
+  font-size: 20px;
+  margin: 0 5px 0 10px;
 `;
 
 export const Wrapper = styled.div`
