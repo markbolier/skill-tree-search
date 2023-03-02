@@ -90,8 +90,6 @@ export const App = () => {
     setCurrentPage(1);
   };
 
-  console.log(currentPage);
-
   const showResults = () => {
     const searchTerms = state.input.trim().split(" ");
     const results = searchTerms
