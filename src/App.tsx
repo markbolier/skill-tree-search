@@ -30,10 +30,12 @@ export const App = () => {
         throw new Error();
     }
   };
-
   const [state, dispatch] = useReducer(reducer, initialState);
+
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(5);
+  const [pageFirstInView, setPageFirstInView] = useState(1);
+  const [pageLastInView, setPageLastInView] = useState(10);
 
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
@@ -56,9 +58,18 @@ export const App = () => {
 
   const nextPage = () => {
     if (currentPage !== amountOfPages) setCurrentPage(currentPage + 1);
+    if (currentPage > 4) {
+      setPageLastInView(currentPage + 5);
+      setPageFirstInView(currentPage - 4);
+    }
   };
+
   const previousPage = () => {
     if (currentPage !== 1) setCurrentPage(currentPage - 1);
+    if (currentPage > 5) {
+      setPageLastInView(currentPage + 4);
+      setPageFirstInView(currentPage - 5);
+    }
   };
 
   const showResults = () => {
@@ -133,6 +144,8 @@ export const App = () => {
             amountOfPages={amountOfPages}
             currentPage={currentPage}
             nextPage={nextPage}
+            pageFirstInView={pageFirstInView}
+            pageLastInView={pageLastInView}
             previousPage={previousPage}
             setCurrentPage={setCurrentPage}
           />

@@ -6,23 +6,21 @@ export const Pagination = ({
   amountOfPages,
   currentPage,
   nextPage,
+  pageFirstInView,
+  pageLastInView,
   previousPage,
   setCurrentPage,
 }: PaginationProps) => {
-  const [pageLimit] = useState(10);
-
   const pageNumbers = [...Array(amountOfPages + 1).keys()].slice(1);
-  const pagesWithLimit = pageNumbers.slice(0, pageLimit);
+  const pagesWithLimit = pageNumbers.slice(pageFirstInView - 1, pageLastInView);
 
   return (
     <Styled.Container>
-      <Styled.Button>
-        {currentPage !== 1 ? (
-          <li onClick={previousPage}>
-            <span>Previous</span>
-          </li>
-        ) : null}
-      </Styled.Button>
+      {currentPage !== 1 ? (
+        <Styled.Button onClick={previousPage}>
+          <span>Previous</span>
+        </Styled.Button>
+      ) : null}
       {pagesWithLimit.map((pageNumber) => {
         return (
           <Styled.Button key={pageNumber}>
@@ -36,13 +34,11 @@ export const Pagination = ({
           </Styled.Button>
         );
       })}
-      <Styled.Button>
-        {currentPage !== pageNumbers.length ? (
-          <li onClick={nextPage}>
-            <span>Next</span>
-          </li>
-        ) : null}
-      </Styled.Button>
+      {currentPage !== pageNumbers.length ? (
+        <Styled.Button onClick={nextPage}>
+          <span>Next</span>
+        </Styled.Button>
+      ) : null}
     </Styled.Container>
   );
 };

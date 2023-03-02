@@ -40,9 +40,11 @@ export interface ItemProps {
 export interface PaginationProps {
   amountOfPages: number;
   currentPage: number;
-  setCurrentPage: React.Dispatch<React.SetStateAction<number>>;
   nextPage: () => void;
+  pageFirstInView: number;
+  pageLastInView: number;
   previousPage: () => void;
+  setCurrentPage: React.Dispatch<React.SetStateAction<number>>;
 }
 
 export interface SearchBarProps {
