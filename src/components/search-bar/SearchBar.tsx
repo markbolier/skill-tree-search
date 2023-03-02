@@ -85,25 +85,32 @@ export const SearchBar = ({
   }, [query || updateInput]);
 
   return (
-    <Styled.SearchBarContainer onBlur={handleBlur} ref={searchBarRef}>
-      <Styled.Wrapper>
-        {filter && (
-          <Styled.Label onClick={handleRemove}>
-            #{filter}
-            <Styled.CloseIcon />
-          </Styled.Label>
-        )}
-        <Styled.Input value={query} onChange={handleInput} placeholder="Search..." type="search" />
-      </Styled.Wrapper>
-      <TypeaheadDropdown
-        autoCompleteData={autocompleteData}
-        focusIndex={focusIndex}
-        handleClick={handleClick}
-        handleFocus={handleFocus}
-        handleKeyDown={handleKeyDown}
-        isOpen={isOpen}
-        query={query}
-      />
-    </Styled.SearchBarContainer>
+    <Styled.Container>
+      <Styled.SearchBar onBlur={handleBlur} ref={searchBarRef}>
+        <Styled.Wrapper>
+          {filter && (
+            <Styled.Label onClick={handleRemove}>
+              #{filter}
+              <Styled.CloseIcon />
+            </Styled.Label>
+          )}
+          <Styled.Input
+            value={query}
+            onChange={handleInput}
+            placeholder="Search..."
+            type="search"
+          />
+        </Styled.Wrapper>
+        <TypeaheadDropdown
+          autoCompleteData={autocompleteData}
+          focusIndex={focusIndex}
+          handleClick={handleClick}
+          handleFocus={handleFocus}
+          handleKeyDown={handleKeyDown}
+          isOpen={isOpen}
+          query={query}
+        />
+      </Styled.SearchBar>
+    </Styled.Container>
   );
 };

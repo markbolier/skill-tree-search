@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const List = styled.li`
   display: flex;
   flex-direction: column;
-  margin: 10px;
 `;
 
 export const Title = styled.h2`

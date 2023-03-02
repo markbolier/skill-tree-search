@@ -108,6 +108,13 @@ const App = () => {
         updateInput={updateInput}
       />
       <Styled.List>
+        {state.results.length > 0 ? (
+          <Styled.Notification>
+            <Styled.Bold>{state.results.length}</Styled.Bold>
+            {state.results.length > 1 ? " results for " : " result for "}
+            <Styled.Bold>{state.input}</Styled.Bold>
+          </Styled.Notification>
+        ) : null}
         {currentItems.map((hit: Fuse.FuseResult<ItemProps>) => {
           return (
             <Item
@@ -121,7 +128,7 @@ const App = () => {
             />
           );
         })}
-        {state.results.length !== itemsPerPage && state.results.length > itemsPerPage && (
+        {state.results.length !== itemsPerPage && state.results.length > itemsPerPage ? (
           <Pagination
             amountOfPages={amountOfPages}
             currentPage={currentPage}
@@ -129,7 +136,7 @@ const App = () => {
             previousPage={previousPage}
             setCurrentPage={setCurrentPage}
           />
-        )}
+        ) : null}
       </Styled.List>
     </Styled.Container>
   );
