@@ -20,10 +20,7 @@ export const Container = styled.div`
 export const List = styled.ul`
   display: flex;
   flex-direction: column;
+  gap: 20px;
   list-style: none;
   padding: 0;
-`;
-
-export const Notification = styled.p`
-  margin: 10px 0;
 `;

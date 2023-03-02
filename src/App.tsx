@@ -109,11 +109,11 @@ const App = () => {
       />
       <Styled.List>
         {state.results.length > 0 ? (
-          <Styled.Notification>
-            <Styled.Bold>{state.results.length}</Styled.Bold>
+          <p>
+            {state.results.length}
             {state.results.length > 1 ? " results for " : " result for "}
             <Styled.Bold>{state.input}</Styled.Bold>
-          </Styled.Notification>
+          </p>
         ) : null}
         {currentItems.map((hit: Fuse.FuseResult<ItemProps>) => {
           return (
