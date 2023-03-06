@@ -47,18 +47,19 @@ export const App = () => {
     dispatch({ type: ACTIONS.SET_FILTER, payload: filter });
   };
 
-  console.log("state:", state.filter);
+  console.log("filter:", state.filter);
+  console.log("input:", state.input);
+  console.log("results:", state.results);
 
   const handleInput = (event: React.FormEvent<HTMLInputElement>) => {
-    console.log(event);
     const value = event.currentTarget.value;
-    if (value.startsWith("#") && value.endsWith(" ")) {
-      const filterValue = value.substring(1, value.length - 1);
-      console.log(filterValue);
-      dispatch({ type: ACTIONS.SET_FILTER, payload: filterValue });
-      dispatch({ type: ACTIONS.SET_INPUT, payload: "" });
-      return;
-    }
+    // if (value.startsWith("#") && value.endsWith(" ")) {
+    //   const filterValue = value.substring(1, value.length - 1);
+    //   console.log(filterValue);
+    //   dispatch({ type: ACTIONS.SET_FILTER, payload: filterValue });
+    //   dispatch({ type: ACTIONS.SET_INPUT, payload: "" });
+    //   return;
+    // }
     dispatch({ type: ACTIONS.SET_INPUT, payload: value });
   };
 
@@ -102,6 +103,7 @@ export const App = () => {
 
   const showResults = () => {
     const searchTerms = state.input.trim().split(" ");
+    console.log("searchterms", searchTerms);
     const results = searchTerms
       .flatMap((term: string) => fuse.search(term))
       .filter(
