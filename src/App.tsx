@@ -47,8 +47,18 @@ export const App = () => {
     dispatch({ type: ACTIONS.SET_FILTER, payload: filter });
   };
 
+  console.log("state:", state.filter);
+
   const handleInput = (event: React.FormEvent<HTMLInputElement>) => {
+    console.log(event);
     const value = event.currentTarget.value;
+    if (value.startsWith("#") && value.endsWith(" ")) {
+      const filterValue = value.substring(1, value.length - 1);
+      console.log(filterValue);
+      dispatch({ type: ACTIONS.SET_FILTER, payload: filterValue });
+      dispatch({ type: ACTIONS.SET_INPUT, payload: "" });
+      return;
+    }
     dispatch({ type: ACTIONS.SET_INPUT, payload: value });
   };
 

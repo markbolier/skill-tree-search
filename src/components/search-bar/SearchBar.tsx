@@ -96,10 +96,10 @@ export const SearchBar = ({
             </Styled.Label>
           )}
           <Styled.Input
-            value={query}
             onChange={handleInput}
             placeholder="Search..."
             type="search"
+            value={query}
           />
         </Styled.Wrapper>
         <TypeaheadDropdown

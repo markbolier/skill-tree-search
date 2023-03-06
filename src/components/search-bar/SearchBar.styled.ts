@@ -18,9 +18,9 @@ export const Container = styled.div`
 export const Input = styled.input`
   border-radius: 10px;
   border: none;
+  flex-grow: 1;
   font-size: 15px;
   padding: 10px;
-  flex-grow: 1;
 
   &:focus,
   :focus-visible,
