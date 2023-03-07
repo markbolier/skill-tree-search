@@ -91,7 +91,7 @@ export const SearchBar = ({
           <Styled.SearchIcon>🔍</Styled.SearchIcon>
           {filter.length > 0 && (
             <Styled.Label onClick={handleRemove}>
-              {filter}
+              #{filter}
               <Styled.CloseIcon />
             </Styled.Label>
           )}

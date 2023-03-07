@@ -45,7 +45,6 @@ export const App = () => {
   const handleFilter = (event: React.MouseEvent<HTMLButtonElement>) => {
     const filter = event.currentTarget.innerText.substring(1);
     dispatch({ type: ACTIONS.SET_FILTER, payload: filter });
-    showResults();
   };
 
   const handleInput = (event: React.FormEvent<HTMLInputElement>) => {
@@ -101,8 +100,6 @@ export const App = () => {
     setCurrentPage(1);
   };
 
-  console.log(state.filter);
-
   const showResults = () => {
     // Wanneer er alleen een filter is
 
@@ -117,13 +114,6 @@ export const App = () => {
       );
     dispatch({ type: ACTIONS.SET_RESULTS, payload: results });
     setCurrentPage(1);
-  };
-
-  const handleManualFilter = () => {
-    const input = state.input.trim().split(" ");
-    const manualFilter = input.filter((string) => string.startsWith("#"));
-    dispatch({ type: ACTIONS.SET_FILTER, payload: manualFilter });
-    dispatch({ type: ACTIONS.SET_INPUT, payload: "" });
   };
 
   const updateInput = (value: string) => {
