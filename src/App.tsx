@@ -43,13 +43,24 @@ export const App = () => {
   const currentItems = state.results.slice(indexOfFirstItem, indexOfLastItem);
 
   const handleFilter = (event: React.MouseEvent<HTMLButtonElement>) => {
-    const filter = event.currentTarget.innerText;
+    const filter = event.currentTarget.innerText.substring(1);
     dispatch({ type: ACTIONS.SET_FILTER, payload: filter });
+    showResults();
   };
 
   const handleInput = (event: React.FormEvent<HTMLInputElement>) => {
     const value = event.currentTarget.value;
-    dispatch({ type: ACTIONS.SET_INPUT, payload: value });
+    if (value.startsWith("#")) {
+      if (value.endsWith(" ")) {
+        const filter = value.slice(1, -1);
+        dispatch({ type: ACTIONS.SET_FILTER, payload: filter });
+        dispatch({ type: ACTIONS.SET_INPUT, payload: "" });
+      } else {
+        dispatch({ type: ACTIONS.SET_INPUT, payload: value });
+      }
+    } else {
+      dispatch({ type: ACTIONS.SET_INPUT, payload: value });
+    }
   };
 
   const handleRemove = () => {
@@ -90,20 +101,29 @@ export const App = () => {
     setCurrentPage(1);
   };
 
+  console.log(state.filter);
+
   const showResults = () => {
+    // Wanneer er alleen een filter is
+
+    // Wanneer er een filter + query is
     const input = state.input.trim().split(" ");
-    const filter = input.filter((term) => term.startsWith("#"));
     const searchTerms = input.filter((string) => !string.startsWith("#"));
     const results = searchTerms
       .flatMap((term: string) => fuse.search(term))
       .filter(
         (result: Fuse.FuseResult<any>) =>
-          !filter.length ||
-          filter.some((tag) => result.item.label.toLowerCase().includes(tag.slice(1))),
+          !state.filter.length || state.filter.toLowerCase() === result.item.label.toLowerCase(),
       );
     dispatch({ type: ACTIONS.SET_RESULTS, payload: results });
-    dispatch({ type: ACTIONS.SET_FILTER, payload: filter });
     setCurrentPage(1);
+  };
+
+  const handleManualFilter = () => {
+    const input = state.input.trim().split(" ");
+    const manualFilter = input.filter((string) => string.startsWith("#"));
+    dispatch({ type: ACTIONS.SET_FILTER, payload: manualFilter });
+    dispatch({ type: ACTIONS.SET_INPUT, payload: "" });
   };
 
   const updateInput = (value: string) => {
