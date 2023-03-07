@@ -101,6 +101,8 @@ export const App = () => {
   };
 
   const showResults = () => {
+    // Wanneer er alleen een query is
+
     // Wanneer er alleen een filter is
 
     // Wanneer er een filter + query is
