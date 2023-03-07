@@ -43,23 +43,12 @@ export const App = () => {
   const currentItems = state.results.slice(indexOfFirstItem, indexOfLastItem);
 
   const handleFilter = (event: React.MouseEvent<HTMLButtonElement>) => {
-    const filter = event.currentTarget.innerText.substring(1);
+    const filter = event.currentTarget.innerText;
     dispatch({ type: ACTIONS.SET_FILTER, payload: filter });
   };
 
-  console.log("filter:", state.filter);
-  console.log("input:", state.input);
-  console.log("results:", state.results);
-
   const handleInput = (event: React.FormEvent<HTMLInputElement>) => {
     const value = event.currentTarget.value;
-    // if (value.startsWith("#") && value.endsWith(" ")) {
-    //   const filterValue = value.substring(1, value.length - 1);
-    //   console.log(filterValue);
-    //   dispatch({ type: ACTIONS.SET_FILTER, payload: filterValue });
-    //   dispatch({ type: ACTIONS.SET_INPUT, payload: "" });
-    //   return;
-    // }
     dispatch({ type: ACTIONS.SET_INPUT, payload: value });
   };
 
@@ -102,14 +91,18 @@ export const App = () => {
   };
 
   const showResults = () => {
-    const searchTerms = state.input.trim().split(" ");
-    console.log("searchterms", searchTerms);
+    const input = state.input.trim().split(" ");
+    const filter = input.filter((term) => term.startsWith("#"));
+    const searchTerms = input.filter((string) => !string.startsWith("#"));
     const results = searchTerms
       .flatMap((term: string) => fuse.search(term))
       .filter(
-        (result: Fuse.FuseResult<any>) => !state.filter || result.item.label === state.filter,
+        (result: Fuse.FuseResult<any>) =>
+          !filter.length ||
+          filter.some((tag) => result.item.label.toLowerCase().includes(tag.slice(1))),
       );
     dispatch({ type: ACTIONS.SET_RESULTS, payload: results });
+    dispatch({ type: ACTIONS.SET_FILTER, payload: filter });
     setCurrentPage(1);
   };
 
@@ -136,7 +129,7 @@ export const App = () => {
   useEffect(() => {
     showResults();
     resetPageHandling();
-  }, [searchQuery, state.filter]);
+  }, [searchQuery]);
 
   return (
     <Styled.Container>

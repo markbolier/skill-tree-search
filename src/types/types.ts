@@ -58,7 +58,7 @@ export interface SearchBarProps {
 
 interface SetFilterAction {
   type: typeof ACTIONS.SET_FILTER;
-  payload: string;
+  payload: any;
 }
 
 interface SetInputAction {
