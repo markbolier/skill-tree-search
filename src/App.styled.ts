@@ -17,6 +17,18 @@ export const Container = styled.div`
   padding: 20px;
 `;
 
+export const Label = styled.button`
+  background-color: #f1edeb;
+  border-radius: 5px;
+  border: none;
+  color: black;
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin: 6px 1px 6px 6px;
+  padding: 5px;
+  width: fit-content;
+`;
+
 export const List = styled.ul`
   display: flex;
   flex-direction: column;

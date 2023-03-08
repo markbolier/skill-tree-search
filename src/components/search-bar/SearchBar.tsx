@@ -89,17 +89,17 @@ export const SearchBar = ({
       <Styled.SearchBar onBlur={handleBlur} ref={searchBarRef}>
         <Styled.Wrapper>
           <Styled.SearchIcon>🔍</Styled.SearchIcon>
-          {filter && (
+          {filter.length > 0 && (
             <Styled.Label onClick={handleRemove}>
               #{filter}
               <Styled.CloseIcon />
             </Styled.Label>
           )}
           <Styled.Input
-            value={query}
             onChange={handleInput}
             placeholder="Search..."
             type="search"
+            value={query}
           />
         </Styled.Wrapper>
         <TypeaheadDropdown

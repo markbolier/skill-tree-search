@@ -6,9 +6,9 @@ import { Header } from "./components/header";
 import { Item } from "./components/item";
 import { Pagination } from "./components/pagination";
 import { SearchBar } from "./components/search-bar";
+import { useDebounce } from "./utils";
 import * as Styled from "./App.styled";
 import mockData from "../src/mock-data/example-data.json";
-import useDebounce from "./hooks/useDebounce";
 
 export const App = () => {
   const initialState = {
@@ -49,7 +49,17 @@ export const App = () => {
 
   const handleInput = (event: React.FormEvent<HTMLInputElement>) => {
     const value = event.currentTarget.value;
-    dispatch({ type: ACTIONS.SET_INPUT, payload: value });
+    if (value.startsWith("#")) {
+      if (value.endsWith(" ")) {
+        const filter = value.slice(1, -1);
+        dispatch({ type: ACTIONS.SET_FILTER, payload: filter });
+        dispatch({ type: ACTIONS.SET_INPUT, payload: "" });
+      } else {
+        dispatch({ type: ACTIONS.SET_INPUT, payload: value });
+      }
+    } else {
+      dispatch({ type: ACTIONS.SET_INPUT, payload: value });
+    }
   };
 
   const handleRemove = () => {
@@ -90,13 +100,24 @@ export const App = () => {
     setCurrentPage(1);
   };
 
-  const showResults = () => {
-    const searchTerms = state.input.trim().split(" ");
-    const results = searchTerms
-      .flatMap((term: string) => fuse.search(term))
-      .filter(
-        (result: Fuse.FuseResult<any>) => !state.filter || result.item.label === state.filter,
-      );
+  const updateSearchResults = () => {
+    const input = state.input.trim().split(" ");
+    const searchTerms = input.filter((term: string) => !term.startsWith("#"));
+    const results =
+      searchTerms[0] === "" && state.filter.length > 0
+        ? fuse
+            .search(state.filter)
+            .filter(
+              (match: Fuse.FuseResult<any>) =>
+                state.filter.toLowerCase() === match.item.label.toLowerCase(),
+            )
+        : searchTerms
+            .flatMap((term: string) => fuse.search(term))
+            .filter(
+              (match: Fuse.FuseResult<any>) =>
+                !state.filter.length ||
+                state.filter.toLowerCase() === match.item.label.toLowerCase(),
+            );
     dispatch({ type: ACTIONS.SET_RESULTS, payload: results });
     setCurrentPage(1);
   };
@@ -122,7 +143,7 @@ export const App = () => {
   const searchQuery = useDebounce(state.input, 700);
 
   useEffect(() => {
-    showResults();
+    updateSearchResults();
     resetPageHandling();
   }, [searchQuery, state.filter]);
 
@@ -138,13 +159,19 @@ export const App = () => {
         updateInput={updateInput}
       />
       <Styled.List>
-        {state.results.length > 0 ? (
-          <p>
-            {state.results.length}
-            {state.results.length > 1 ? " results for " : " result for "}
+        {state.results.length > 0 && (
+          <span>
+            {state.results.length} {state.results.length > 1 ? "results" : "result"}
+            {state.input.length > 0 && " for "}
             <Styled.Bold>{state.input}</Styled.Bold>
-          </p>
-        ) : null}
+            {state.filter && (
+              <>
+                {" in"}
+                <Styled.Label>#{state.filter}</Styled.Label>
+              </>
+            )}
+          </span>
+        )}
         {currentItems.map((hit: Fuse.FuseResult<ItemProps>) => {
           return (
             <Item
