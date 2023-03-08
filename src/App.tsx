@@ -49,6 +49,7 @@ export const App = () => {
 
   const handleInput = (event: React.FormEvent<HTMLInputElement>) => {
     const value = event.currentTarget.value;
+    // TODO: Trim, split and put value(s) in an array? But where to split on to identify the end of a filter with 'space'?
     if (value.startsWith("#")) {
       if (value.endsWith(" ")) {
         const filter = value.slice(1, -1);
@@ -101,22 +102,30 @@ export const App = () => {
   };
 
   const showResults = () => {
-    // Wanneer er alleen een query is
-
-    // Wanneer er alleen een filter is
-
-    // Wanneer er een filter + query is
     const input = state.input.trim().split(" ");
     const searchTerms = input.filter((string) => !string.startsWith("#"));
-    const results = searchTerms
-      .flatMap((term: string) => fuse.search(term))
-      .filter(
-        (result: Fuse.FuseResult<any>) =>
-          !state.filter.length || state.filter.toLowerCase() === result.item.label.toLowerCase(),
-      );
+    console.log("searchterms:", searchTerms);
+    const results =
+      searchTerms[0] === "" && state.filter.length > 0
+        ? fuse
+            .search(state.filter)
+            .filter(
+              (result: Fuse.FuseResult<any>) =>
+                state.filter.toLowerCase() === result.item.label.toLowerCase(),
+            )
+        : searchTerms
+            .flatMap((term) => fuse.search(term))
+            .filter(
+              (result: Fuse.FuseResult<any>) =>
+                !state.filter.length ||
+                state.filter.toLowerCase() === result.item.label.toLowerCase(),
+            );
     dispatch({ type: ACTIONS.SET_RESULTS, payload: results });
     setCurrentPage(1);
   };
+
+  console.log(state.filter);
+  console.log(state.results);
 
   const updateInput = (value: string) => {
     dispatch({ type: ACTIONS.SET_INPUT, payload: value });
@@ -143,6 +152,7 @@ export const App = () => {
     resetPageHandling();
   }, [searchQuery, state.filter]);
 
+  // console.log(fuse.search("cloud"));
   return (
     <Styled.Container>
       <Header />
