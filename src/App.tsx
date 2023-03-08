@@ -167,7 +167,7 @@ export const App = () => {
             {state.filter && (
               <>
                 {" in"}
-                <Styled.Label> #{state.filter}</Styled.Label>
+                <Styled.Label>#{state.filter}</Styled.Label>
               </>
             )}
           </span>
