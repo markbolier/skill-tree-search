@@ -49,7 +49,6 @@ export const App = () => {
 
   const handleInput = (event: React.FormEvent<HTMLInputElement>) => {
     const value = event.currentTarget.value;
-    // TODO: Trim, split and put value(s) in an array? But where to split on to identify the end of a filter with 'space'?
     if (value.startsWith("#")) {
       if (value.endsWith(" ")) {
         const filter = value.slice(1, -1);
@@ -101,10 +100,9 @@ export const App = () => {
     setCurrentPage(1);
   };
 
-  const showResults = () => {
+  const updateSearchResults = () => {
     const input = state.input.trim().split(" ");
     const searchTerms = input.filter((string) => !string.startsWith("#"));
-    console.log("searchterms:", searchTerms);
     const results =
       searchTerms[0] === "" && state.filter.length > 0
         ? fuse
@@ -123,9 +121,6 @@ export const App = () => {
     dispatch({ type: ACTIONS.SET_RESULTS, payload: results });
     setCurrentPage(1);
   };
-
-  console.log(state.filter);
-  console.log(state.results);
 
   const updateInput = (value: string) => {
     dispatch({ type: ACTIONS.SET_INPUT, payload: value });
@@ -148,11 +143,10 @@ export const App = () => {
   const searchQuery = useDebounce(state.input, 700);
 
   useEffect(() => {
-    showResults();
+    updateSearchResults();
     resetPageHandling();
   }, [searchQuery, state.filter]);
 
-  // console.log(fuse.search("cloud"));
   return (
     <Styled.Container>
       <Header />
