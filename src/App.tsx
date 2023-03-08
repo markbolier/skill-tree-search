@@ -159,13 +159,19 @@ export const App = () => {
         updateInput={updateInput}
       />
       <Styled.List>
-        {state.results.length > 0 ? (
-          <p>
-            {state.results.length}
-            {state.results.length > 1 ? " results for " : " result for "}
+        {state.results.length > 0 && (
+          <span>
+            {state.results.length} {state.results.length > 1 ? "results" : "result"}
+            {state.input.length > 0 && " for "}
             <Styled.Bold>{state.input}</Styled.Bold>
-          </p>
-        ) : null}
+            {state.filter && (
+              <>
+                {" in"}
+                <Styled.Label> #{state.filter}</Styled.Label>
+              </>
+            )}
+          </span>
+        )}
         {currentItems.map((hit: Fuse.FuseResult<ItemProps>) => {
           return (
             <Item
