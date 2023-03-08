@@ -141,7 +141,7 @@ export const App = () => {
   useEffect(() => {
     showResults();
     resetPageHandling();
-  }, [searchQuery]);
+  }, [searchQuery, state.filter]);
 
   return (
     <Styled.Container>
